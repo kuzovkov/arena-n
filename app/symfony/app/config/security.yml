@@ -1,0 +1,54 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: sha512
+        Cinema\CinemaBundle\Entity\User: sha512
+
+    role_hierarchy:
+        ROLE_CINEMA_FILM_ADMIN:
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_EDIT
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_CREATE
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_DELETE
+        ROLE_CINEMA_FILM_EDITOR:
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_EDIT
+        ROLE_CINEMA_FILM_READER:
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
+            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
+            
+        ROLE_VIEWER:      [ROLE_USER, ROLE_CINEMA_FILM_READER]
+        ROLE_EDITOR:      [ROLE_USER, ROLE_CINEMA_FILM_EDITOR]
+        ROLE_ADMIN:       [ROLE_USER, ROLE_CINEMA_FILM_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        main:
+            entity: { class: Cinema\CinemaBundle\Entity\User, property: username }
+        in_memory:
+            memory:
+                users:
+                    userok:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                    adminka: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+            
+    
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            form_login:
+                check_path: /login_check
+                login_path: /login
+                always_use_default_target_path: true
+                default_target_path: /admin/dashboard
+                
+            logout:
+                path:   /logout
+                target: /
+            
+            anonymous: ~
+            #http_basic:
+            #    realm: "Secured Demo Area"
+
+    access_control:
+        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_EDITOR, ROLE_VIEWER] }

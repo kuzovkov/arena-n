@@ -1,0 +1,94 @@
+<!-- backlink -->
+{% if data.filmbackground is defined %}
+{% if data.filmbackground %}
+<a title="кинотеатр Эрвий" href="{{url('cinema_cinema_film', {'slug': data.filmbackground.getSlug})}}" id="backlink" target="_blank"></a>
+{% endif %}
+{% endif %}
+<!-- main -->
+<div class="wrap-main">
+<!-- tel -->
+<div class="roundedBox"><div>тел. 
+        {% if data.snipets is defined %}
+            {% for snipet in data.snipets %}
+                {% if snipet.getKey == 'top_phone' %}
+                    {{snipet.getSnipet | raw}}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            top_phone
+        {% endif %}
+
+</div></div>
+<!-- tel -->
+
+<!-- tel -->
+<div class="roundedBox2">
+    <div>
+        {% if data.snipets is defined %}
+            {% for snipet in data.snipets %}
+                {% if snipet.getKey == 'cassa_mode' %}
+                    {{snipet.getSnipet | raw}}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            cassa_mode
+        {% endif %}
+    </div>
+</div>
+<!-- tel -->
+
+{% if data %}
+{% if data.filmbackground %}
+<div class="wrp-btn-buy">
+    <div class="top-film-name">
+        <a title="кинотеатр Эрвий {{data.filmbackground.getName}}" href="{{url('cinema_cinema_film', {'slug': data.filmbackground.getSlug})}}">
+        {% if data.filmbackground.getImageNameUrl == false %}
+            {{data.filmbackground.getName}}
+        {% endif %}
+        </a>
+    </div>
+    {#<a href="{{url('cinema_cinema_film', {'slug': data.filmbackground.getSlug})}}" class="btn-buy-t" href="">{{data.filmbackground.getName}}</a>#}
+</div>
+{% else %}
+<div class="wrp-btn-buy">
+    <div class="top-film-name">
+        <a href="">
+        
+        </a>
+    </div>
+    <a class="btn-buy-t" href=""></a>
+</div>
+
+{% endif %}
+
+
+{% else %}
+<div class="wrp-btn-buy">
+    <div class="top-film-name">
+        <a href="">
+        
+        </a>
+    </div>
+    <a class="btn-buy-t" href=""></a>
+</div>
+{% endif %}
+<div class="main">
+<div class="wrp-zbg">
+<!--  header  -->
+<header><nav>
+<ul class="nav-list">
+<li id="index"><a title="кинотеатр Эрвий" href="{{url('cinema_cinema_homepage')}}">Кинотеатр "Эрвий"</a></li>
+<li id="today"><a title="кинотеатр Эрвий Сегодня" href="{{url('cinema_cinema_today')}}">Сегодня</a></li>
+<li id="soon"><a title="кинотеатр Эрвий Скоро" href="{{url('cinema_cinema_soon')}}">Скоро</a></li>
+<li id="schedule"><a title="кинотеатр Эрвий Расписание" href="{{url('cinema_cinema_schedule')}}">Расписание сеансов</a></li>
+<li id="actions"><a title="кинотеатр Эрвий Акции" href="{{url('cinema_cinema_page', {'slug':'actions'})}}">Акции</a></li>
+{#<li id="disco"><a title="кинотеатр Эрвий Ретро-Бар Арена" href="{{url('cinema_cinema_retrobar')}}">Ретро-Бар Арена</a></li>#}
+{#<li id="added"><a href="{{url('cinema_cinema_added')}}">Еще</a></li>#}
+
+</ul>
+</nav></header>
+<!-- end header -->
+{#<p>&nbsp;</p>#}
+ <!--  content  -->
+<div class="wrap-content">
+<div class="content">

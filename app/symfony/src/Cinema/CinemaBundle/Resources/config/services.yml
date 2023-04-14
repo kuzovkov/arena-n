@@ -1,0 +1,70 @@
+parameters:
+#    cinema_cinema.example.class: Cinema\CinemaBundle\Example
+
+services:
+    string_loader.twig.extension:
+         class: Twig_Extension_StringLoader
+         tags: [{ name: twig.extension }]
+    login_listener:
+        class: 'Cinema\CinemaBundle\Listener\LoginListener'
+        arguments: ['@security.context', '@doctrine']
+        tags:
+            - { name: 'kernel.event_listener', event: 'security.interactive_login' }
+         
+#    cinema_cinema.example:
+#        class: %cinema_cinema.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    cinema.cinema.admin.user:
+        class: Cinema\CinemaBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Пользователи }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\User
+            - 'CinemaCinemaBundle:UserAdmin'
+     
+    cinema.cinema.admin.film:
+        class: Cinema\CinemaBundle\Admin\FilmAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Фильмы }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\Film
+            - 'CinemaCinemaBundle:FilmAdmin'
+            
+    cinema.cinema.admin.page:
+        class: Cinema\CinemaBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Страницы }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\Page
+            - 'CinemaCinemaBundle:PageAdmin'
+            
+    cinema.cinema.admin.news:
+        class: Cinema\CinemaBundle\Admin\NewsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Новости }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\News
+            - 'CinemaCinemaBundle:NewsAdmin'
+            
+    cinema.cinema.admin.banner:
+        class: Cinema\CinemaBundle\Admin\BannerAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Баннеры }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\Banner
+            - 'CinemaCinemaBundle:BannerAdmin'
+            
+    cinema.cinema.admin.snipet:
+        class: Cinema\CinemaBundle\Admin\SnipetAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Снипеты }
+        arguments:
+            - ~
+            - Cinema\CinemaBundle\Entity\Snipet
+            - 'CinemaCinemaBundle:SnipetAdmin'

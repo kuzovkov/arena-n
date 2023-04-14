@@ -1,0 +1,210 @@
+table.rasp-table
+{
+    border: 1px solid #737373;
+    margin: 20px auto 30px auto;
+}
+
+ @-moz-document url-prefix() 
+ { 
+    
+    .film-wrapper
+    {
+        height: 100%;
+        position: relative;
+    }
+                  
+ }
+
+
+table.rasp-table p.film-name
+{
+    color: #333333;
+    font-size: 18px;
+    cursor: pointer;   
+}
+
+table.rasp-table td.film
+{
+    padding: 5px;
+    border-bottom: 1px solid #737373;
+    position: relative;
+}
+
+@-moz-document url-prefix()
+{
+    table.rasp-table td.film
+    {
+        padding: 5px;
+        border-bottom: 1px solid #737373;
+        position: relative;
+    }
+}
+
+table.rasp-table p.imghide img
+{
+    display: none;   
+}
+
+table.rasp-table p.imgshow img
+{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    z-index: 2;
+    width: 180px;
+    height: auto;
+    border: 3px solid #737373;   
+}
+
+ @-moz-document url-prefix()
+ {
+    table.rasp-table p.imgshow img
+    {
+        top: -5px;
+        left: 383px; 
+    }
+ }
+
+table.rasp-table span.age
+{
+    width: 25px; 
+    height: 25px; 
+    line-height: 25px; 
+    text-align: center; 
+    color: #fff; 
+    background-color: #b44044; 
+    border-radius: 18px; 
+    font-size: 10px; 
+    font-family: 'a_futuraortoltlight';
+    display: inline-block;
+    margin: -10px 0 10px 5px;
+    position: absolute;
+    top: 15px;
+    left: 360px;
+}
+
+@-moz-document url-prefix()
+{
+    table.rasp-table span.age
+    {
+        top: 10px;
+        left: 355px;
+    }
+}
+
+table.rasp-table span.desc
+{
+    color: #737373;
+    font-size: 12px;   
+}
+
+table.rasp-table th
+{
+    width: 20px;
+    font-size: 18px;
+    background-color: #b44044;
+    padding: 10px 0 10px 0;
+    color: #fff;
+}
+
+table.rasp-table tr, table.rasp-table td, table.rasp-table th
+{
+    border: 1px solid #737373;
+}
+
+table.rasp-table td
+{
+    vertical-align: top;
+    padding: 0;
+}
+
+table.rasp-table th.film
+{
+    width: 400px;
+}
+
+table.rasp-table th.room
+{
+    width: 50px;
+}
+table.rasp-table th.seance
+{
+    width: 200px;
+}
+
+table.rasp-table th.prices
+{
+    width: 200px;
+}
+
+
+table.rasp-table td.room
+{
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #737373;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+    color: #737373;
+    
+}
+
+table.rasp-table td.time
+{
+    padding-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: #737373;
+    border-right: 1px solid #737373;
+    width: 179px;
+    cursor: pointer;
+}
+
+
+table.rasp-table td.price
+{
+    padding: 10px 0 10px 0;
+    text-align: center;
+    vertical-align: middle;
+    color: #737373;
+    cursor: pointer;
+}
+
+span.date-schedule
+{
+    font-size: 24px;
+    color: #737373;
+    font-weight: bold;
+    margin: 10px auto 10px auto;
+    width: 50px;
+}
+
+span.weekend
+{
+    color: #b44044;
+}
+
+a#next, a#prev
+{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#schedule_all_films, #schedule_film
+{
+    text-align: center;   
+}
+
+table.b-shed td.time, table.b-shed td.td-z 
+{
+    text-align: left;
+}
+
+a.qtip-price
+{
+    text-decoration: none;
+    color: #737373;
+}

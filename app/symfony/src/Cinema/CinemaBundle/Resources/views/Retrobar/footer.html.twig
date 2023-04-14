@@ -1,0 +1,75 @@
+</div>
+<br /> 
+{% include "CinemaCinemaBundle:Default:bottom_banner.html.twig" %}</div>
+<!-- content -->
+</div>
+<div class="sub-footer">&nbsp;</div>
+</div>
+</div>
+<!-- end main -->
+
+<!--  footer --><footer>
+<div class="foot-inner">
+<ul class="foot-nav">
+<li><a title="Ретро-Бар Арена Расписание" href="{{path('cinema_cinema_retrobar_page',{'slug':'schedule'})}}">РАСПИСАНИЕ</a></li>
+<li><a title="Ретро-Бар Арена О Ретро-Баре" href="{{url('cinema_cinema_retrobar_page', {'slug':'about'})}}">О Ретро-Баре</a></li>
+{#<li><a title="Ретро-Бар Арена Акции и скидки" href="{{path('cinema_cinema_retrobar_page',{'slug':'action'})}}">АКЦИИ И СКИДКИ</a></li>#}
+<li><a title="Ретро-Бар Арена Вакансии" href="{{url('cinema_cinema_retrobar_page', {'slug':'vacancy'})}}">Вакансии</a></li>
+<li><a title="Ретро-Бар Арена Контакты" href="{{url('cinema_cinema_retrobar_page', {'slug':'contact'})}}">Контакты</a></li>
+</ul>
+<div class="foot-info">Телефон: 56-57-59<br />Почта: <a href=" admin@arena-n.info "> admin@arena-n.info </a> &copy; 2014</div>
+
+{#
+<ul class="foot-soc">
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc1.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc2.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc3.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc4.png')}}" alt="" width="28" height="28" /></a></li>
+</ul>
+
+<ul class="foot-counters">
+<li><a><img src="{{asset('bundles/cinemacinema/images/f-counter1.png')}}" alt="" width="88" height="31" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/f-counter2.png')}}" alt="" width="31" height="31" /></a></li>
+</ul>
+<div class="develop"><a>Сайт разработан</a></div>
+#}
+
+<ul class="foot-counters">
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=16010767&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/16010767/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:16010767,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter16010767 = new Ya.Metrika({id:16010767,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/16010767" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</ul>
+</div>
+{#<div class="develop"><a href="admin/dashboard">Панель администратора</a></div>#}
+</footer><!-- end footer -->
+<p>&nbsp;</p>

@@ -1,0 +1,51 @@
+Cinema\CinemaBundle\Entity\Page:
+    type: entity
+    table: page
+    repositoryClass: Cinema\CinemaBundle\Entity\PageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '255'
+            nullable: false
+        content:
+            type: text
+            nullable: true
+        htmlTitle:
+            column: html_title
+            type: string
+            length: '255'
+            nullable: true
+        metaKeywords:
+            column: meta_keywords
+            type: string
+            length: '255'
+            nullable: true
+        metaDescription:
+            column: meta_description
+            type: string
+            length: '255'
+            nullable: true
+        type:
+            type: string
+            length: '255'
+            nullable: true
+        slug:
+            type: string
+            length: '255'
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+        
+           
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue ]
+        preUpdate: [ setUpdatedAtValue ]

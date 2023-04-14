@@ -1,0 +1,160 @@
+{% block form %}
+    {{ sonata_block_render_event('sonata.admin.edit.form.top', { 'admin': admin, 'object': object }) }}
+
+    {% set url = admin.id(object) is not null ? 'edit' : 'create' %}
+
+    {% if not admin.hasRoute(url)%}
+        <div>
+            {{ "form_not_available"|trans({}, "SonataAdminBundle") }}
+       
+    {% else %}
+         </div>
+        <form class="form-horizontal"
+              action="{{ admin.generateUrl(url, {'id': admin.id(object), 'uniqid': admin.uniqid, 'subclass': app.request.get('subclass')}) }}" {{ form_enctype(form) }}
+              method="POST"
+              {% if not admin_pool.getOption('html5_validate') %}novalidate="novalidate"{% endif %}
+              >
+            {% if form.vars.errors|length > 0 %}
+                <div class="sonata-ba-form-error">
+                    {{ form_errors(form) }}
+                </div>
+            {% endif %}
+           
+            {% block sonata_pre_fieldsets %}
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        {% for name, form_group in admin.formgroups %}
+                            <li class="{% if loop.first %}active{% endif %}">
+                                <a href="#{{ admin.uniqid }}_{{ loop.index }}" data-toggle="tab">
+                                    <i class="icon-exclamation-sign has-errors hide"></i>
+                                    {{ admin.trans(name, {}, form_group.translation_domain) }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+            {% endblock %}
+            
+            {% block sonata_tab_content %}
+                <div class="tab-content">
+                    {% for name, form_group in admin.formgroups %}
+                        <div class="tab-pane {% if loop.first %} active{% endif %}" id="{{ admin.uniqid }}_{{ loop.index }}">
+                            <fieldset>
+                                <div class="sonata-ba-collapsed-fields">
+                                    {% if form_group.description != false %}
+                                        <p>{{ form_group.description|raw }}</p>
+                                    {% endif %}
+
+                                    {% for field_name in form_group.fields %}
+                                        {% if admin.formfielddescriptions[field_name] is defined %}
+                                            {% if field_name != 'onbackground' %}
+                                                {{ form_row(form[field_name])}}
+                                               {% elseif object.getWallPresent %}
+                                                    {{ form_row(form[field_name])}}
+                                               {% else %} 
+                                                    {% set a=form_row(form[field_name])%}
+                                            {% endif %}
+                                            {% if field_name == 'trailer_link' %}
+                                                {% if object.getId != null %}
+                                                    <div class="trailer-div">
+                                                        <input type="submit" id="btn-trailer" form="load-trailer" value="Загрузить трейлер"/>
+                                                    </div>
+                                                    <div id="preload"><img src="{{asset('bundles/cinemacinema/images/720.GIF')}}"/></div>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %} 
+                                    {% endfor %}
+                                    
+                                </div>
+                            </fieldset>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endblock %}
+
+            {% include "CinemaCinemaBundle:js:js.html.twig" %}
+            
+            {% block sonata_post_fieldsets %}
+                </div>
+            {% endblock %}
+
+            {{ form_rest(form) }}
+            
+            {% block formactions %}
+                <div class="well well-small form-actions">
+                    {% if app.request.isxmlhttprequest %}
+                        {% if admin.id(object) is not null %}
+                            <input type="submit" class="btn btn-primary" name="btn_update" value="{{ 'btn_update'|trans({}, 'SonataAdminBundle') }}">
+                        {% else %}
+                            <input type="submit" class="btn" name="btn_create" value="{{ 'btn_create'|trans({}, 'SonataAdminBundle') }}">
+                        {% endif %}
+                    {% else %}
+                        {% if admin.supportsPreviewMode %}
+                            <button class="btn btn-info persist-preview" name="btn_preview" type="submit">
+                                <i class="icon-eye-open"></i>
+                                {{ 'btn_preview'|trans({}, 'SonataAdminBundle') }}
+                            </button>
+                        {% endif %}
+                        {% if admin.id(object) is not null %}
+                            <input type="submit" class="btn btn-primary" name="btn_update_and_edit" value="{{ 'btn_update_and_edit_again'|trans({}, 'SonataAdminBundle') }}">
+
+                            {% if admin.hasroute('list') %}
+                                <input type="submit" class="btn" name="btn_update_and_list" value="{{ 'btn_update_and_return_to_list'|trans({}, 'SonataAdminBundle') }}">
+                            {% endif %}
+
+                            {% if admin.hasroute('delete') and admin.isGranted('DELETE', object) %}
+                                {{ 'delete_or'|trans({}, 'SonataAdminBundle') }}
+                                <a class="btn btn-danger" href="{{ admin.generateObjectUrl('delete', object) }}">{{ 'link_delete'|trans({}, 'SonataAdminBundle') }}</a>
+                            {% endif %}
+
+                            {% if admin.isAclEnabled() and admin.hasroute('acl') and admin.isGranted('MASTER', object) %}
+                                <a class="btn" href="{{ admin.generateObjectUrl('acl', object) }}">{{ 'link_edit_acl'|trans({}, 'SonataAdminBundle') }}</a>
+                            {% endif %}
+                        {% else %}
+                            {% if admin.hasroute('edit') %}
+                                <input class="btn btn-primary" type="submit" name="btn_create_and_edit" value="{{ 'btn_create_and_edit_again'|trans({}, 'SonataAdminBundle') }}">
+                            {% endif %}
+                            {% if admin.hasroute('list') %}
+                                <input type="submit" class="btn" name="btn_create_and_list" value="{{ 'btn_create_and_return_to_list'|trans({}, 'SonataAdminBundle') }}">
+                            {% endif %}
+                            <input class="btn" type="submit" name="btn_create_and_create" value="{{ 'btn_create_and_create_a_new_one'|trans({}, 'SonataAdminBundle') }}">
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endblock formactions %}
+        </form>
+        
+    {% endif%}
+
+    {{ sonata_block_render_event('sonata.admin.edit.form.bottom', { 'admin': admin, 'object': object }) }}
+    {% if object.getContent is defined %}
+        <form id="upload-image-page" method="post" enctype="multipart/form-data" action="{{url('cinema_cinema_admin_image_upload',{'id':object.getId})}}"> 
+        </form>
+    {% endif %}
+    
+    {% if object.getWallUrl is defined %}
+        <form id="upload-wall-film" method="post" enctype="multipart/form-data" action="{{url('cinema_cinema_admin_image_upload_wall',{'id':object.getId})}}"> 
+        </form>
+         <form id="upload-name-film" method="post" enctype="multipart/form-data" action="{{url('cinema_cinema_admin_image_upload_name',{'id':object.getId})}}"> 
+        </form>
+    {% endif %}
+    
+    {% if object.getId is defined %}
+        <script type="text/javascript">
+            var trailerLink = $('#{{admin.uniqid}}_trailer_link');
+            var url = trailerLink.val();
+            var input = "<input type='hidden' id='trailer-url' name='trailer_url' value='" + url + "' form='load-trailer' />";
+            document.write(input);
+            $('#preload').hide();
+        </script>
+        
+        <form id="load-trailer" method="post" action="{{url('cinema_cinema_admin_trailer_load',{'id':object.getId})}}"> 
+        </form>
+        
+        <script type="text/javascript">
+            
+            var form = document.getElementById('load-trailer');
+            form.onsubmit = function(){  $('#trailer-url').val($('#{{admin.uniqid}}_trailer_link').val());$('#preload').show(); $('#btn-trailer').attr('disabled','disabled'); };
+            
+        </script>
+    {% endif %}
+{% endblock %}

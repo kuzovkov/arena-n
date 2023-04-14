@@ -1,0 +1,62 @@
+{% extends '::retrobar_base.html.twig' %}
+
+{% block content %}
+    {% include "CinemaCinemaBundle:Retrobar:action.html.twig" %}
+	{% include "CinemaCinemaBundle:Retrobar:activity.html.twig" %}			
+    {% include "CinemaCinemaBundle:Retrobar:news.html.twig" %}            
+			
+			
+{% endblock %}
+
+
+{% block javascripts %}
+<script type="text/javascript">
+var nav = document.getElementById('price');
+nav.className = "active";
+        
+function hideFull()
+{
+    $('.in-text div.full').hide();
+}
+
+function showShort()
+{
+    $('.in-text div.short').show();
+}
+
+hideFull(); 
+
+function more( id, elem )
+{
+    if ( elem.html() == '<a>подробнее</a>')
+                                {
+                                     
+                                    $('#short_'+id).hide();
+                                    $('#full_'+id).fadeIn(1000);
+                                    elem.html('<a>свернуть</a>'); 
+                                }
+                                else
+                                {
+                                    $('#full_'+id).hide();
+                                    $('#short_'+id).fadeIn(1000);
+                                    elem.html('<a>подробнее</a>'); 
+                                    
+                                }
+}
+
+$('.in-more').click(function(){ 
+                                
+                                var id=this.id;
+                                var elem = $(this);
+                                more(id,elem);  
+                            }
+                      );
+
+</script>
+{% endblock %}
+
+
+
+				
+	
+

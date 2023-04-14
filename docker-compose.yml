@@ -1,0 +1,66 @@
+version: '3.0'
+services:
+  nginx:
+    image: nginx:1.18-alpine
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+     - ./nginx/conf.d:/etc/nginx/conf.d:ro
+     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+     - share:/run/php
+     - ./certbot/conf:/etc/letsencrypt
+     - ./certbot/www:/var/www/certbot
+     - ./app/symfony:/var/www/html
+    networks:
+      - backend
+    depends_on:
+      - app
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app/symfony:/var/www/html
+      - share:/run/php
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:8.0.31
+    volumes:
+     - mysql-data:/var/lib/mysql
+     - ./mysql/dumps:/dumps
+     - ./mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf:ro
+     - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+    - "23306:3306"
+    environment:
+     MYSQL_ROOT_PASSWORD: rootP@ssw0rd
+     MYSQL_USER: arena
+     MYSQL_PASSWORD: P@ssw0rd
+     MYSQL_DATABASE: symfony1
+    networks:
+      - backend
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "1"
+
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mysql-data: {}
+  share: {}

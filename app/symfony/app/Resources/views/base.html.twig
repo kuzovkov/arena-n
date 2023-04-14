@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         {% block metatag %}
+            <meta name="description" content="Кинотеатр Эрвий" />
+            <meta name="keywords" content="Кинотеатр Эрвий, Йошкар-Ола, Арена, клуб, кинотеатр, кино, расписание, смотрите, дискотека" />
+            <meta name="copyright" content="Арена" />
+         {% endblock %}
+        <title>{% block title %}Кинотеатр "Эрвий"{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/style.css?dfgdf=dfgdfgdf')}}"/>
+            <link type="text/css" rel="stylesheet" href="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.css')}}"/>
+        {% endblock %}
+        {% block js_top%}
+            <script src="{{asset('bundles/cinemacinema/js/jquery-1.11.0.min.js')}}"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/jquery.jcarousel.min.js')}}"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/jquery.stylish-select.min.js')}}"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/script.js?gdfgg=dfgdfgdsfgd')}}"></script>
+            <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript"></script>
+            <script type="text/javascript" src="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.js')}}"></script>
+            <script type="text/javascript" src="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.pack.js')}}"></script>
+            <script type="text/javascript">
+                    var s,i,x;
+                    x=document.getElementsByTagName('link');
+                    for(i=0;i<x.length;i++){x[i].href=x[i].href+'?'+new Date().getTime();}
+            </script>
+         <!--[if lt IE 9]> 
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->       
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+       
+    </head>
+    <body>
+       
+       {% block header %}
+            {% include "CinemaCinemaBundle:Default:header.html.twig" %}    
+       {% endblock %}
+        
+        {% block content %}
+        
+        {% endblock %}
+        
+       {% block footer %}
+        {% include "CinemaCinemaBundle:Default:footer.html.twig" %}
+       {% endblock %} 
+        
+        {% block javascripts %}
+            {% if data.filmbackground is defined %}
+            
+            {% if data.filmbackground %}
+            <script type="text/javascript">
+                var PATH_TO_WALL = '../../../upload/images/film_wall/';
+                var PATH_TO_NAME = '../../../upload/images/names/';
+                var filename = PATH_TO_WALL + '{{data.filmbackground.getImageWallName}}';
+                 
+                var wrap = document.getElementsByClassName('wrap-main')[0];
+                //console.log(wrap);
+                var btnbuy = $('.wrp-btn-buy');
+                var background = 'url("' + filename + '") center 0 no-repeat';
+                wrap.style.background = background;
+                //wrap.css({'background':background,'min-height': '100%', 'width': '100%', 'min-width': '980px', 'background-attachment': 'fixed'});
+                
+                {% if data.filmnameimage is defined %}
+                var namefilm = PATH_TO_NAME + '{{data.filmnameimage}}';
+                var backgroundBtnBuy = 'url("'+ namefilm + '") center center no-repeat';
+                btnbuy.css({'height':'298px', 'position':'relative', 'width':'960px', 'margin':'0 auto','background':backgroundBtnBuy});
+                {% endif %}
+            </script>
+            {% endif %}
+            
+            {% endif %}
+        {% endblock %}
+    </body>
+</html>

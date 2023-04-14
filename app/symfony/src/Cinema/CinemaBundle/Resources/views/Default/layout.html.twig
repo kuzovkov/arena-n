@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block metatag %}
+    
+    <meta name="keywords" content="Кинотеатр Эрвий, Йошкар-Ола, Арена, клуб, кинотеатр, кино, расписание, смотрите, дискотека {{page.getMetaKeywords}}"/>
+    <meta name="description" content="Кинотеатр Эрвий {{page.getMetaDescription}}"/>
+    <meta name="copyright" content="Арена" />
+{% endblock %}
+
+{% block title %}
+    {{page.getHtmlTitle}}
+{% endblock %}
+ 
+{% block content %}
+    <div class="i-title">{{page.getTitle}}</div>
+    {{page.getContent | raw}}
+</div>
+{% endblock %}
+        
+{% block javascript%}
+{{parent()}}
+
+{% endblock %}

@@ -1,0 +1,110 @@
+</div>
+<br /> {% include "CinemaCinemaBundle:Default:bottom_banner.html.twig" %}</div>
+<!-- content -->
+</div>
+<div class="sub-footer">&nbsp;</div>
+</div>
+</div>
+<!-- end main -->
+
+
+<!--  footer --><footer>
+<div class="foot-inner">
+<ul class="foot-nav">
+<li><a title="кинотеатр Эрвий Расписание" href="{{path('cinema_cinema_schedule')}}">РАСПИСАНИЕ СЕАНСОВ</a></li>
+<li><a title="кинотеатр Эрвий О кинотеатре" href="{{url('cinema_cinema_page', {'slug':'about'})}}">О кинотеатре</a></li>
+{#<li><a title="кинотеатр Эрвий Акции и скидки" href="{{path('cinema_cinema_action')}}">АКЦИИ И СКИДКИ</a></li>#}
+<li><a title="кинотеатр Эрвий Вакансии"href="{{url('cinema_cinema_page', {'slug':'vacancy'})}}">Вакансии</a></li>
+<li><a title="кинотеатр Эрвий Контакты" href="{{url('cinema_cinema_page', {'slug':'contact'})}}">Контакты</a></li>
+<li><a title="кинотеатр Эрвий Договор-оферта" href="{{url('cinema_cinema_page', {'slug':'oferta'})}}">Договор-оферта</a></li>
+<li><a title="кинотеатр Эрвий Способы оплаты" href="{{url('cinema_cinema_page', {'slug':'payment'})}}">Способы оплаты</a></li>
+<li><a title="кинотеатр Эрвий Купить билет" href="{{url('cinema_cinema_page', {'slug':'buyticket'})}}">Купить билет</a></li>
+</ul>
+<div class="foot-info">Телефон: 
+        {% if data.snipets is defined %}
+            {% for snipet in data.snipets %}
+                {% if snipet.getKey == 'bottom_phone' %}
+                    {{snipet.getSnipet | raw}}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            bottom_phone
+        {% endif %}<br />Почта: <a href="mailto: 
+        
+        {% if data.snipets is defined %}
+            {% for snipet in data.snipets %}
+                {% if snipet.getKey == 'email' %}
+                    {{snipet.getSnipet | raw}}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            email
+        {% endif %} "> 
+        {% if data.snipets is defined %}
+            {% for snipet in data.snipets %}
+                {% if snipet.getKey == 'email' %}
+                    {{snipet.getSnipet | raw}}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            email
+        {% endif %} </a> &copy; 2014</div>
+
+{#
+<ul class="foot-soc">
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc1.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc2.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc3.png')}}" alt="" width="28" height="28" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/fsc4.png')}}" alt="" width="28" height="28" /></a></li>
+</ul>
+
+<ul class="foot-counters">
+<li><a><img src="{{asset('bundles/cinemacinema/images/f-counter1.png')}}" alt="" width="88" height="31" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/f-counter2.png')}}" alt="" width="31" height="31" /></a></li>
+</ul>
+<div class="develop"><a>Сайт разработан</a></div>
+#}
+
+<ul class="foot-counters">
+
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=28028790&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/28028790/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:28028790,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter28028790 = new Ya.Metrika({id:28028790,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/28028790" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</ul>
+</div>
+{#<div class="develop"><a href="admin/dashboard">Панель администратора</a></div>#}
+</footer><!-- end footer -->
+<p>&nbsp;</p>
+

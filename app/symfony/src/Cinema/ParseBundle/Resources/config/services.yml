@@ -1,0 +1,7 @@
+parameters:
+#    cinema_parse.example.class: Cinema\ParseBundle\Example
+
+services:
+#    cinema_parse.example:
+#        class: %cinema_parse.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

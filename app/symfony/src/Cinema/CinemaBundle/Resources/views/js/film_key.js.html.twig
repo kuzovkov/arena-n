@@ -1,0 +1,23 @@
+<script type="text/javascript">    
+   var ids = [];
+   var colors = [];
+   {% for object in admin.datagrid.results %}
+        ids.push({{object.getId}});
+        colors.push('{{object.defineColor}}');  
+   {% endfor %}
+   
+   for ( var i = 0; i < ids.length; i++ ){
+        
+        var color = defineColor(i);
+        var selector1 = 'td[objectid='+ids[i]+']';
+        var selector2 = 'td[objectid='+ids[i]+'] a';
+        $(selector1).css('color',color);
+        $(selector2).css('color',color);
+   }
+   
+   function defineColor(i){
+       return colors[i];
+   } 
+     
+              
+</script>

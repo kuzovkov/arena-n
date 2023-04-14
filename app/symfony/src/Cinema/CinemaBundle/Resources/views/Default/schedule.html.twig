@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{parent()}}
+    <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/schedule.css')}}"/>
+    <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/jquery.qtip.min.css')}}"/>
+    {#<link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/jquery.qtip.css')}}"/>#}
+{% endblock %}
+
+{% block js_top%}
+    {{parent()}}
+    <script src="{{asset('bundles/cinemacinema/js/jquery.qtip.min.js')}}"></script>
+    {#<script src="{{asset('bundles/cinemacinema/js/jquery.stylish-select.min.js')}}"></script>
+    <script src="{{asset('bundles/cinemacinema/js/imagesloaded.pkg.min.js')}}"></script>#}
+          
+{% endblock %}
+
+{% block content %}
+
+<div id="schedule_all_films"><img class="preload" src="{{asset('bundles/cinemacinema/images/725.gif')}}"/></div>
+<div class="cl"></div>
+</div>
+<br /> 
+<div class="cl"></div>
+{% endblock %}
+
+{% block javascripts %}
+{{parent()}}
+<script type="text/javascript">
+var nav = document.getElementById('schedule');
+nav.className = "active";
+var day = 0;
+loadSchedule();
+
+function loadSchedule()
+{
+    $('#schedule_all_films').load('{{path("cinema_cinema_get_full_schedule_table")}}',{day:day});
+}
+
+</script> 
+{% endblock %}
+

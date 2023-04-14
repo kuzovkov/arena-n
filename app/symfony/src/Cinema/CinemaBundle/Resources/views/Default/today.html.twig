@@ -1,0 +1,117 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+<div class="b-title">Сегодня</div>
+<div class="video-desc-soon">
+{% for film in data.today %}
+    
+    <div class="video-pic">
+    <a href="{{url('cinema_cinema_film', {'slug': film.getSlug})}}">
+    <img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="170" height="241" />
+    </a>
+    </div>
+    <div class="video-desc">
+    <div class="yy">{{film.getAgelimit}}+</div>
+    <table>
+        <tbody>
+        <tr>
+            <td>Название:</td>
+            <td><b>{{film.getName}}</b></td>
+        </tr>
+        <tr>
+            <td>Производство:</td>
+            <td>{{film.getCountry}}</td>
+        </tr>
+        <tr>
+            <td>Премьера в кинотеатре "Эрвий":</td>
+            <td>
+            {% if film.getDateFirstArena %}
+            {{film.getDateFirstArena.format('d m Y')}} г.
+            {% else %}
+             - 
+            {% endif %}
+            </td>
+        </tr>
+        {% if film.getDateFirstWorld.timestamp > 0 %}
+        <tr>
+            <td>Мировая премьера:</td>
+            <td>
+            {% if film.getDateFirstWorld  %}
+            {{film.getDateFirstWorld.format('d m Y')}} г.
+            {% else %}
+             - 
+            {% endif %}
+            </td>
+        </tr>
+        {% endif %}
+        {% if film.getBudget %}
+        <tr>
+            <td>Бюджет:</td>
+            <td>$ {{film.getBudget | number_format(0,' ',' ')}}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td>Жанр:</td>
+            <td>{{film.getGenre}}</td>
+        </tr>
+        <tr>
+            <td>Режиссер:</td>
+            <td>{{film.getDirector}}</td>
+        </tr>
+        {% if film.getDuration %}
+        <tr>
+            <td>Продолжительность:</td>
+            <td>{{film.getDuration}}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td>В формате:</td>
+            <td>{% if data.formats[film.getId] == '3D'%} 
+                    <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
+                {% endif %}
+                
+                {% if data.formats[film.getId] == '2D' %} 
+                    <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />
+                {% endif %}
+                 
+                {% if data.formats[film.getId] == '3D2D' %}
+                    <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
+                    <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />  
+                {% endif %}
+            </td>
+        </tr>
+        {% if film.getRating %}
+        <tr>
+            <td>Рейтинг:</td>
+            <td>{{film.getRating | number_format(1,'.', ' ')}}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+    
+    </div>
+    <p class="film-description">{{film.getDescription | striptags | raw}}</p>
+    <hr />
+{% endfor %}
+
+</div>
+{% include "CinemaCinemaBundle:Default:banners.html.twig" %}
+
+</div>
+<br /> 
+<div class="cl"></div>
+
+{% endblock %}
+
+{% block javascripts %}
+{{parent()}}
+<script type="text/javascript">
+ //tr-odd
+ $('.video-desc table tr:odd').addClass('tr-odd');
+    
+var nav = document.getElementById('today');
+nav.className = "active";
+</script> 
+{% endblock %}
+

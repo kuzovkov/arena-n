@@ -1,0 +1,20 @@
+addon_backup:
+    resource: "@AddonBackupBundle/Resources/config/routing.yml"
+    prefix:   /database
+
+cinema_parse:
+    resource: "@CinemaParseBundle/Resources/config/routing.yml"
+    prefix:   /
+
+cinema_cinema:
+    resource: "@CinemaCinemaBundle/Resources/config/routing.yml"
+    prefix:  /
+
+admin:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+    
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin

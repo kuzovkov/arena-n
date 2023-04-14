@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         {% block metatag %}
+            <meta name="description" content="Кинотеатр Эрвий" />
+            <meta name="keywords" content="Кинотеатр Эрвий, Йошкар-Ола, Арена, клуб, кинотеатр, кино, расписание, смотрите, дискотека" />
+            <meta name="copyright" content="Арена" />
+         {% endblock %}
+        <title>{% block title %}РетроБар{% endblock %}</title>
+        {% block stylesheets %}
+           <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/dark.css')}}"/>
+           <link type="text/css" rel="stylesheet" href="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.css')}}"/>
+        {% endblock %}
+        {% block js_top%}
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/jquery.jcarousel.min.js')}}"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/jquery.stylish-select.min.js')}}"></script>
+        	<script src="{{asset('bundles/cinemacinema/js/script.js')}}"></script>
+            <script type="text/javascript" src="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.js')}}"></script>
+            <script type="text/javascript" src="{{asset('bundles/cinemacinema/js/fancybox/jquery.fancybox.pack.js')}}"></script>
+        	<!--[if lt IE 9]> 
+        		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+        	<![endif]-->
+                
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+       
+    </head>
+    <body>
+       
+       {% block header %}
+            {% include "CinemaCinemaBundle:Retrobar:header.html.twig" %}     
+       {% endblock %}
+        
+        {% block content %}
+        
+        {% endblock %}
+        
+       {% block footer %}
+        {% include "CinemaCinemaBundle:Retrobar:footer.html.twig" %}
+       {% endblock %} 
+        
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

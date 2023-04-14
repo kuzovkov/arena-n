@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+{% if data.news %}
+{% set news = data.news %}
+<div class="i-news clearfix">
+<div class="in-pic"><a id="single_1" href="/{{news.getUploadDir}}{{news.getImg}}"><img src="/{{news.getUploadDir}}{{news.getImg}}" alt="" width="103" /></a></div>
+<div class="in-text">
+{% if news.getUpdatedAt %}
+<time class="clearfix"><i>{{news.getUpdatedAt.format('j')}}</i><em>{{data.month[news.getUpdatedAt.format('m')-1]}}</em><span>{{news.getUpdatedAt.format('Y')}}</span></time>
+{% else %}
+<time class="clearfix"><i>{{news.getCreatedAt.format('j')}}</i><em>{{data.month[news.getCreatedAt.format('m')-1]}}</em><span>{{news.getCreatedAt.format('Y')}}</span></time>
+{% endif %}
+<h3 id="{{news.getId}}" class="more"><a>{{news.getTitle}}</a></h3>
+
+<div><p>{{news.getContent | raw}}</p></div>
+
+</div>
+</div>
+
+{% endif %}   
+<div class="in-more all-news"><a href="{{url('cinema_cinema_all_news')}}">Все новости</a></div>
+
+{% endblock %}
+{% block javascripts %}
+{{parent()}}
+<script type="text/javascript">
+    $("#single_1").fancybox({
+              helpers: {
+                  title : {
+                      type : 'float'
+                  }
+              }
+          });
+</script>
+{% endblock %}
+

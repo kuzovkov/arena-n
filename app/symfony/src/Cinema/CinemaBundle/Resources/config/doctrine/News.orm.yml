@@ -1,0 +1,40 @@
+Cinema\CinemaBundle\Entity\News:
+    type: entity
+    table: news
+    repositoryClass: Cinema\CinemaBundle\Entity\NewsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '255'
+            nullable: true
+        content:
+            type: text
+            nullable: true
+        img:
+            type: string
+            length: '255'
+            nullable: true
+        type:
+            type: string
+            length: 255
+            nullable: true
+        userId:
+            column: user_id
+            type: integer
+            nullable: true
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+        
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue ]
+        preUpdate: [ setUpdatedAtValue ]

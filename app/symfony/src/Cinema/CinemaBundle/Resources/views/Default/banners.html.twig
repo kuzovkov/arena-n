@@ -1,0 +1,16 @@
+<aside class="col-right">
+<ul class="sbn">
+{#
+<li><a><img src="{{asset('bundles/cinemacinema/images/sb1.png')}}" alt="" width="200" height="344" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/sb2.png')}}" alt="" width="200" height="129" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/sb3.png')}}" alt="" width="200" height="228" /></a></li>
+<li><a><img src="{{asset('bundles/cinemacinema/images/sb1.png')}}" alt="" width="200" height="344" /></a></li>
+#}
+{% if data.banners %}
+    {% for banner in data.banners %}
+        <li><a {%if banner.getBannerUrl %} href="{{banner.getBannerUrl}}"{% endif %}><img src="{{banner.getBannerImageUrl}}" alt="" width="200" /></a></li>
+    {% endfor %}
+{% endif %}
+</ul>
+
+</aside>

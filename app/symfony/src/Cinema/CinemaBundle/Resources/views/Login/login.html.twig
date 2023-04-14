@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Логин{% endblock %}
+{% block stylesheets %}
+{{parent()}}
+<link rel="stylesheet" type="text/css" href="{{asset('bundles/cinemacinema/css/login.css')}}"/> 
+
+{% endblock %}
+
+{% block content %}
+
+<form id="loginForm" action="{{ path('login_check') }}" method="post">
+	{% if error is defined %}
+    {% if error %}
+        <div class="login-error">{{ error.message }}</div>
+    {% endif %}
+    {% endif %}
+    
+    <div class="field">
+		<label>Имя пользователя:</label>
+		<div class="input"><input type="text" name="_username" value="{{ last_username }}" id="login" /></div>
+	</div>
+
+	<div class="field">
+		{#<a href="#" id="forgot">Забыли пароль?</a>#}
+		<label>Пароль:</label>
+		<div class="input"><input type="password" name="_password" value="" id="pass" /></div>
+	</div>
+
+	<div class="submit">
+		<button type="submit">Войти</button>
+        <button id="cancel" type="button">Отмена</button>
+		{#<label id="remember"><input name="" type="checkbox" value="" /> Запомнить меня</label>#}
+	</div>
+</form>
+<div class="cl"></div>
+{% endblock %}
+
+
+{% block javascripts %}
+{{parent()}}
+    <script type="text/javascript">
+    var btn = document.getElementById('cancel');
+    btn.onclick = function(){ document.location.href="{{path('cinema_cinema_homepage')}}";};
+    
+    </script>
+
+{% endblock %}

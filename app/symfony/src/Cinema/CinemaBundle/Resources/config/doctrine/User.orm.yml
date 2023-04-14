@@ -1,0 +1,34 @@
+Cinema\CinemaBundle\Entity\User:
+    type: entity
+    table: user
+    repositoryClass: Cinema\CinemaBundle\Entity\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: '255'
+        password:
+            type: string
+            length: '255'
+        email:
+            type: string
+            lenght: '255'
+        roles:
+            type: string
+            lenght: '255'
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+            
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue ]
+        preUpdate: [ setUpdatedAtValue ]
+    

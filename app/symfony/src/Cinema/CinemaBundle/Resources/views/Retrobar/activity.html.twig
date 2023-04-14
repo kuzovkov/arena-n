@@ -1,0 +1,24 @@
+<div class="cat-tabs"></div>
+<div class="b-title">ОЖИДАЕМЫЕ МЕРОПРИЯТИЯ</div>
+             
+<ul class="tf-list clearfix">
+    {% if data.rb_activity %}
+        {% for news in data.rb_activity %} 
+       
+        <li>
+            <a title="Ретро-бар Арена" href="{{url('cinema_cinema_one_news_retrobar',{id:news.getId})}}">
+				<i><img src="/{{news.getUploadDir}}{{news.getImg}}" width="203" alt=""/></i>
+				<div>
+                    {% if news.getUpdatedAt %}
+                        <time class="clearfix"><i>{{news.getUpdatedAt.format('j')}}</i><em>{{data.month[news.getUpdatedAt.format('m')-1]}}</em><span>{{news.getUpdatedAt.format('Y')}}</span></time>
+                    {% else %}
+                        <time class="clearfix"><i>{{news.getCreatedAt.format('j')}}</i><em>{{data.month[news.getCreatedAt.format('m')-1]}}</em><span>{{news.getCreatedAt.format('Y')}}</span></time>
+                    {% endif %}
+                    <p>{{news.getContent | striptags | slice(0,70) | replace({'&nbsp;':' '})}}</p></a>
+                </div>
+        </li>
+        {% endfor %}
+    {% endif %}            
+                    
+</ul>
+<div class="in-more all-news"><a title="Ретро-бар Арена Все мероприятия" href="{{url('cinema_cinema_all_news_retrobar',{'type':'activity'})}}">Все мероприятия >></a></div>

@@ -1,0 +1,386 @@
+{#<script type="text/javascript" src="{{asset('/bundles/cinemacinema/js/ckeditor/ckeditor.js')}}"></script>#}
+
+<script type="text/javascript">
+
+if ( $('textarea').is('#{{admin.uniqid}}_content') )
+{
+    //CKEDITOR.replace('{{admin.uniqid}}_content',{width: 480, height: 400} );
+    
+    tinymce.init({ selector: "#{{admin.uniqid}}_content", width: 425, height: 400, language : 'ru',
+    plugins: [
+                "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "table contextmenu directionality emoticons template textcolor paste textcolor"
+        ],
+        image_list: [ {% render '/admin/getimagelist' %} ],
+        toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | inserttime preview | forecolor backcolor",
+        toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft",
+
+        menubar: false,
+        code_dialog_width: 1024,
+        toolbar_items_size: 'small',
+
+        style_formats: [
+                {title: 'Bold text', inline: 'b'},
+                {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                {title: 'Example 1', inline: 'span', classes: 'example1'},
+                {title: 'Example 2', inline: 'span', classes: 'example2'},
+                {title: 'Table styles'},
+                {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+        ],
+
+        templates: [
+                {title: 'Test template 1', content: 'Test 1'},
+                {title: 'Test template 2', content: 'Test 2'}
+        ]
+    });
+    
+    {% if object.getId %}
+    
+    {% if object.getSlug is defined %}
+    //form upload image for page
+     var fieldContent = $('#{{admin.uniqid}}_content');
+        var link = '<a href="#" id="switch" style="margin: 0 0 0 10px;">Загрузить изображение</a>';
+        fieldContent.after(link);
+        var block = '<div id="image_upload" style="margin: 15px 0 5px 0;"></div>';
+        var link = $('#switch');
+        link.after(block);
+        var block = $('#image_upload');
+        block.css({'position':'relative'});
+        var load = false;
+        link.toggle( function()
+        {
+            if( !load )
+            {
+                block.load("{{path('cinema_cinema_admin_get_form_upload',{'id':object.getId, 'form':'upload-image-page'})}}");
+                load = true;
+            }
+            else
+            {
+                block.fadeIn(1000);
+            }
+        
+            link.text("Скрыть форму загрузки");
+            },
+            function(){ block.fadeOut(1000); link.text("Загрузить изображение");} );
+    //end form upload image for page
+    {% endif %}
+    {% endif %}
+}
+else if ( $('textarea').is('#{{admin.uniqid}}_description') )
+{
+    //CKEDITOR.replace('{{admin.uniqid}}_description',{width: 480, height: 400} );
+       
+    tinymce.init( { selector: "#{{admin.uniqid}}_description", width: 425, height: 400, language : 'ru',
+    plugins: [
+                "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "table contextmenu directionality emoticons template textcolor paste fullpage textcolor"
+        ],
+
+        toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | inserttime preview | forecolor backcolor",
+        toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft",
+
+        menubar: false,
+        code_dialog_width: 1024,
+        toolbar_items_size: 'small',
+
+        style_formats: [
+                {title: 'Bold text', inline: 'b'},
+                {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                {title: 'Example 1', inline: 'span', classes: 'example1'},
+                {title: 'Example 2', inline: 'span', classes: 'example2'},
+                {title: 'Table styles'},
+                {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+        ],
+
+        templates: [
+                {title: 'Test template 1', content: 'Test 1'},
+                {title: 'Test template 2', content: 'Test 2'}
+        ]
+    });
+    
+}
+
+//if IE or Firefox
+var browser = navigator.userAgent.toLowerCase();
+    if ( ( browser.indexOf( 'msie' ) != -1 ) || ( 
+                        browser.indexOf( 'firefox' ) != -1 ) )
+    {
+         if ( $('input').is('#{{admin.uniqid}}_date_first') )
+        {
+            {% if object.getDateFirst is defined %}
+            {% if object.getDateFirst %}
+                var dateFirst = '{{object.getDateFirst.format("Y-m-d")}}';
+            {% else %}
+            var dateFirst = 'now';
+            {% endif %}
+            {% endif %}
+            $('input#{{admin.uniqid}}_date_first').datepicker( $.datepicker.regional[ "ru" ]);
+            $('input#{{admin.uniqid}}_date_first').datepicker("option","dateFormat","yy-mm-dd");
+            $('input#{{admin.uniqid}}_date_first').datepicker("setDate",dateFirst);
+        }
+        
+        if ( $('input').is('#{{admin.uniqid}}_date_last') )
+        {
+            {% if object.getDateLast is defined %}
+            {% if object.getDateLast %}
+            var dateLast = '{{object.getDateLast.format("Y-m-d")}}';
+            {% else %}
+            var dateLast = 'now';
+             {% endif %}
+             {% endif %}
+            $('input#{{admin.uniqid}}_date_last').datepicker($.datepicker.regional[ "ru" ]);
+            $('input#{{admin.uniqid}}_date_last').datepicker("option","dateFormat","yy-mm-dd");
+            $('input#{{admin.uniqid}}_date_last').datepicker("setDate",dateLast);
+        }
+        
+        if ( $('input').is('#{{admin.uniqid}}_date_first_world') )
+        {
+            {% if object.getDateFirstWorld is defined %}
+            {% if object.getDateFirstWorld %}
+            var dateFirstWorld = '{{object.getDateFirstWorld.format("Y-m-d")}}';
+            {% else %}
+            var dateFirstWorld = 'now';
+            {% endif %}
+            {% endif %}
+            $('input#{{admin.uniqid}}_date_first_world').datepicker($.datepicker.regional[ "ru" ]);
+            $('input#{{admin.uniqid}}_date_first_world').datepicker("option","dateFormat","yy-mm-dd");
+            $('input#{{admin.uniqid}}_date_first_world').datepicker("setDate",dateFirstWorld);
+        }
+        
+        if ( $('input').is('#{{admin.uniqid}}_date_first_arena') )
+        {
+             {% if object.getDateFirstArena is defined %}
+            {% if object.getDateFirstArena %}
+            var dateFirstArena = '{{object.getDateFirstArena.format("Y-m-d")}}';
+            {% else %}
+            var dateFirstArena = 'now';
+            {% endif %}
+            {% endif %}
+            $('input#{{admin.uniqid}}_date_first_arena').datepicker($.datepicker.regional[ "ru" ]);
+            $('input#{{admin.uniqid}}_date_first_arena').datepicker("option","dateFormat","yy-mm-dd");
+            $('input#{{admin.uniqid}}_date_first_arena').datepicker("setDate",dateFirstArena);
+        }
+        
+        if ( $('input').is('#{{admin.uniqid}}_end_key') )
+        {
+             {% if object.getEndKey is defined %}
+            {% if object.getEndKey %}
+            var dateEndKey = '{{object.getEndKey.format("Y-m-d")}}';
+            {% else %}
+            var dateEndKey = null;
+            {% endif %}
+            {% endif %}
+            $('input#{{admin.uniqid}}_end_key').datepicker($.datepicker.regional[ "ru" ]);
+            $('input#{{admin.uniqid}}_end_key').datepicker("option","dateFormat","yy-mm-dd");
+            $('input#{{admin.uniqid}}_end_key').datepicker("setDate",dateEndKey);
+        }
+    
+    }  //endif IE or Firefox
+    
+    
+    {% if object.getId %}
+    var IMAGE_PATH = '/upload/images/film_big/';
+    var SMALL_IMAGE_PATH = '/upload/images/film/';
+    var WALL_IMAGE_PATH = '/upload/images/film_wall/';
+    var NEWS_IMAGE_PATH = '/upload/images/news/';
+    
+    if ( $('input').is('#{{admin.uniqid}}_poster_small') )
+    {
+        var inputPosterSmall = $('#{{admin.uniqid}}_poster_small');
+        var value = inputPosterSmall.attr('value');
+        var name = '{{object.getId}}' + '.jpg';
+        var image = '<p style="margin:5px"><img src="'+SMALL_IMAGE_PATH+name+'" /></p>';
+        inputPosterSmall.after(image);
+     
+    }
+    
+    if ( $('input').is('#{{admin.uniqid}}_poster_big') )
+    {
+        var inputPosterBig = $('#{{admin.uniqid}}_poster_big');
+        var value = inputPosterBig.attr('value');
+        var name = '{{object.getId}}' + '.jpg';
+        var image = '<p style="margin:8px"><img src="'+IMAGE_PATH+name+'" width="20%" height="20%"/><p>';
+        inputPosterBig.after(image);
+    }
+    
+    {% if object.getImageWallName is defined %}
+    if ( $('input').is('#{{admin.uniqid}}_wall_url') )
+    {
+        var inputWallUrl = $('#{{admin.uniqid}}_wall_url');
+        var value = inputWallUrl.attr('value');
+        var name = '{{object.getImageWallName}}?x=' + Math.random()*100000;
+        var image = '<p style="margin:8px"><img src="'+WALL_IMAGE_PATH+name+'" width="20%" height="20%"/><p>';
+        inputWallUrl.after(image);
+        
+       
+        //form upload wall
+        var linkTr = '<a href="#" id="switch_wall" style="margin: 0 0 0 10px;">Загрузить обои с диска</a>';
+        inputWallUrl.after(linkTr);
+        var blockTr = '<div id="trailer_upload" style="margin: 15px 0 5px 0;"></div>';
+        var linkTr = $('#switch_wall');
+        linkTr.after(blockTr);
+        var blockTr = $('#trailer_upload');
+        blockTr.css({'position':'relative'});
+        var loadTr = false;
+        
+        linkTr.toggle( function()
+        {
+            if( !loadTr )
+            {
+                blockTr.load("{{path('cinema_cinema_admin_get_form_upload',{'id':object.getId,'form':'upload-wall-film'})}}");
+                loadTr = true;
+            }
+            else
+            {
+                blockTr.fadeIn(1000);
+            }
+        
+            linkTr.text("Скрыть форму загрузки");
+            },
+            function(){ blockTr.fadeOut(1000); linkTr.text("Загрузить обои с диска");} );
+        //end form upload wall 
+        
+        //form upload name_image
+        var inputName = $('#{{admin.uniqid}}_name');
+        var linkName = '<a href="#" id="switch_name" style="margin: 0 0 0 10px;">Загрузить картинку с названием с диска</a>';
+        inputName.after(linkName);
+        var blockName = '<div id="name_image_upload" style="margin: 15px 0 5px 0;"></div>';
+        var linkName = $('#switch_name');
+        linkName.after(blockName);
+        var blockName = $('#name_image_upload');
+        blockName.css({'position':'relative'});
+        var loadName = false;
+        {% if  object.getImageNameUrl is defined %}
+        {% if object.getImageNameUrl %}
+        var imageName = '<img src="{{object.getImageNameUrl}}?x='+ Math.random()*100000 +'" /><a href="{{url('cinema_cinema_admin_image_name_delete',{id:object.getId})}}">Удалить</a>';
+        blockName.after(imageName);
+        {% endif %}
+        {% endif %}
+        linkName.toggle( function()
+        {
+            if( !loadName )
+            {
+                blockName.load("{{path('cinema_cinema_admin_get_form_upload',{'id':object.getId,'form':'upload-name-film'})}}");
+                loadName = true;
+            }
+            else
+            {
+                blockName.fadeIn(1000);
+            }
+        
+            linkName.text("Скрыть форму загрузки");
+            },
+            function(){ blockName.fadeOut(1000); linkName.text("Загрузить картинку с названием с диска");} );
+        //end form upload name_image   
+        
+    }
+    {% endif %}
+    {% endif %}
+    
+    {% if object.getId %}
+    
+        {% if object.getBannerImageUrl is defined %}
+        //show banner
+            {% if object.getBannerImageUrl %}
+            if ( $('input').is('#{{admin.uniqid}}_imgfilename') )
+            {
+                
+                var imgfilename = $('#{{admin.uniqid}}_imgfilename');
+                var imageBanner = '<p>&nbsp;</p><p><img src="{{object.getBannerImageUrl}}" /></p>';
+                imgfilename.after(imageBanner);
+            }
+            {% endif %}
+        //end show banner
+        
+        {% endif %}
+    
+    if ( $('input').is('#{{admin.uniqid}}_img') )
+    {
+        var inputImg = $('#{{admin.uniqid}}_img');
+        var value = inputImg.attr('value');
+        {% if object.getImg is defined %}
+        var name = '{{object.getImg}}';
+        {%  else %}
+        var name = '';
+        {% endif %}
+        var image = '<p style="margin:5px"><img src="'+NEWS_IMAGE_PATH+name+'" width="103" height="100"/></p>';
+        inputImg.after(image);
+     
+    }
+    {% endif %}
+    
+    if ( $('input').is('#{{admin.uniqid}}_user_id') )
+    {
+        var inputUserId = $('#{{admin.uniqid}}_user_id');
+        inputUserId.val({{app.user.getId}});
+     
+    }
+    
+    if ( $('input').is('#{{admin.uniqid}}_date_first') )
+    {
+        {% if object.getId %}
+        //form schedule
+        var fieldData = $('#{{admin.uniqid}}_date_first');
+        var link = '<a href="#" id="switch" style="margin: 0 0 0 10px;">Расписание</a>';
+        fieldData.after(link);
+        var block = '<div id="sched" style="margin: 15px 0 5px 0;"></div>';
+        var link = $('#switch');
+        link.after(block);
+        var block = $('#sched');
+        block.css({'position':'relative'});
+         
+        var load = false;
+        
+        link.toggle( function()
+        {
+            if( !load )
+            {
+                block.load("{{path('cinema_cinema_admin_get_form_block')}}");
+                load = true;
+            }
+            else
+            {
+                block.fadeIn(1000);
+            }
+        
+            link.text("Скрыть");
+            },
+            function(){ block.fadeOut(1000); link.text("Расписание");} );
+            
+            //end form schedule
+            {% endif %}
+    }
+    
+    if ( $('input').is('#{{admin.uniqid}}_avail_key') )
+    {
+        {% if object.getId %}
+            var availKeyCheckbox = $('#{{admin.uniqid}}_avail_key');
+            if (( availKeyCheckbox ).prop('checked') === false ) 
+            {
+                //$('#{{admin.uniqid}}_end_key').val(null);
+                $('#{{admin.uniqid}}_end_key').attr('disabled',true);
+            }
+            
+            availKeyCheckbox.change(function(){
+    
+                 if( $(this).prop('checked') === false )
+                 {
+                    $('#{{admin.uniqid}}_end_key').val(null);
+                    $('#{{admin.uniqid}}_end_key').attr('disabled',true);
+                 }
+                 else
+                 {
+                    $('#{{admin.uniqid}}_end_key').attr('disabled',false);
+                 }   
+            });
+        
+        {% endif %}
+    }
+    
+</script>

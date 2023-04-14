@@ -1,0 +1,194 @@
+{% extends '::base.html.twig' %}
+
+
+{% block stylesheets %}
+	{{parent()}}
+    <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/schedule.css')}}"/>
+    <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/jquery.qtip.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('bundles/cinemacinema/css/jquery.qtip.css')}}"/>
+{% endblock %}
+
+{% block js_top%}
+    {{parent()}}
+    <script src="{{asset('bundles/cinemacinema/js/imagesloaded.pkg.min.js')}}"></script>
+    <script src="{{asset('bundles/cinemacinema/js/jquery.qtip.min.js')}}"></script>
+    <script src="{{asset('bundles/cinemacinema/js/jquery.stylish-select.min.js')}}"></script>
+    <script src="{{asset('bundles/cinemacinema/js/imagesloaded.pkg.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('bundles/cinemacinema/js/jwplayer/jwplayer.js')}}"></script>
+    <script type="text/javascript">jwplayer.key="+w2dT5h4jJ27TMTalFPJE/IWsZ2cIzBT0BxnHA==";</script>    
+{% endblock %}
+
+{% block content %}
+
+<div class="v-title">{{data.film.getName}}<span class="original-n">{{data.film.getNameEn}}</span></div>
+<div class="date-x">Премьера в кинотеатре "Эрвий" {{data.film.getDateFirstArena.format( 'j' )}}{% set key = data.film.getDateFirstArena.format( 'm' ) - 1 %} {{month[key]}} {{data.film.getDateFirstArena.format( 'Y' )}} г.</div>
+<aside class="col-left">
+<div class="video-pic"><a id="single_1" href="/upload/images/film_big/{{data.film.getId}}.jpg"><img src="/upload/images/film_big/{{data.film.getId}}.jpg" alt="" width="170" height="241" /></a></div>
+<div class="video-desc">
+<div class="yy">{{data.film.getAgelimit}}+</div>
+<table>
+<tbody>
+<tr>
+<td>Производство:</td>
+<td>{{data.film.getCountry}}</td>
+</tr>
+{% if data.film.getDateFirstWorld.timestamp > 0 %}
+<tr>
+<td>Мировая премьера:</td>
+<td>
+{% if data.film.getDateFirstWorld %}
+{{data.film.getDateFirstWorld.format('d m Y')}} г.
+{% else %}
+ - 
+{% endif %}
+
+</td>
+
+</tr>
+{% endif %}
+<tr>
+<td>Премьера в "Эрвий":</td>
+<td>
+{% if data.film.getDateFirstArena  %}
+{{data.film.getDateFirstArena.format('d m Y')}} г.
+{% else %}
+ - 
+{% endif %}
+</td>
+
+
+</tr>
+{% if data.film.getBudget %}
+    <tr>
+    <td>Бюджет:</td>
+    <td>$ {{data.film.getBudget | number_format(0,' ',' ')}}</td>
+    </tr>
+{% endif %}
+<tr>
+<td>Жанр:</td>
+<td>{{data.film.getGenre}}</td>
+</tr>
+<tr>
+<td>Режиссер:</td>
+<td>{{data.film.getDirector}}</td>
+</tr>
+
+{% if data.film.getDuration %}
+
+<tr>
+<td>Продолжительность:</td>
+<td>{{data.film.getDuration}}</td>
+</tr>
+{% endif %}
+
+<tr>
+<td>В формате:</td>
+    <td>
+        {% if data.format == '3D'%} 
+                    <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
+        {% endif %}
+        
+        {% if data.format == '2D' %} 
+            <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />
+        {% endif %}
+         
+        {% if data.format == '3D2D' %}
+            <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
+            <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />  
+        {% endif %}
+    </td>
+</tr>
+{% if data.film.getRating %}
+<tr>
+<td>Рейтинг:</td>
+<td>{{data.film.getRating | number_format(1,'.', ' ')}}</td>
+</tr>
+{% endif %}
+</tbody>
+</table>
+</div>
+<p class="film-description">{{data.film.getDescription| striptags  | raw}}</p>
+<p>&nbsp;</p>
+<hr/>
+<p>&nbsp;</p>
+<div class="cl">&nbsp;</div>
+<div class="v-player"><div id="v-player">Loading the player...</div>
+{#<iframe src="{{data.film.getTrailerLink}}" width="600" height="320" frameborder="0" allowfullscreen="allowfullscreen"></iframe>#}
+</div>
+
+<div class="b-filter">Расписание<span class="gb"></span><select class="ss">
+
+{% set count = 0 %}
+{% for key,dates in data.datesstring %}
+{% if count == 0 %}
+    {% set count = count+1 %}
+    <option selected="selected" value="{{key}}">{{dates | lower}}</option>
+{% else %}
+    {% set count = count+1 %}
+    <option value="{{key}}">{{dates | lower}}</option>
+{% endif %}
+
+{% endfor %}
+
+</select></div>
+
+<div id="schedule_film"><img class="preload" src="{{asset('bundles/cinemacinema/images/725.gif')}}"/></div>
+
+</aside>
+{% include "CinemaCinemaBundle:Default:banners.html.twig" %}
+<div class="cl">&nbsp;</div>
+<div class="b-title">Также сегодня</div>
+<div class="wrap-t-car">
+<div id="jc" class="t-car">
+<ul class="tf-list">
+{% for film in data.today %}
+<li><a href="{{path('cinema_cinema_film',{slug:film.getSlug})}}"> <i><img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="160" height="229" /></i><span><strong>{{film.getName}}</strong>{{film.getGenre}}</span></a></li>
+{% endfor %}</ul>
+</div>
+<div class="jcarousel-prev">&nbsp;</div>
+<div class="jcarousel-next">&nbsp;</div>
+</div>
+{% include "CinemaCinemaBundle:Default:news.html.twig" %}
+{% include "CinemaCinemaBundle:Default:vkgroup.html.twig" %}
+
+</div>
+<br />
+
+
+{% endblock %}
+
+{% block javascripts %}
+{{parent()}}
+<script type="text/javascript">
+    var id = {{data.film.getId}};
+    loadSchedule();
+    $('select.ss').change( function(){  loadSchedule(); });
+    function loadSchedule()
+    {
+        week = $('select.ss').val();
+        $('#schedule_film').load('{{path("cinema_cinema_get_schedule_table")}}',{id:id, week:week});
+    }
+    
+    //tr-odd
+    $('.video-desc table tr:odd').addClass('tr-odd');
+        
+    //JWplayer
+    jwplayer("v-player").setup({
+        file: "{{data.film.getTrailerLink}}",
+        width: 600,
+        height: 320,
+		autostart: true
+    });
+    
+    //fancybox
+    $("#single_1").fancybox({
+              helpers: {
+                  title : {
+                      type : 'float'
+                  }
+              }
+          });
+    
+    
+</script> 
+{% endblock %}

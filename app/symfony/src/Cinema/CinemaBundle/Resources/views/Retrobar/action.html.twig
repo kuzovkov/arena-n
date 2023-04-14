@@ -1,0 +1,27 @@
+<div class="b-title">АКЦИИ</div>
+{% if data.rb_action %}
+    {% for news in data.rb_action %}
+                
+        <div class="i-news clearfix">
+            <div class="in-pic">
+                <a title="Ретро-бар Арена" href="{{url('cinema_cinema_one_news_retrobar',{id:news.getId})}}">
+                    <img src="/{{news.getUploadDir}}{{news.getImg}}" width="103" alt=""/>
+                </a>
+            </div>
+            <div class="in-text">
+				{% if news.getUpdatedAt %}
+                    <time class="clearfix"><i>{{news.getUpdatedAt.format('j')}}</i><em>{{data.month[news.getUpdatedAt.format('m')-1]}}</em><span>{{news.getUpdatedAt.format('Y')}}</span></time>
+                {% else %}
+                    <time class="clearfix"><i>{{news.getCreatedAt.format('j')}}</i><em>{{data.month[news.getCreatedAt.format('m')-1]}}</em><span>{{news.getCreatedAt.format('Y')}}</span></time>
+                {% endif %}
+						
+				<div id="short_{{news.getId}}" class="short"><p>{{news.getContent  | slice(0,200)| raw}}</p></div>
+                <div id="full_{{news.getId}}" class="full"><p>{{news.getContent | raw}}</p></div>
+				<div id="{{news.getId}}" class="in-more"><a>подробнее</a></div>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="in-more all-news"><a title="Ретро-бар Арена Все акции" href="{{url('cinema_cinema_all_news_retrobar',{'type':'action'})}}">Все акции >></a></div>
+{% endif %}
+
+                

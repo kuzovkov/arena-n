@@ -1,0 +1,117 @@
+Cinema\CinemaBundle\Entity\Film:
+    type: entity
+    table: film
+    repositoryClass: Cinema\CinemaBundle\Entity\FilmRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '255'
+            nullable: true
+        name_en:
+            type: string
+            length: '255'
+            nullable: true
+        country:
+            type: string
+            length: '255'
+            nullable: true
+        year:
+            type: integer
+            length: 4
+            nullable: true
+        director:
+            type: string
+            length: '255'
+            nullable: true
+        genre:
+            type: string
+            length: '255'
+            nullable: true
+        is3d:
+            type: boolean
+            nullable: true
+        agelimit:
+            type: integer
+            length: 3
+            nullable: true
+        duration:
+            type: integer
+            length: 4
+            nullable: true
+        date_first:
+            type: date
+            nullable: true
+        date_last:
+            type: date
+            nullable: true
+        date_first_world:
+            type: date
+            nullable: true
+        date_first_arena:
+            type: date
+            nullable: true
+        budget:
+            type: integer
+            length: 20
+            nullable: true
+        rating:
+            type: string
+            nullable: true
+        trailer_link:
+            type: string
+            nullable: true
+        poster_big:
+            type: string
+            length: 255
+            nullable: true
+        poster_small:
+            type: string
+            length: 255
+            nullable: true
+        wall_url:
+            type: string
+            length: 255
+            nullable: true
+        url:
+            type: string
+            length: 255
+            nullable: true
+        description: 
+            type: text
+            nullable: true
+        slug:
+            type: string
+            lenght: 255
+            nullable: false
+        onbackground:
+            type: boolean
+            nullable: true
+        wall_present:
+            type: boolean
+            nullable: true
+        end_key:
+            type: date
+            nullable: true
+        avail_key:
+            type: boolean
+            nullable: true
+        avail_film:
+            type: boolean
+            nullable: true
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+        
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue, correctEndKey, checkWallPresent ]
+        preUpdate: [ setUpdatedAtValue, correctEndKey, checkWallPresent ]
+        postLoad: [ checkWallPresent ]

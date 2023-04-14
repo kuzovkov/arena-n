@@ -1,0 +1,146 @@
+cinema_cinema_today:
+    pattern:  /today/{genre}
+    defaults: { _controller: CinemaCinemaBundle:Default:today,genre:all }
+    
+cinema_cinema_soon:
+    pattern:  /soon
+    defaults: { _controller: CinemaCinemaBundle:Default:soon }
+
+cinema_cinema_schedule:
+    pattern:  /schedule
+    defaults: { _controller: CinemaCinemaBundle:Default:schedule }
+    
+cinema_cinema_retrobar:
+    pattern:  /retrobar
+    defaults: { _controller: CinemaCinemaBundle:Retrobar:index }
+    
+cinema_cinema_all_news:
+    pattern:  /news/page/{page}
+    defaults: { _controller: CinemaCinemaBundle:News:allNews,page:1 }
+    
+cinema_cinema_all_news_retrobar:
+    pattern:  /retrobar/news/page/{type}/{page}
+    defaults: { _controller: CinemaCinemaBundle:News:allNewsRb,type:news,page:1 }
+    
+cinema_cinema_one_news:
+    pattern:  /news/{id}
+    defaults: { _controller: CinemaCinemaBundle:News:oneNews,id:null }
+    
+cinema_cinema_one_news_retrobar:
+    pattern:  /retrobar/news/{id}
+    defaults: { _controller: CinemaCinemaBundle:News:oneNewsRb,id:null }
+    
+cinema_cinema_film:
+    pattern:  /film/{slug}
+    defaults: { _controller: CinemaCinemaBundle:Film:film, slug:none }
+    
+cinema_cinema_film2:
+    pattern:  /film/
+    defaults: { _controller: CinemaCinemaBundle:Film:film }
+    
+login:
+    pattern:   /login
+    defaults:  { _controller: CinemaCinemaBundle:Login:login }
+
+cinema_cinema_homepage:
+    pattern:  /
+    defaults: { _controller: CinemaCinemaBundle:Default:index }
+
+login_check:
+    pattern:   /login_check
+    
+logout:
+    pattern: /logout
+    
+cinema_cinema_get_schedule_table:
+    pattern: /getscheduletable
+    defaults: { _controller: CinemaCinemaBundle:Default:getScheduleTable }
+
+cinema_cinema_get_full_schedule_table:
+    pattern: /getfullscheduletable
+    defaults: { _controller: CinemaCinemaBundle:Default:getFullScheduleTable }
+      
+cinema_cinema_admin_get_form_block:
+    pattern: /admin/getformblock
+    defaults: { _controller: CinemaCinemaBundle:Schedule:getFormBlock }
+    
+cinema_cinema_admin_schedule:
+    pattern: /admin/schedule
+    defaults: { _controller: CinemaCinemaBundle:Schedule:schedule }
+    
+cinema_cinema_admin_get_schedule_table:
+    pattern: /admin/getscheduletable
+    defaults: { _controller: CinemaCinemaBundle:Schedule:getScheduleTable }
+
+cinema_cinema_admin_del_schedule_record:
+    pattern: /admin/delschedulerecord
+    defaults: { _controller: CinemaCinemaBundle:Schedule:delScheduleRecord }
+    
+cinema_cinema_admin_check_error_schedule:
+    pattern: /admin/checkerrorschedule
+    defaults: { _controller: CinemaCinemaBundle:Schedule:checkSchedule }
+    
+cinema_cinema_admin_get_confirm_dialog:
+    pattern: /admin/getconfirmdialog
+    defaults: { _controller: CinemaCinemaBundle:Schedule:getConfirmDialog }
+    
+cinema_cinema_test:
+    pattern:  /test/test
+    defaults: { _controller: CinemaCinemaBundle:Default:getFullScheduleTable }
+    
+cinema_cinema_test2:
+    pattern:  /test/test2
+    defaults: { _controller: CinemaCinemaBundle:Default:test }
+
+cinema_cinema_index:
+    pattern:  /genre/{genre}
+    defaults: { _controller: CinemaCinemaBundle:Default:index,genre:all }
+    
+cinema_cinema_retrobar_page:
+    pattern:  /retrobar/{slug}
+    defaults: { _controller: CinemaCinemaBundle:Slug:retrobarslug, slug:index }
+    
+cinema_cinema_page:
+    pattern:  /{slug}
+    defaults: { _controller: CinemaCinemaBundle:Slug:slug, slug:index }
+   
+admin_cinema_cinema_film_error:
+    pattern:  /admin/cinema/cinema/film/error
+    defaults: { _controller: CinemaCinemaBundle:FilmAdmin:error }
+    
+cinema_cinema_admin_get_confirm_delete_all_dialog:
+    pattern:  /admin/getconfirmdelall
+    defaults: { _controller: CinemaCinemaBundle:Schedule:getConfirmDelAllDialog }
+    
+cinema_cinema_admin_delete_schedule:
+    pattern:  /admin/deleteallseances
+    defaults: { _controller: CinemaCinemaBundle:Schedule:delAllSeances }
+    
+cinema_cinema_admin_get_image_list:
+    pattern:  /admin/getimagelist
+    defaults: { _controller: CinemaCinemaBundle:Upload:getImageList }
+    
+cinema_cinema_admin_get_form_upload:
+    pattern:  /admin/getimageformupload/{id}/{form}
+    defaults: { _controller: CinemaCinemaBundle:Upload:getImageFormUpload,id:null }
+    
+cinema_cinema_admin_image_upload:
+    pattern:  /admin/imageupload/{id}
+    defaults: { _controller: CinemaCinemaBundle:Upload:imageUpload,id:null }
+    
+cinema_cinema_admin_image_upload_wall:
+    pattern:  /admin/imageuploadwall/{id}
+    defaults: { _controller: CinemaCinemaBundle:Upload:imageUploadWall,id:null }
+    
+cinema_cinema_admin_image_upload_name:
+    pattern:  /admin/imageuploadname/{id}
+    defaults: { _controller: CinemaCinemaBundle:Upload:imageUploadName,id:null }
+    
+cinema_cinema_admin_trailer_load:
+    pattern:  /admin/trailerload/{id}
+    defaults: { _controller: CinemaCinemaBundle:Upload:trailerLoad,id:null }
+    
+cinema_cinema_admin_image_name_delete:
+    pattern:  /admin/imagenamedelete/{id}
+    defaults: { _controller: CinemaCinemaBundle:Upload:deleteImageName,id:null }
+    

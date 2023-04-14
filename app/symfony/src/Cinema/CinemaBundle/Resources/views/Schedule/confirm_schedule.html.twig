@@ -1,0 +1,18 @@
+
+<div class="shedule-dialog-confirm" id="dialog-confirm" title="Добавить сеансы?">
+  <p>    
+    <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;">Добавление сеансов</span>
+        Добавить  следующие сеансы:<br />
+        Даты: {{data.dates}}<br />
+        Время начала: {{data.hour}}:{{data.min}}<br />
+        Цена билета: {{data.price}}<br />
+        Номер зала: {% if data.room == '5' %}
+                        VIP
+                    {%else%}
+                        {{data.room}}
+                    {% endif %}
+        <br/>
+        3D сеанс: {% if data.is3d == 'true' %} Да {% else %} Нет {% endif %}       
+  </p>
+    
+</div>

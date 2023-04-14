@@ -1,0 +1,36 @@
+Cinema\CinemaBundle\Entity\Banner:
+    type: entity
+    table: banner
+    repositoryClass: Cinema\CinemaBundle\Entity\BannerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '255'
+            nullable: true
+        bannershow:
+            type: boolean
+            nullable: true 
+        imgfilename:
+            type: string
+            length: '255'
+            nullable: true
+        banner_url:
+            type: string
+            length: '255'
+            nullable: true
+        created_at:
+            type: datetime
+            nullable: true
+        updated_at:
+            type: datetime
+            nullable: true
+        
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue ]
+        preUpdate: [ setUpdatedAtValue ]
