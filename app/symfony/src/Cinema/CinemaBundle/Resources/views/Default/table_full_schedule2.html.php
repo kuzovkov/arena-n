@@ -1,6 +1,6 @@
 <?php
     
-    $roomName = array(0,1,2,3,4,'VIP',6);/*array for rename room number to name*/
+    $roomName = array(0,1,2,3,4,'VIP');/*array for rename room number to name*/
     $seances3 = array();
     //print_r($data['seances']);exit();
     
@@ -62,14 +62,7 @@
      
         
         <td class="time">
-            <a class='qtip-time title' href="#" title="<?php echo $seance->getPrice(); ?> руб">
-                <?php echo $seance->getTimeBegin()->format('H:i'); ?>
-                <?php if ($seance->getIs3d()):?> 
-                    <img src="bundles/cinemacinema/images/i3d.png" alt="" width="21" height="13" /> 
-                <?php else: ?>
-                    <img src="bundles/cinemacinema/images/empty.png" alt="" width="21" height="13" /> 
-                <?php endif;?>
-            </a>
+            <a class='qtip-time title' href="#" title="<?php echo $seance->getPrice(); ?> руб"><?php echo $seance->getTimeBegin()->format('H:i'); ?></a>
         </td>
         <td class="price">
                         <a class='qtip-price title' title=""><?php echo $seance->getPrice(); ?>&nbsp;руб</a>             

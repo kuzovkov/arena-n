@@ -1,140 +1,171 @@
-### Инструкция по развертыванию сайта на сервере и использованию
+Symfony Standard Edition
+========================
 
-#### 1. Развертывание
+Welcome to the Symfony Standard Edition - a fully-functional Symfony2
+application that you can use as the skeleton for your new applications.
 
-##### 1.1. Загрузить папку с сайтом на сервер, таким образом, чтобы в публичной папке веб-сервера находилась папка web приложения
-Пример настройки для Apache:
-```conf
-            <VirtualHost *:80>
-            ServerName symfony1.loc
-            DocumentRoot "C:/www3/symfony1/web"
-            <Directory "C:/www3/symfony1/web">
-            Options Indexes FollowSymLinks
-            AllowOverride All
-            #Order allow,deny
-            Allow from all
-            </Directory>
-            </VirtualHost>
-```
-##### 1.2. Создать базу данных и залить данные из дампа в корне сайта: symfony1.sql
-##### 1.3 Проверить соответствие конфигурации сервера: http://symfony1.loc/config.php
+This document contains information on how to download, install, and start
+using Symfony. For a more detailed explanation, see the [Installation][1]
+chapter of the Symfony Documentation.
 
-##### 1.4 В файле /app/config/parameters.yml записать актуальные настройки для Вашего сервера БД.
-    Например:
-```conf        
-        database_driver: pdo_mysql
-        database_host: 127.0.0.1
-        database_port: 3306
-        database_name: symfony1
-        database_user: root
-        database_password: root
-        mailer_transport: smtp
-        mailer_host: 127.0.0.1
-        mailer_user: null
-        mailer_password: null
-        locale: ru
-        secret: ThisTokenIsNotSoSecretChangeIt 
-```        
-    
-#### 2. Использование
+1) Installing the Standard Edition
+----------------------------------
 
-##### 2.1. Вход в админку: набрать url /admin/dashboard
-    login: superadmin
-    pass: admin
-    
-##### 2.2. Добавление фильма
-    Фильмы->Добавить новый
-    Откроется форма редактирования фильма с пустыми полями.
-    Ввести в поле Url c сайта kinopoisk.ru
-    Нажать кнопку "Создать и Продолжить редактирование"
-    Будут загружены данные фильма и изображения большого и малого 
-    постеров и обоев (если есть).
-    Если обои фильма были загружены, появится чекбокс "Фон сайта", позволяющий
-    установить изображение обоев фоновым изображением сайта.
-    Изображения малого постера, большого постера, и обоев 
-    загружаются в каталоги /web/upload/images/film, 
-    /web/upload/images/film_big, /web/upload/images/film_wall соответсвенно.
-    При необходимости изображения можно загружать и с других URL при редактировании 
-    данных фильма, для этого нужно прописать  URL'ы  в соответвующие поля
-    формы и нажать кнопку Сохранить.
-    
-##### 2.3 Редактирование расписания
-    Кликнуть по ссылке "Расписание", откроется форма для добавления сеансов
-    и таблица расписания для данного фильма.
-    На форме можно выбрать даты, установить время в часах и минутах,номер зала,  ввести цену
-    на билеты. Нажать кнопку "Установить". После подтверждения установленные сеансы
-    бужут добавлены в таблицу расписания. При добавлении автоматически производится 
-    проверка на отсутствие накладок сеансов.
-    Для удаления сеанса нажать  иконку с изображение корзины в строке соответвующего сеанса. 
-     
-##### 3.Роли
-    Пользователи могут иметь различные роли (может быть более одной)
-    Каждая роль наделяется правами (отдельно на чтение, редактирование, удаление) относительно 
-    разных сущностей( Фильмы, Страницы, Пользователи, Новости)
-    Пользователь superadmin имеет полный набор прав для всех сущностей.
-    Добавление и удаление пользователей, добавление и удаление ролей пользователей
-    доступно ( в данной конфигурации) только для superadmin. Это делается в форме редактирования 
-    Пользователя в Админ Панели.
-    
-    Сама конфигурация ролей прописывается в файле /app/config/security.yml:
-    
-    Пример:
-    Каким пользователям что разрешено делать с каждой сущностью:
-    Например, FILM_EDITOR может смотреть список, смотреть данные о фильме и их редактировать
-```yaml
-        role_hierarchy:
-        ROLE_CINEMA_FILM_ADMIN:
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_EDIT
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_CREATE
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_DELETE
-        ROLE_CINEMA_FILM_EDITOR:
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_EDIT
-        ROLE_CINEMA_FILM_READER:
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_LIST
-            - ROLE_CINEMA_CINEMA_ADMIN_FILM_VIEW
-```     
-        Какие есть роли и их набор  подролей:
-```yaml        
-        ROLE_VIEWER:      [ROLE_USER, ROLE_CINEMA_FILM_READER]
-        ROLE_EDITOR:      [ROLE_USER, ROLE_CINEMA_FILM_EDITOR]
-        ROLE_ADMIN:       [ROLE_USER, ROLE_CINEMA_FILM_ADMIN]
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-```        
-        Кому разрешен доступ а Админ Панель:
-```yaml
-        access_control:
-        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_EDITOR, ROLE_VIEWER] }
-```        
-        В данной конфигурации определены роли СуперАдмин (superadmin/admin),
-        Админ (admin/admin),Редактор (admin/admin),
-        Читатель (admin/admin), Пользователь (admin/admin)
-        
-        
-#### 4. Баннеры
-    На вкладках Сегодня и Скоро могут размещаться рекламные баннеры с правой стороны.
-    Html код отвечающий за их размещение содержится в отдельном шаблоне:
-    файл /src/Cinema/CinemaBundle/Resources/Views/Default/banners.html.twig
-    
-    Его содержимое:
- 
-```html
-    <aside class="col-right">
-        <ul class="sbn">
-        
-        <li><a><img src="{{asset('bundles/cinemacinema/images/sb1.png')}}" alt="" width="200" height="344" /></a></li>
-        <li><a><img src="{{asset('bundles/cinemacinema/images/sb2.png')}}" alt="" width="200" height="129" /></a></li>
-        <li><a><img src="{{asset('bundles/cinemacinema/images/sb3.png')}}" alt="" width="200" height="228" /></a></li>
-        <li><a><img src="{{asset('bundles/cinemacinema/images/sb1.png')}}" alt="" width="200" height="344" /></a></li>
-        </ul>
-    
-    </aside>  
-```    
-#### 5. Рейтинг фильма загружается с сайта kinopoisk.ru, автоматическое обновление
-    пока не реализовано 
-        
-    
-    
+When it comes to installing the Symfony Standard Edition, you have the
+following options.
+
+### Use Composer (*recommended*)
+
+As Symfony uses [Composer][2] to manage its dependencies, the recommended way
+to create a new project is to use it.
+
+If you don't have Composer yet, download it following the instructions on
+http://getcomposer.org/ or just run the following command:
+
+    curl -s http://getcomposer.org/installer | php
+
+Then, use the `create-project` command to generate a new Symfony application:
+
+    php composer.phar create-project symfony/framework-standard-edition path/to/install
+
+Composer will install Symfony and all its dependencies under the
+`path/to/install` directory.
+
+### Download an Archive File
+
+To quickly test Symfony, you can also download an [archive][3] of the Standard
+Edition and unpack it somewhere under your web server root directory.
+
+If you downloaded an archive "without vendors", you also need to install all
+the necessary dependencies. Download composer (see above) and run the
+following command:
+
+    php composer.phar install
+
+2) Checking your System Configuration
+-------------------------------------
+
+Before starting coding, make sure that your local system is properly
+configured for Symfony.
+
+Execute the `check.php` script from the command line:
+
+    php app/check.php
+
+The script returns a status code of `0` if all mandatory requirements are met,
+`1` otherwise.
+
+Access the `config.php` script from a browser:
+
+    http://localhost/path/to/symfony/app/web/config.php
+
+If you get any warnings or recommendations, fix them before moving on.
+
+3) Browsing the Demo Application
+--------------------------------
+
+Congratulations! You're now ready to use Symfony.
+
+From the `config.php` page, click the "Bypass configuration and go to the
+Welcome page" link to load up your first Symfony page.
+
+You can also use a web-based configurator by clicking on the "Configure your
+Symfony Application online" link of the `config.php` page.
+
+To see a real-live Symfony page in action, access the following page:
+
+    web/app_dev.php/demo/hello/Fabien
+
+4) Getting started with Symfony
+-------------------------------
+
+This distribution is meant to be the starting point for your Symfony
+applications, but it also contains some sample code that you can learn from
+and play with.
+
+A great way to start learning Symfony is via the [Quick Tour][4], which will
+take you through all the basic features of Symfony2.
+
+Once you're feeling good, you can move onto reading the official
+[Symfony2 book][5].
+
+A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
+playing with it, you can remove it by following these steps:
+
+  * delete the `src/Acme` directory;
+
+  * remove the routing entry referencing AcmeDemoBundle in `app/config/routing_dev.yml`;
+
+  * remove the AcmeDemoBundle from the registered bundles in `app/AppKernel.php`;
+
+  * remove the `web/bundles/acmedemo` directory;
+
+  * remove the `security.providers`, `security.firewalls.login` and
+    `security.firewalls.secured_area` entries in the `security.yml` file or
+    tweak the security configuration to fit your needs.
+
+What's inside?
+---------------
+
+The Symfony Standard Edition is configured with the following defaults:
+
+  * Twig is the only configured template engine;
+
+  * Doctrine ORM/DBAL is configured;
+
+  * Swiftmailer is configured;
+
+  * Annotations for everything are enabled.
+
+It comes pre-configured with the following bundles:
+
+  * **FrameworkBundle** - The core Symfony framework bundle
+
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+
+  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
+    component
+
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
+    sending emails
+
+  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+
+  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
+    library
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
+    capabilities
+
+  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
+    code
+
+All libraries and bundles included in the Symfony Standard Edition are
+released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  http://symfony.com/doc/2.4/book/installation.html
+[2]:  http://getcomposer.org/
+[3]:  http://symfony.com/download
+[4]:  http://symfony.com/doc/2.4/quick_tour/the_big_picture.html
+[5]:  http://symfony.com/doc/2.4/index.html
+[6]:  http://symfony.com/doc/2.4/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  http://symfony.com/doc/2.4/book/doctrine.html
+[8]:  http://symfony.com/doc/2.4/book/templating.html
+[9]:  http://symfony.com/doc/2.4/book/security.html
+[10]: http://symfony.com/doc/2.4/cookbook/email.html
+[11]: http://symfony.com/doc/2.4/cookbook/logging/monolog.html
+[12]: http://symfony.com/doc/2.4/cookbook/assetic/asset_management.html
+[13]: http://symfony.com/doc/2.4/bundles/SensioGeneratorBundle/index.html

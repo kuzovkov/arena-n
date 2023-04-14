@@ -232,7 +232,7 @@ class Film
      */
     public function setGenre($genre)
     {
-        $this->genre = trim($genre);
+         $this->genre = trim($genre);
 
         return $this;
     }
@@ -244,7 +244,8 @@ class Film
      */
     public function getGenre()
     {
-        return (substr($this->genre, -1) == ',')? substr( $this->genre, 0, strlen( $this->genre )-1 ) : $this->genre;
+        
+		return (substr($this->genre, -1) == ',')? substr( $this->genre, 0, strlen( $this->genre )-1 ) : $this->genre;
     }
 
     /**
@@ -642,7 +643,7 @@ class Film
     public function setDateFirstWorld($dateFirstWorld)
     {
         $this->date_first_world = $dateFirstWorld;
-
+		
         return $this;
     }
 
@@ -665,7 +666,6 @@ class Film
     public function setDateFirstArena($dateFirstArena)
     {
         $this->date_first_arena = $dateFirstArena;
-
         return $this;
     }
 
@@ -676,7 +676,6 @@ class Film
      */
     public function getDateFirstArena()
     {
-        
         return $this->date_first_arena;
     }
 

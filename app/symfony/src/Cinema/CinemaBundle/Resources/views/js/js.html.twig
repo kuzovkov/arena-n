@@ -209,7 +209,7 @@ var browser = navigator.userAgent.toLowerCase();
         inputPosterBig.after(image);
     }
     
-    {% if object.getImageWallName is defined %}
+    
     if ( $('input').is('#{{admin.uniqid}}_wall_url') )
     {
         var inputWallUrl = $('#{{admin.uniqid}}_wall_url');
@@ -280,7 +280,6 @@ var browser = navigator.userAgent.toLowerCase();
         //end form upload name_image   
         
     }
-    {% endif %}
     {% endif %}
     
     {% if object.getId %}

@@ -3,18 +3,80 @@
 #### 1. Развертывание
 
 ##### 1.1. Загрузить папку с сайтом на сервер, таким образом, чтобы в публичной папке веб-сервера находилась папка web приложения
-Пример настройки для Apache:
+Пример настройки для Nginx:
 ```conf
-            <VirtualHost *:80>
-            ServerName symfony1.loc
-            DocumentRoot "C:/www3/symfony1/web"
-            <Directory "C:/www3/symfony1/web">
-            Options Indexes FollowSymLinks
-            AllowOverride All
-            #Order allow,deny
-            Allow from all
-            </Directory>
-            </VirtualHost>
+   server {
+       listen          80;
+       listen         443 ssl http2;
+       server_name arena.kuzovkov12.ru;
+       #SSL
+       if ($scheme = http) {
+           return 301 https://$server_name$request_uri;
+       }
+
+       root /var/www/html/web;
+
+       location / {
+               try_files $uri /app.php$is_args$args;
+       }
+
+       location ~ ^/(app_dev|info|config|cc|cc-dev)\.php(/|$) {
+               fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+               fastcgi_split_path_info ^(.+\.php)(/.*)$;
+               include fastcgi_params;
+               proxy_set_header Host $host;
+               proxy_set_header X-Real-IP $remote_addr;
+               proxy_set_header X-Forwarded-Proto http;
+               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+               proxy_connect_timeout 9000;
+               proxy_send_timeout    9000;
+               proxy_read_timeout    9000;
+               send_timeout          9000;
+               fastcgi_read_timeout 180s;
+               client_max_body_size  0;
+               proxy_pass_request_headers      on;
+               # When you are using symlinks to link the document root to the
+               # current version of your application, you should pass the real
+               # application path instead of the path to the symlink to PHP
+               # FPM.
+               # Otherwise, PHP's OPcache may not properly detect changes to
+               # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126
+               # for more information).
+               fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+               fastcgi_param DOCUMENT_ROOT $realpath_root;
+       }
+
+       location ~ ^/app\.php(/|$) {
+               fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+               fastcgi_split_path_info ^(.+\.php)(/.*)$;
+               include fastcgi_params;
+               # When you are using symlinks to link the document root to the
+               # current version of your application, you should pass the real
+               # application path instead of the path to the symlink to PHP
+               # FPM.
+               # Otherwise, PHP's OPcache may not properly detect changes to
+               # your PHP files (see https://github.com/zendtech/ZendOptimizerPlus/issues/126
+               # for more information).
+               fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+               fastcgi_param DOCUMENT_ROOT $realpath_root;
+               fastcgi_read_timeout 180s;
+               # Prevents URIs that include the front controller. This will 404:
+               # http://domain.tld/app.php/some-path
+               # Remove the internal directive to allow URIs like this
+               internal;
+           }
+
+       location /.well-known/acme-challenge/ {
+           root /var/www/certbot;
+       }
+
+       ssl_certificate /etc/letsencrypt/live/arena.kuzovkov12.ru/fullchain.pem;
+       ssl_certificate_key /etc/letsencrypt/live/arena.kuzovkov12.ru/privkey.pem;
+
+       #include /etc/nginx/ssl-params.conf; #optional
+       access_log /var/log/nginx-access.log;
+       error_log /var/log/nginx-error.log; 
+   }         
 ```
 ##### 1.2. Создать базу данных и залить данные из дампа в корне сайта: symfony1.sql
 ##### 1.3 Проверить соответствие конфигурации сервера: http://symfony1.loc/config.php
@@ -26,8 +88,8 @@
         database_host: 127.0.0.1
         database_port: 3306
         database_name: symfony1
-        database_user: root
-        database_password: root
+        database_user: arena
+        database_password: P@ssw0rd
         mailer_transport: smtp
         mailer_host: 127.0.0.1
         mailer_user: null
@@ -158,5 +220,13 @@ docker-compose restart nginx
 ```
 Go to https://domain-name/info.php
         
-    
-    
+#### Troubleshooting
+#####  Fix error: "SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client "
+  
+```bash  
+docker-compose exec mysql bash
+mysql -uroot -prootP@ssw0rd
+```
+```mysql
+ ALTER USER 'arena'@'%' IDENTIFIED WITH mysql_native_password BY 'P@ssw0rd';
+```

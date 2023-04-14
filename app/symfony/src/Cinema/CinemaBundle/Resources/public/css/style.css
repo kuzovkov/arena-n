@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 { font-family: Arial, Helvetica, sans-serif; font-size: 1
 .clearfix {zoom:1;}
 .cl { clear: both; height: 0; font-size: 0; line-height: 0; }
 
-.wrap-main {  min-height: 100%; width: 100%; min-width: 980px; background-attachment: fixed;}
+.wrap-main { background: url("../images/bgc.jpg") center 0 no-repeat; min-height: 100%; width: 100%; min-width: 980px; background-attachment: fixed;}
 .main { width: 960px; margin: 0 auto; position: relative; z-index: 2; }
 
 .wrp-btn-buy { height: 298px; position: relative;}
@@ -148,7 +148,7 @@ header { width: 940px; height: 42px; position: relative; }
    position: absolute;
    right: 35px;
    top: 110px;
-   width: 420px;
+   width: 170px;
    border-radius: 20px;
    -moz-border-radius: 20px;
    -webkit-border-radius: 20px;
@@ -181,7 +181,7 @@ header { width: 940px; height: 42px; position: relative; }
 .sub-footer { height: 236px;}
 footer { width: 100%; background-color: #212121; min-width: 980px; height: 236px; margin: -236px auto 0 auto; position: relative; z-index: 2; } 
 .foot-inner { width: 960px; margin: 0 auto; height: 236px; position: relative; }
-.foot-nav { list-style: none; vertical-align: top; width: 800px; left: 0px; top: 40px; position: absolute; }
+.foot-nav { list-style: none; vertical-align: top; width: 682px; left: 0px; top: 40px; position: absolute; }
 .foot-nav li { display: inline-block; vertical-align: top; width: 338px; text-transform: uppercase; padding: 0 0 20px 0; font-size: 12px;}
 .foot-nav li a { font-family: 'a_futuraortoltlight'; color: #fff; }
 .foot-nav li a:hover { color: #ffe447; text-decoration: underline; }
@@ -258,8 +258,3 @@ ul.newList li a:hover { color: #000; opacity: 1; text-decoration: none; }
 
 .top-film-name  { width: 229px; line-height: 40px; text-align: center; font-size: 24px; color: #fff; text-decoration: none; left: 366px; top: 102px; position: absolute; font-family: 'a_futuraortoregular';  }
 .top-film-name  a { color: #fff; font-family: 'a_futuraortoregular'; }
-
-.h-line { height: 1px; padding: 0; margin: 0; background-color: #555;}
-.h-line td { height: 1px; padding: 0; margin: 0; }
-
-address {font-style:normal;}

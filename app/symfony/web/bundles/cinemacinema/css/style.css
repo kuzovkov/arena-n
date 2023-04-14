@@ -181,7 +181,7 @@ header { width: 940px; height: 42px; position: relative; }
 .sub-footer { height: 236px;}
 footer { width: 100%; background-color: #212121; min-width: 980px; height: 236px; margin: -236px auto 0 auto; position: relative; z-index: 2; } 
 .foot-inner { width: 960px; margin: 0 auto; height: 236px; position: relative; }
-.foot-nav { list-style: none; vertical-align: top; width: 800px; left: 0px; top: 40px; position: absolute; }
+.foot-nav { list-style: none; vertical-align: top; width: 682px; left: 0px; top: 40px; position: absolute; }
 .foot-nav li { display: inline-block; vertical-align: top; width: 338px; text-transform: uppercase; padding: 0 0 20px 0; font-size: 12px;}
 .foot-nav li a { font-family: 'a_futuraortoltlight'; color: #fff; }
 .foot-nav li a:hover { color: #ffe447; text-decoration: underline; }

@@ -7,32 +7,16 @@
 <!-- main -->
 <div class="wrap-main">
 <!-- tel -->
-<div class="roundedBox"><div>тел. 
-        {% if data.snipets is defined %}
-            {% for snipet in data.snipets %}
-                {% if snipet.getKey == 'top_phone' %}
-                    {{snipet.getSnipet | raw}}
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            top_phone
-        {% endif %}
-
-</div></div>
+<div class="roundedBox"><div>тел. 380-390</div></div>
 <!-- tel -->
 
 <!-- tel -->
 <div class="roundedBox2">
     <div>
-        {% if data.snipets is defined %}
-            {% for snipet in data.snipets %}
-                {% if snipet.getKey == 'cassa_mode' %}
-                    {{snipet.getSnipet | raw}}
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            cassa_mode
-        {% endif %}
+        Режим работы кассы: <br />
+        с 09:30 до 23:00<br />
+        Билеты на ночной сеанс продаются  до 23:00<br />
+        Если зрители не приходят к этому времени, то сеанс отменяется.
     </div>
 </div>
 <!-- tel -->

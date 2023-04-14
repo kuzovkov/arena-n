@@ -33,7 +33,6 @@
         
     </select>
     </p>
-    
     <p>
     Мин: <select name="min" id="min">
         <option selected value="00">00</option>
@@ -66,10 +65,7 @@
         <option value="6">6</option>
     </select>
     </p>
-    <p>
-        3D сеанс: <input name="is3d" type="checkbox" id="is3d"/>
-        
-    </p>
+    
     <input type="button" value="Установить" id="send"/>
 </fieldset>
 
@@ -114,12 +110,11 @@ $(document).ready(function(){
 <script type="text/javascript">
 $('#send').click(function(){
             var dates = $('#datepicker').multiDatesPicker('getDates');
-            dates = dates.join(',');
+            dates = dates.join(',')
             var hour = $('#hour').val();
             var min = $('#min').val();
             var room = $('#room').val();
             var price = $('#price').val();
-            var is3d = $('#is3d').prop('checked');
             price = parseInt( price );
             if ( isNaN( price ) )
             {
@@ -129,7 +124,7 @@ $('#send').click(function(){
             var id = $('ul.breadcrumb li.active').text();
             
             
-            $('#confirm_dialog').load("{{path('cinema_cinema_admin_get_confirm_dialog')}}",{dates:dates,hour:hour,min:min,price:price,room:room,is3d:is3d}, function()
+            $('#confirm_dialog').load("{{path('cinema_cinema_admin_get_confirm_dialog')}}",{dates:dates,hour:hour,min:min,price:price,room:room}, function()
                         {
                             $( "#dialog-confirm" ).dialog({
                                 resizable: false,
@@ -138,7 +133,7 @@ $('#send').click(function(){
                                 buttons: {
                                     "Добавить": function() {
                                                                 $( this ).dialog( "close" );
-                                                                $('#schedule_table').load("{{path('cinema_cinema_admin_schedule')}}",{dates:dates,hour:hour,min:min,price:price,room:room,id:id,is3d:is3d});
+                                                                $('#schedule_table').load("{{path('cinema_cinema_admin_schedule')}}",{dates:dates,hour:hour,min:min,price:price,room:room,id:id});
                                                                 $('#schedule_error').load("{{path('cinema_cinema_admin_check_error_schedule')}}",{id:id});                     
                                                                 setTimeout( function(){ $('#schedule_error').load("{{path('cinema_cinema_admin_check_error_schedule')}}",{id:id});}, 2000 ); 
                                                             },

@@ -24,7 +24,6 @@ class ScheduleController extends Controller
         $price = intval( $request->request->get('price') );
         $room = intval( $request->request->get('room') );
         $id = intval( $request->request->get('id') );
-        $is3d = $request->request->get('is3d');
         $arrayDate = explode( ',', $dates );
         
         $newSeances = array();
@@ -34,7 +33,6 @@ class ScheduleController extends Controller
             $seance->setFilmId( $id );
             $seance->setNumberRoot( $room );
             $seance->setPrice( $price );
-            $seance->setIs3d(($is3d == 'true')?true:false);
             $seance->setTimeBegin( date_create( $date . ' ' . $hour . ':' . $min . ':' . '00' ) );
             $newSeances[] = $seance;
         }
@@ -209,7 +207,6 @@ class ScheduleController extends Controller
         $data['min'] = $request->request->get('min');
         $data['price'] = intval( $request->request->get('price') );
         $data['room'] = intval( $request->request->get('room') );
-        $data['is3d'] = $request->request->get('is3d');
         return $this->render( 'CinemaCinemaBundle:Schedule:confirm_schedule.html.twig', array( 'data' => $data ) );
     }//end func
     

@@ -34,7 +34,7 @@
        
     </head>
     <body>
-       
+     
        {% block header %}
             {% include "CinemaCinemaBundle:Default:header.html.twig" %}    
        {% endblock %}
@@ -56,12 +56,10 @@
                 var PATH_TO_NAME = '../../../upload/images/names/';
                 var filename = PATH_TO_WALL + '{{data.filmbackground.getImageWallName}}';
                  
-                var wrap = document.getElementsByClassName('wrap-main')[0];
-                //console.log(wrap);
+                var wrap = $('.wrap-main');
                 var btnbuy = $('.wrp-btn-buy');
                 var background = 'url("' + filename + '") center 0 no-repeat';
-                wrap.style.background = background;
-                //wrap.css({'background':background,'min-height': '100%', 'width': '100%', 'min-width': '980px', 'background-attachment': 'fixed'});
+                wrap.css({'background':background,'min-height': '100%', 'width': '100%', 'min-width': '980px', 'background-attachment': 'fixed'});
                 
                 {% if data.filmnameimage is defined %}
                 var namefilm = PATH_TO_NAME + '{{data.filmnameimage}}';

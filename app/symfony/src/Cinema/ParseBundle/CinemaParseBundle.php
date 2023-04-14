@@ -27,7 +27,7 @@ class CinemaParseBundle extends Bundle
     /**
      * @var const string BASE_PATH Base path application folder
      */
-    const BASE_PATH = 'C:/www3/symfony1/';
+    const BASE_PATH = '/home/www/html/';
     
     /**
      * @var const string BASE_PATH Base path application folder
@@ -58,19 +58,19 @@ class CinemaParseBundle extends Bundle
     /**
      * @var const string TRAILER_PATH Path to trailers
      */
-    const TRAILER_PATH = 'web/upload/images/trailers';
+    const TRAILER_PATH = 'web/upload/trailers';
     
     /**
      * @var const string BASE_TRAILER_URL Base of trailers URL
      */
     const BASE_TRAILER_URL = 'http://kp.cdn.yandex.net/';
-    
-    /**
+	
+	/**
      * @var const string TRAILER_DOWNLOAD_LOG Trailer download logfile 
      */
     const TRAILER_DOWNLOAD_LOG = 'download.log';
-    
-    /**
+	
+	 /**
      * @var const string REGV_TRAILER_URL Trailer get URL regV  
      */
     const REGV_TRAILER_URL = '/[0-9]{1,}\/kinopoisk\.ru[_0-9a-zA-Z\-\.]{3,}/';
@@ -80,7 +80,7 @@ class CinemaParseBundle extends Bundle
      */
     const TRAILER_EXT = '.mp4';
     
-    /**
+	/**
      * @var const string YANDEX_URL Image store place
      */
     const YANDEX_URL = 'http://st.kp.yandex.net/';

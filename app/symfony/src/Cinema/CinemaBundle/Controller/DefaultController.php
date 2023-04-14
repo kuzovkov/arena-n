@@ -9,6 +9,8 @@ use Cinema\CinemaBundle\CinemaCinemaBundle;
 use Cinema\CinemaBundle\Helper\Setting;
 use Cinema\CinemaBundle\Helper\CacheControl;
 
+use Cinema\CinemaBundle\Controller\UserAdmin as S;
+
 class DefaultController extends Controller
 {
     
@@ -23,9 +25,12 @@ class DefaultController extends Controller
     
     public function indexAction( $genre = 'all' )
     {
-        $entities = array('Film', 'News', 'Schedule', 'Snipet');
+	//var_dump(UserAdminController::encodePassword("admin", "")); die;
+        $entities = array('Film', 'News', 'Schedule');
+	
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
+        
         $repository = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Film");
         $repoNews = $this->getDoctrine()->getRepository(Setting::BUNDLE.":News");
         $data['genres'] = $repository->createGenreArray();
@@ -35,7 +40,6 @@ class DefaultController extends Controller
         $data['filmnameimage'] = $repository->getFilmImageName();
         $data['news'] = $repoNews->getNews('CINEMA_NEWS');
         $data['month'] = $this->month;
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets(); 
         $response = $this->render( Setting::BUNDLE.':Default:index.html.twig', array( 'data'=> $data ) );
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func
@@ -47,25 +51,16 @@ class DefaultController extends Controller
     public function todayAction( $genre='all' )
     {
         
-        $entities = array('Film', 'Banner', 'Schedule', 'Snipet');
+        $entities = array('Film', 'Banner', 'Schedule');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         $repository = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Film");
         $repoBanners = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Banner");
-        $repoSchedule = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Schedule");
         $data['today'] = $repository->getFilmsTodayInfo( $genre );
-        $formats = array();
-        foreach( $data['today'] as $film )
-        {
-            $filmId = $film->getId();
-            $formats[$filmId] = $repoSchedule->filmHasFormats($filmId);
-        } 
-        $data['formats'] = $formats;
         $data['genres'] = $repository->createGenreArray();
         $data['filmbackground'] = $repository->getFilmOnBackground();
         $data['filmnameimage'] = $repository->getFilmImageName();
         $data['banners'] = $repoBanners->getBanners();
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( Setting::BUNDLE.':Default:today.html.twig', array( 'data'=> $data ) );
         
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
@@ -77,24 +72,15 @@ class DefaultController extends Controller
      **/
     public function soonAction()
     {
-        $entities = array('Film', 'Banner', 'Schedule', 'Snipet');
+        $entities = array('Film', 'Banner', 'Schedule');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         $repository = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Film");
         $repoBanners = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Banner");
-        $repoSchedule = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Schedule");
         $data['soon'] = $repository->getFilmsSoonInfo();
-        $formats = array();
-        foreach( $data['soon'] as $film )
-        {
-            $filmId = $film->getId();
-            $formats[$filmId] = $repoSchedule->filmHasFormats($filmId);
-        } 
-        $data['formats'] = $formats;
         $data['filmbackground'] = $repository->getFilmOnBackground();
         $data['filmnameimage'] = $repository->getFilmImageName();
         $data['banners'] = $repoBanners->getBanners();
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( Setting::BUNDLE.':Default:soon.html.twig', array( 'data'=> $data ) );
         
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
@@ -106,13 +92,12 @@ class DefaultController extends Controller
      **/
     public function scheduleAction()
     {
-        $entities = array('Film', 'Schedule', 'Snipet');
+        $entities = array('Film', 'Schedule');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         $repository = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Film");
         $data['filmbackground'] = $repository->getFilmOnBackground();
         $data['filmnameimage'] = $repository->getFilmImageName();
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( Setting::BUNDLE.':Default:schedule.html.twig', array('data'=>$data));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func
@@ -127,8 +112,6 @@ class DefaultController extends Controller
         $request = $this->get('request');
         $id = $request->request->get('id');
         $week = $request->request->get('week');
-        //$id=111;
-        //$week=0;
         $repoFilm = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Film");
         $film = $repoFilm->find($id);
         $is3d = ( $film )? $film->getIs3d() : false;
@@ -157,11 +140,5 @@ class DefaultController extends Controller
         
     }//end func
     
-    public function testAction()
-    {
-        $repo = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Schedule");
-        $repo->filmHasFormats(113);
-        
-    }
     
 }//end class

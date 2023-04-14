@@ -60,11 +60,3 @@ services:
             - Cinema\CinemaBundle\Entity\Banner
             - 'CinemaCinemaBundle:BannerAdmin'
             
-    cinema.cinema.admin.snipet:
-        class: Cinema\CinemaBundle\Admin\SnipetAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: Кинотеатр, label: Снипеты }
-        arguments:
-            - ~
-            - Cinema\CinemaBundle\Entity\Snipet
-            - 'CinemaCinemaBundle:SnipetAdmin'

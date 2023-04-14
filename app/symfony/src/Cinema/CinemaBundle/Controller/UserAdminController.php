@@ -80,10 +80,10 @@ class UserAdminController extends Controller
         }
     }//end func
     
-    private function encodePassword(  $password, $salt, $algorithm = 'sha512', $iterations = 5000 )
+    public function encodePassword(  $password, $salt, $algorithm = 'sha512', $iterations = 5000 )
     {
         
-        $salted = $this->mergePasswordAndSalt( $password, $salt );
+        $salted = UserAdminController::mergePasswordAndSalt( $password, $salt );
         $digest = hash( $algorithm, $salted, true );
 
         // "stretch" hash
@@ -94,7 +94,7 @@ class UserAdminController extends Controller
         return base64_encode($digest);
     }//end func
 
-    private function mergePasswordAndSalt($password, $salt)
+    public function mergePasswordAndSalt($password, $salt)
     {
         if (empty($salt)) {
             return $password;

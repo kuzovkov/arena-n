@@ -67,19 +67,7 @@
         {% endif %}
         <tr>
             <td>В формате:</td>
-            <td>{% if data.formats[film.getId] == '3D'%} 
-                    <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
-                {% endif %}
-                
-                {% if data.formats[film.getId] == '2D' %} 
-                    <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />
-                {% endif %}
-                 
-                {% if data.formats[film.getId] == '3D2D' %}
-                    <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> 
-                    <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />  
-                {% endif %}
-            </td>
+            <td>{% if film.getIs3d %} <img src="{{asset('bundles/cinemacinema/images/i3d.png')}}" alt="" width="21" height="13" /> {% else %} <img src="{{asset('bundles/cinemacinema/images/i2d.png')}}" alt="" width="21" height="13" />{% endif %}</td>
         </tr>
         {% if film.getRating %}
         <tr>

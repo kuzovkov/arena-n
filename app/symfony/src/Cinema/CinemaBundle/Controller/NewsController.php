@@ -19,7 +19,7 @@ class NewsController extends Controller
      **/
     public function allNewsAction($page=1)
     {
-        $entities = array('Film', 'News', 'Snipet');
+        $entities = array('Film', 'News');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         
@@ -31,7 +31,6 @@ class NewsController extends Controller
         $data['pages'] = $repoNews->getNumberPage('CINEMA_NEWS');
         $data['page'] = $page;
         $data['month'] = $this->month;
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( 'CinemaCinemaBundle:Default:all_news.html.twig', array('data'=>$data));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
         
@@ -43,7 +42,7 @@ class NewsController extends Controller
      **/
     public function oneNewsAction($id=null)
     {
-        $entities = array('Film', 'News', 'Snipet');
+        $entities = array('Film', 'News');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         
@@ -53,7 +52,6 @@ class NewsController extends Controller
         $repoNews = $this->getDoctrine()->getRepository("CinemaCinemaBundle:News");
         $data['news'] = $repoNews->getOneNews($id);
         $data['month'] = $this->month;
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( 'CinemaCinemaBundle:Default:one_news.html.twig', array('data'=>$data));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func
@@ -64,7 +62,7 @@ class NewsController extends Controller
      **/
     public function oneNewsRbAction($id=null)
     {
-        $entities = array('Film', 'News', 'Snipet');
+        $entities = array('Film', 'News');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         
@@ -78,7 +76,6 @@ class NewsController extends Controller
         $data['month'] = $this->month;
         $data['type'] = $types[$news->getType()];
         $data['title'] = $title[$news->getType()];
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( 'CinemaCinemaBundle:Retrobar:one_news.html.twig', array('data'=>$data));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func
@@ -90,7 +87,7 @@ class NewsController extends Controller
      **/
     public function allNewsRbAction( $type, $page=1)
     {
-        $entities = array('Film', 'News', 'Snipet');
+        $entities = array('Film', 'News');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         
@@ -105,7 +102,6 @@ class NewsController extends Controller
         $data['title'] = $title[$type];
         $data['type'] = $type;
         $data['month'] = $this->month;
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render( 'CinemaCinemaBundle:Retrobar:all_news.html.twig', array('data'=>$data));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func

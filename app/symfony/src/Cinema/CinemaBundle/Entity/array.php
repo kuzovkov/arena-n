@@ -1,7 +1,4 @@
 <?php
-/**
- * function return array to convert string in russian to translit 
- **/
 
 function getReplaceArray()
 {

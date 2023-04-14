@@ -19,7 +19,8 @@ class FilmController extends Controller
      **/
     public function filmAction( $slug = '' )
     {
-        $entities = array('Film', 'News', 'Schedule','Banner', 'Snipet');
+
+        $entities = array('Film', 'News', 'Schedule','Banner');
         $result = CacheControl::cacheCheck($this->getDoctrine(),$this->getRequest(),new Response(), $entities, $this->sharedEntities);
         if (is_object($result)) return $result;
         
@@ -33,12 +34,10 @@ class FilmController extends Controller
         $data['today'] = $repository->getFilmsTodayInfo();
         $repoNews = $this->getDoctrine()->getRepository("CinemaCinemaBundle:News");
         $data['news'] = $repoNews->getNews('CINEMA_NEWS');
-        $data['month'] = $this->month;
-        $data['format'] = $repoSched->filmHasFormats($id); 
+        $data['month'] = $this->month; 
         $data['filmbackground'] = $repository->getFilmOnBackground();
         $data['filmnameimage'] = $repository->getFilmImageName();
         $data['banners'] = $repoBanners->getBanners();
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         if ( !$data['film'] ) 
             return $this->redirect($this->generateUrl('cinema_cinema_index'));
         $response =  $this->render('CinemaCinemaBundle:Default:film.html.twig', array( 'data'=> $data, 'month' => $this->month )); 

@@ -377,1746 +377,862 @@
             },
             "require": {
                 "doctrine/dbal": ">=2.2,<2.5-dev",
-                "jdorn/sql-formatter": "~1.1",
-                "php": ">=5.3.2",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/framework-bundle": "~2.2"
-            },
-            "require-dev": {
-                "doctrine/orm": ">=2.2,<2.5-dev",
-                "symfony/validator": "~2.2",
-                "symfony/yaml": "~2.2"
-            },
-            "suggest": {
-                "doctrine/orm": "The Doctrine ORM integration is optional in the bundle.",
-                "symfony/web-profiler-bundle": "to use the data collector"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Bundle\\DoctrineBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                }
-            ],
-            "description": "Symfony DoctrineBundle",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "database",
-                "dbal",
-                "orm",
-                "persistence"
-            ],
-            "time": "2013-03-25 20:13:59"
-        },
-        {
-            "name": "doctrine/inflector",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
+                "jdorn/sql-formatficatio        "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
-                }
-            ],
-            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "inflection",
-                "pluarlize",
-                "singuarlize",
-                "string"
-            ],
-            "time": "2013-01-10 21:49:15"
-        },
-        {
-            "name": "doctrine/lexer",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb",
-                "shasum": ""
-            },
+                 n3@7c740                {
+           -gcP1.*(Udrmatficatio        "name": "Guilhhub.com/doctrin1      lcWag
+     c   ywlcP/dbr           "7Iicat          "j74810,
+                    "email": "guNa   "notification-url": "https://packagist.org/downloads/",
+           16h0a  }
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+     /rg/   
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+         },
             "require": {
-                "php": ">=5.3.2"
+     @1E          ef3rctrine/doctrine-bundle",
+          e": {
+  ": "6/sql-f,c"phcPenco",
+   eS@7c740       ctrf.-"pb gdne-bundle",
+          e": {
+  ": "6/sql-f,c"phcPenco",
+   eS@7c740              },
+                {
+                    "name": "GuilhermeEn
+ c748 "henco",
+         },
+            "require": {
+     @1E          ef3rctY96://pacdSt(00":       },
+: "e"Bere": {
+     f3rctrine/doctrine-bundle",
+          e":.1},
+3L     /@ 1a          "requir   2     "email": "roman@code-factory.org"
+                },
+              tory.org"
+                },
+              tory.org"
+                },
+                   },
+            "require": {
+                "doctrine/dbal": "e":  :6          h   "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipb",
+         e": "765b0d87fcc3e83ctrine-bundle",
+   1 gi
+      Xtion Layelf-   CCgd3n
+      ygc-"phcPenco",
+    h18cAd
+        {
+            "ndoc           "requ  {6o",
+1/hrl": "https://github.com/doctrine/dbal.git",
+                "referC_d    {
+                    "name": "Guindlo",
+6/dbctakt@bd-   a6   ygd {
+   65beere       e"ro7        "referC_d    {
+           d3n h1,$leng7u },27211258cbef3a4fb9"
             },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Lexer\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+            "dist": {
+                P(00":       },
+: "e"Bere": {
+     f3rctrine/,rman@code-f00"Ene-bf-b0bef3n
+      ygc-"phcPenco",
+    h18cbef3n
+      ygc-"phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion 8cbef3eh    {
+                    "name": "Guindlo",
+6/dbctakt@bd-   a6   ygd {
+   651   c-1 gi0d87fc Xl": "http,
+6/dbctakt@bd-   a6   ygd {
+   65 (                "type": "git",
+                "url": "https://github.co  h      "0adPenco",url": "https://github.co  h      "0adPenco",url": "https://github.co iory2Pen1weE0E
+      ygc-"phcPenco",
+ ib 07I,tIEb "https://github.co ior         "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
+         ,75E yge   nse": [trine-bundle",
+          e":.1},
+3L     /@ 1a          "requir   2                   "typeie/do11258cbef3a4fb9"
+              1weE0E   {
+                   ib 07I,tIEb58cbef3a4fb9"
+         ole": "Creator"
                 },
                 {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
+               ,9:    h18gc-bh0-idactory.org"
+             $},
+{
+     url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipb",
+tio 4E 1aEh/downloads/",
+            "license": [
+                "MIT"
+        ctrin   ikt@beberlei.de"
                 },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
-                }
-            ],
-            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "lexer",
-                "parser"
-            ],
-            "time": "2013-01-12 18:59:04"
-        },
-        {
-            "name": "doctrine/orm",
-            "version": "v2.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "0363a5548d9263f979f9ca149decb9cfc66419ab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/0363a5548d9263f979f9ca149decb9cfc66419ab",
-                "reference": "0363a5548d9263f979f9ca149decb9cfc66419ab",
-                "shasum": ""
-            },
+    "MIT"
+        ctrin   ikrmgc       e1
+             $}     },b.com/doctrine/dbal.git",
+                "referC_d    {
+          
+    17mgCHc"Berikt@b     /:          bu,tI  a6   ygd {
+   65beere       e"ro7        "referC_d    {
+             I  crh1R1ygdCgy:(           $},
+{
+     url": "https://api.github.com/repos/doctrine/DoctrineBueMh00om/             "homep rmeEnt         },
             "require": {
-                "doctrine/collections": "~1.1",
-                "doctrine/dbal": "~2.4",
-                "ext-pdo": "*",
-                "php": ">=5.3.2",
-                "symfony/console": "~2.0"
-            },
-            "require-dev": {
-                "satooshi/php-coveralls": "dev-master",
-                "symfony/yaml": "~2.1"
-            },
-            "suggest": {
-                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
-            },
-            "bin": [
-                "bin/doctrine",
-                "bin/doctrine.php"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\ORM\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+     @1E          ef3rctrine/doctrine-bundle",
+     '  },
+   ql-f,c"pheEnt         },
+           
+Eh1Re     "referC_   gcoctr    :.1},
+3L  f.e/d1 Ht@bd-   a6   ygd {
+   65beere       e"ro7        "referC_d    {
+   rmeEnt         }
+   65btp://www.doctrine-project.org",
+            "keywords": [
+         coctrOry.orgw.docet":dr0-f,cu
+             "reference": "765b0d87fcc3e8hub.com/doib e0obdmgc-},
+ Xe": "7E   e"ro7        "referC_d    {
+   oiygd {
+   65beere       e"ro7        "referC_d    {
+           d3n h1,$leng7uMom/rep   oiVag w 3m/doE  eefeor         "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                }
+           etgy:gc.@a6eefeor         "license": [
+                "MIT"
             ],
-            "description": "Object-Relational-Mapper for PHP",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "database",
-                "orm"
-            ],
-            "time": "2014-02-08 16:35:09"
-        },
-        {
-            "name": "incenteev/composer-parameter-handler",
-            "version": "v2.1.0",
-            "target-dir": "Incenteev/ParameterHandler",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Incenteev/ParameterHandler.git",
-                "reference": "143272a0a09c62616a3c8011fc165a10c6b35241"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/143272a0a09c62616a3c8011fc165a10c6b35241",
-                "reference": "143272a0a09c62616a3c8011fc165a10c6b35241",
-                "shasum": ""
-            },
+        1 e/DoctrineBueMh00om/             "homep rmeEnt         },
             "require": {
-                "php": ">=5.3.3",
-                "symfony/yaml": "~2.0"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpspec/prophecy-phpunit": "~1.0",
-                "symfony/filesystem": "~2.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Incenteev\\ParameterHandler": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
+     c               0000777 0000060 000006e( uirE    f-bE         }nse"n               "MIT"
+            ],
+        1 e/DoctrineBueMh00om/            u
+@7c740                {
+           -gcP1."phpunit/oib e0obdmgc-  ],X{
+    E
+     c               0000777 0000oi/github.co  h      "0adPenco",url": "https://github.co  h      "0adPenco",urM1,$len000oiVaERS  "ty       ctrin   ikrmgc       e1
+             $}     },b.com/doctrine        n000fh/doe": [          $},
+{
+     url": "https:( https://  "email": "jon58cbef3a4fb9"
+             url 65beere       e"ro7        "referC_d    {
+             I  crh1R1yg0bef6f00"Ene-bf-b0be   hs/",
             "license": [
                 "MIT"
+        ctrin   itrin
+    if3a4fb)f     elf-   . 001 (1    yb": "Doctrine/Bundle/DoctrineBundle",
+            "source": {
+            dh13a4fb)f     elf-   . 001 (1    yb"         $}     },yn               "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                }
-            ],
-            "description": "Composer script handling your ignored parameter file",
-            "homepage": "https://github.com/Incenteev/ParameterHandler",
+         },b.com/doctrine/db         url 65beer1 gi    f-3b)f b                       "email": "guilhermeblanco@gmail.com",
+                 "MIT"
+  gCgc:   N-   E)f rub.co  h  eh1    c.@A gd               "MIT"
+  gCgc:   N-   E)f rub.co  h  eh1    c.@A gd  7E   e"ro7        "referC_d    {
+   oiygd {
+   65beere       e"ro7 t    url0ilhermeblanco@gmail.com",
+        ea50fa86e      Cgi.V},b.com/doctrine        n000fh/doe"pe"r/phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",oct",
+    11        "license": [
+                "MIT"
+        ctrin   itrin
+    if3a4fb)f     elf-   . 001 (1    yb": "Doctrine/Bundle/DoctrineBundle",
+    df1,9@l6  },b/Bundle/DoctrineBu1r f.e/d1 HuY3df1,9@l6   f- exer":,
+ mgc Admgc.@a6,
+    df1,9@l6  },b/Bundle/DoctrineBu1r f.e/d1 HuY3df1,9@l6   f- exer":,
+1 ctrine/db         url 65beer1 gi    f-3b)f b                       "email": "guilhermeblc                                        anco",
+    h18cb  {
+   oiygd          anco",
+    h18cb  {
+   oiiIT"
+        n  e":  6,
+0E)f rub.c1,9@0:,
+1 ctrine/db         url 65beer1enstacli   f- exer":,   iching library offering an object-oriel
+    h18cbef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion 8cbef3eh    cR      ],
+         Xtion 8cbef3eh    cR      ],
+o",u(          ancoEblce/         "license": [
+                "MIT"
+        ctrin   itrin
+    if3a4foib  r1e an1ference": "765b ggc    e/d f-e5                Croject.org",
             "keywords": [
-                "parameters management"
+         coctrOry.orgw.docet":dr0-f,cu
+           u   ywords"              "MIT"
             ],
-            "time": "2013-12-07 10:10:39"
-        },
-        {
-            "name": "jdorn/sql-formatter",
-            "version": "v1.2.17",
+         },b.com/doctrine/db          [
+   gcRb Hc    Ndle/"http  ywords"              "MIT"
+     :( :   c   ith Hc          ],
+         },b.com/doctrine/db         url 65beer1 gi   k     "M000bucbe        "MIT"
+  gCgc:   N-   E)f rub.co  h  eh1    c.@A gd  7E   e"],
+ I7 0EmgCHcrmgcobEh00  7         ],
+eb)fh1    c  "reference": "765b0d87fcc3e839c74817b7211258cbef3a4fb9",
+                "eh    {
+                  h  7E   e"ro7        "referC_d    {
+   oiygd {
+   65beere       e"ro7 a17        url 65beer1 gi    f-3b)f  8cbef3eh    cR      ],
+ "ro7 a17        url 65beer1 gi    f-3b)f  8cbef3eh    cR      ],
+ "ro7 a17        url 65beer1 gi    f-3b)f  8cbef3eh    cR      ],
+ "ro7 a17        url 65beer1 gi    f-3b)f  8cbef3eh    cR      ],
+ "ro7 a17        url 65beer1 gi    f-3b)f  8cbef3eh    cR    T  f1.com/doctrine   yword       [elf-   8
+ "rdoctrine b0":,
+1 ctrine/db         url 65beer1 gi    f-3b)f b                       "email6 65beere       e"roI   :( :   eannotations",
+   
+         e"roI   :( :   eannotations",
+   
+         e"roI   :( :   eannotations",
+  f- exer":,   iching library offering an object-oriel
+    h18cbef3n
+ 4c-"le/D : "Doctrine/Bundle/DoctrineBundle",
             "source": {
-                "type": "git",
-                "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
-                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "lib"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+            dh13a7mc- exob)f b  cR       ]6 HctrintrineBundle",
+            "source": {
+            dh13a7mc- exob)f b  cR b/Bundle/DocttD   trintri /,n             "MITcintrineBundle",
+            "sourhnco",
+    h18cbef3n
+ 4c-"phcPenco",
+    h18cbef3n
+ 4c-"phcPenco",
+       "sourhn           "source"   h18cbdh 8cbef3eh    cR      ],
+o",u(          ancoEblce/         "license": [
+          gi    f-3b)f  8cbef3eh    cR    T  17m_d       [elf-   8
+ "rdoctrine b0":,
+o7mHm "licentrir[
                 "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Dorn",
-                    "email": "jeremy@jeremydorn.com",
-                    "homepage": "http://jeremydorn.com/"
-                }
-            ],
-            "description": "a PHP SQL highlighting library",
-            "homepage": "https://github.com/jdorn/sql-formatter/",
-            "keywords": [
-                "highlight",
-                "sql"
-            ],
-            "time": "2014-01-12 16:20:24"
-        },
-        {
-            "name": "knplabs/knp-menu",
-            "version": "v1.1.2",
-            "source": {
+  h1    cR    T  17m_d       [elf-   8        :(D h1    cR 1R{
                 "type": "git",
-                "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873"
+                "url": "https://github.com/doctrine/collections.git",
+                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/f8e867268f63f561c1adadd6cbb5d8524f921873",
-                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "pimple/pimple": "*",
-                "silex/silex": "1.0.*",
-                "twig/twig": ">=1.2,<2.0-dev"
-            },
-            "suggest": {
-                "pimple/pimple": "for the built-in implementations of the menu provider and renderer provider",
-                "silex/silex": "for the integration with your silex application",
-                "twig/twig": "for the TwigRenderer and the integration with your templates"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Knp\\Menu\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+                     Hhttps://api.github.com/repos/doctrine/DoctrineBundle/zipb",
+         e": "",fctri [elf-   8
+ "rd_1b  cR d8   "sourcee
+                /D h1    cR 1R{
+     -     Pttps://git
+  url": "htt99a1b ey10         6fctr "MITcintrine1"refere
+  99a1b ey10         6fctr "M  url": "htt99a1b ey10         6fctr "MITcintrine1"refere
+  99a1b ey10 i0     gi   neBeineM  url"e262 "M000bucbe  00om/            u
+@7c740            iiI   Hps://api.github.com/repos/doctrine/DoctrineBundle/zipb",
+         e": "",fctri 6   ygl)H
+ "rd_1b  cR d8   "sourcee
+                /D h1    cR 1R{
+     -     Pttps://g ichin ntree
+ng library offering an object-oriel
+    h18cbef3n
+ 4c-"le/D : "DoctE6trt/do11258cbef  }Ebl "DH ey10         6fctr "MITcintrine1"refere
+  99a1b ey10 i0     gi   neBeineM  urlrC_d  l)H1f21{
+           d3n huDw3 d_1 Ud: {
+                "type": "zip",
+   
+ef3e  l)H1f))He/DoctrineBundle/zipb",
+         e": "",fctri 6   ygl)H
+ "rd_1b  cR d8   "sourc     ]l)H          /D h1    cR 1R{
+     -     Pttps://g ichin ntree
+ng library offering ype": yy   s",
+ "ref0yn               "MIT"
+            ],
+         },b.com/doctrine/db    eannotatio7E  c   eM  url": "htt99a1b ey10         6fctr "MITcin   rm(0"refere
+  99a1b ey10 i0     gi   nep/dole/DoctrineB7ctr  gH: "zip",
+   
+ef3e  l)H1f))He/DoctrineBundle/zipb",
+         e": "",fctri 6   ygit/oibl)H))He/DoctrineBundle/zipb",
+         e": "",fctri 6   ygl)H
+ "rd_1b  cR d8   "soN21: "https://github.uDw3 : " Ud/g ichin ntree
+ng library offering an dist"y10   r1 gi f{
+   Yhttps://githu1a1b    rm(1ng libn    ferC_d    {
+m/repos/doctrine/    )f b   - e0om13ce": "b99c5c46c87126201899afenb _d "type": "zip",
+   
+ef3e  l)H1f))He/Do"",dmC_dndle/zipb",
+         e": "",fctri 6   X  h18cbefipb",
+         e": "",fctri [elf-   8
+ "rd_1b  cR d8   "sourcee
+       o  ]f-cti X  h18cbefipb",
+         e": "f [elsourcoct/Bu   13            /D h1    cR 1R{
+ nb _d         },b.com/doctrine/db    eannot"zidmC_dc   eM  url": "htt99a1b ey10         6XHm "licen9a1b ey10         6fctr "MITcintrine1"refere
+  99a1b ey10         6fctroy gi./eh0  e"rOrrd_1b  cR d8   "sourcee
+           13trineB7ctr6e  "thub.com/rep7pb" gcRb Hcs.gi512M
+N.ng ering an object-oriel
+    h18cbef3n
+ 4c-"le/D : "DoctE6trt/do11258c gcReB7c   a6   ygd {
+ h    url 65beer1 gi    f-3b)f b                       "email6 65beere       e"gdd {
+ h    url 65beer1 gi    f-3b)f b                       "email6 m/doctrine/collections.git",
+                "reference": "b99c5c46c8712Ei51h0  e"rOrrd_1b  cR d8   "sourcee
+           13trineB7ctr6e  "thub.com/repf./6   ygl)H
+undle",
+            "source": {
+            dh13a4fb)f     elf-   . 001 (1 pfapet99210         6fctr "M  url": "htt99a1b ey10         6fctr "MITcintrine1"reP "f [elsourcoct/Bu   13            /D h1    ,r0         "f Echinc gcReBb)f bcR ddm)        ],
+         },b.com/doctrine/db    eannotatio7E  c   eM  url"./et7     /oibl)H))He/DoctrineBundl  d8   "sourcee
+      Irm8tatio03n
+ 4c-"le/D3 "M/oi    "MIT"
+            ],
+        1 e/DoctrineBueMh00om/            u
+@7c740  i0     gi   nep/dole/Doctnns"entrir[
                 "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                },
-                {
-                    "name": "KnpLabs",
-                    "homepage": "http://knplabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
-                }
-            ],
-            "description": "An object oriented menu library",
-            "homepage": "http://knplabs.com",
-            "keywords": [
-                "menu",
-                "tree"
-            ],
-            "time": "2012-06-10 16:20:40"
-        },
-        {
-            "name": "knplabs/knp-menu-bundle",
-            "version": "v1.1.2",
-            "target-dir": "Knp/Bundle/MenuBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/2fecac02614e5a006f674dd5dd754eeaeca060b9",
-                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9",
-                "shasum": ""
-            },
-            "require": {
-                "knplabs/knp-menu": "~1.1",
-                "symfony/framework-bundle": "~2.0"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Knp\\Bundle\\MenuBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                },
-                {
-                    "name": "Knplabs",
-                    "homepage": "http://knplabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
-                }
-            ],
-            "description": "This bundle provides an integration of the KnpMenu library",
-            "keywords": [
-                "menu"
-            ],
-            "time": "2013-05-25 10:20:03"
-        },
-        {
-            "name": "kriswallsmith/assetic",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "735cffd3982c6e8cdebe292d5db39d077f65890f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/735cffd3982c6e8cdebe292d5db39d077f65890f",
-                "reference": "735cffd3982c6e8cdebe292d5db39d077f65890f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1",
-                "symfony/process": "~2.1"
-            },
-            "require-dev": {
-                "cssmin/cssmin": "*",
-                "joliclic/javascript-packer": "*",
-                "kamicane/packager": "*",
-                "leafo/lessphp": "*",
-                "leafo/scssphp": "*",
-                "leafo/scssphp-compass": "*",
-                "mrclay/minify": "*",
-                "phpunit/phpunit": "~3.7",
-                "ptachoire/cssembed": "*",
-                "twig/twig": "~1.6"
-            },
-            "suggest": {
-                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
-                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
-                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
-                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
-                "twig/twig": "Assetic provides the integration with the Twig templating engine"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Assetic": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kris Wallsmith",
-                    "email": "kris.wallsmith@gmail.com",
-                    "homepage": "http://kriswallsmith.net/"
-                }
-            ],
-            "description": "Asset Management for PHP",
-            "homepage": "https://github.com/kriswallsmith/assetic",
-            "keywords": [
-                "assets",
-                "compression",
-                "minification"
-            ],
-            "time": "2013-07-19 00:03:27"
-        },
-        {
-            "name": "monolog/monolog",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
-                "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~3.7.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*"
-            },
-            "suggest": {
-                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
-                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
-                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server",
-                "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Monolog\\": "src/Monolog"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-                "log",
-                "logging",
-                "psr-3"
-            ],
-            "time": "2014-03-23 19:50:26"
-        },
-        {
-            "name": "psr/log",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "sensio/distribution-bundle",
-            "version": "v2.3.4",
-            "target-dir": "Sensio/Bundle/DistributionBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/66df91b4bd637a83299d8072aed3658bfd3b3021",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/framework-bundle": "~2.2"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\DistributionBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "The base bundle for the Symfony Distributions",
-            "keywords": [
-                "configuration",
-                "distribution"
-            ],
-            "time": "2013-08-22 05:04:53"
-        },
-        {
-            "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.0",
-            "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "2016a90bd032248e7d6e9da29def4959821127c8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/2016a90bd032248e7d6e9da29def4959821127c8",
-                "reference": "2016a90bd032248e7d6e9da29def4959821127c8",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": "~2.2",
-                "symfony/framework-bundle": "~2.4"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4",
-                "symfony/security-bundle": "~2.4"
-            },
-            "suggest": {
-                "symfony/expression-language": "",
-                "symfony/security-bundle": ""
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\FrameworkExtraBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "This bundle provides a way to configure your controllers with annotations",
-            "keywords": [
-                "annotations",
-                "controllers"
-            ],
-            "time": "2013-12-03 07:53:39"
-        },
-        {
-            "name": "sensio/generator-bundle",
-            "version": "v2.3.4",
-            "target-dir": "Sensio/Bundle/GeneratorBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/console": "~2.0",
-                "symfony/framework-bundle": "~2.2"
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.2,>=2.2.3",
-                "symfony/doctrine-bridge": "~2.2",
-                "twig/twig": "~1.11"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\GeneratorBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "This bundle generates code for you",
-            "time": "2013-08-21 18:09:35"
-        },
-        {
-            "name": "sonata-project/admin-bundle",
-            "version": "2.2.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "a8daab61ba5e74524c3b95de938067ba9ee7f718"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/a8daab61ba5e74524c3b95de938067ba9ee7f718",
-                "reference": "a8daab61ba5e74524c3b95de938067ba9ee7f718",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": "~2.2",
-                "knplabs/knp-menu": ">=1.1.0,<3.0.0",
-                "knplabs/knp-menu-bundle": ">=1.1.0,<3.0.0",
-                "sensio/generator-bundle": "~2.2",
-                "sonata-project/block-bundle": "~2.2,>=2.2.7",
-                "sonata-project/core-bundle": "~2.2",
-                "sonata-project/exporter": "~1.0",
-                "sonata-project/jquery-bundle": "1.8.*",
-                "symfony/class-loader": "~2.2",
-                "symfony/config": "~2.2",
-                "symfony/console": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/http-foundation": "~2.2",
-                "symfony/routing": "~2.2",
-                "symfony/security-bundle": "~2.2",
-                "symfony/twig-bridge": "~2.2",
-                "symfony/validator": "~2.2",
-                "twig/extensions": "~1.0",
-                "twig/twig": "~1.12"
-            },
-            "require-dev": {
-                "jms/translation-bundle": "~1.1",
-                "sonata-project/intl-bundle": "~2.1",
-                "symfony/yaml": "~2.2"
-            },
-            "suggest": {
-                "jms/translation-bundle": "Extract message keys from Admins",
-                "sonata-project/intl-bundle": "Add localized date and number into the list"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sonata\\AdminBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataAdminBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataAdminBundle",
-            "homepage": "http://sonata-project.org/bundles/admin",
-            "keywords": [
-                "Admin Generator",
-                "admin",
-                "bootstrap",
-                "sonata"
-            ],
-            "time": "2014-02-16 09:58:32"
-        },
-        {
-            "name": "sonata-project/block-bundle",
-            "version": "2.2.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "1e6adfaa27f46d50973e6f14150e0585f876dd1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/1e6adfaa27f46d50973e6f14150e0585f876dd1e",
-                "reference": "1e6adfaa27f46d50973e6f14150e0585f876dd1e",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": "~2.3",
-                "sonata-project/cache": "~1.0",
-                "sonata-project/core-bundle": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/http-kernel": "~2.2"
-            },
-            "require-dev": {
-                "knplabs/knp-menu-bundle": "~1.1",
-                "sonata-project/admin-bundle": "~2.2"
-            },
-            "suggest": {
-                "knplabs/knp-menu-bundle": "~1.1",
-                "sonata-project/admin-bundle": "~2.2",
-                "sonata-project/cache-bundle": "~2.1"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sonata\\BlockBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataBlockBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataBlockBundle",
-            "homepage": "http://sonata-project.org/bundles/block",
-            "keywords": [
-                "block",
-                "sonata"
-            ],
-            "time": "2014-02-21 14:01:24"
-        },
-        {
-            "name": "sonata-project/cache",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/cache.git",
-                "reference": "3bd8c266c6184ebcf82846d659292e9680b979eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/cache/zipball/3bd8c266c6184ebcf82846d659292e9680b979eb",
-                "reference": "3bd8c266c6184ebcf82846d659292e9680b979eb",
-                "shasum": ""
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.2",
-                "doctrine/phpcr-odm": "~1.0",
-                "predis/predis": "~0.8",
-                "psr/log": "~1.0"
-            },
-            "suggest": {
-                "doctrine/orm": "ORM support",
-                "doctrine/phpcr-odm": "PHPCR ODM support",
-                "ext-apc": "Caching with ext/apc",
-                "ext-memcached": "Caching with ext/memcached",
-                "predis/predis": "Install redis php"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sonata\\Cache\\Tests\\": "test/",
-                    "Sonata\\Cache\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@gmail.com",
-                    "homepage": "http://sonata-project.org/"
-                }
-            ],
-            "description": "Cache library",
-            "homepage": "https://github.com/sonata-project/cache",
-            "keywords": [
-                "cache",
-                "memcached",
-                "mongodb",
-                "redis"
-            ],
-            "time": "2014-02-13 15:12:33"
-        },
-        {
-            "name": "sonata-project/core-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "86ae107d623118f393a149d800135d8942a5a9f1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/86ae107d623118f393a149d800135d8942a5a9f1",
-                "reference": "86ae107d623118f393a149d800135d8942a5a9f1",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/config": "~2.0",
-                "symfony/form": "~2.2",
-                "symfony/http-foundation": "~2.2",
-                "symfony/translation": "~2.2",
-                "twig/twig": "~1.12"
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.4",
-                "doctrine/phpcr-odm": "~1.0",
-                "friendsofsymfony/rest-bundle": "~1.1",
-                "jms/serializer-bundle": "~0.11",
-                "sensio/framework-extra-bundle": "~2.2",
-                "sonata-project/exporter": "~1.3"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sonata\\CoreBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataCoreBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataCoreBundle",
-            "homepage": "http://sonata-project.org/bundles/core",
-            "keywords": [
-                "sonata"
-            ],
-            "time": "2014-04-14 17:04:46"
-        },
-        {
-            "name": "sonata-project/doctrine-orm-admin-bundle",
-            "version": "2.2.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "394d0b02483ef3b53614255976484129e0715d13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/394d0b02483ef3b53614255976484129e0715d13",
-                "reference": "394d0b02483ef3b53614255976484129e0715d13",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/orm": "~2.3",
-                "sonata-project/admin-bundle": "~2.2,>=2.2.2",
-                "sonata-project/exporter": "~1.3,>=1.3.1",
-                "symfony/console": "~2.2",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/framework-bundle": "~2.2",
-                "symfony/security": "~2.2"
-            },
-            "require-dev": {
-                "simplethings/entity-audit-bundle": "~0.1",
-                "sonata-project/admin-bundle": "~2.2@dev"
-            },
-            "suggest": {
-                "simplethings/entity-audit-bundle": "If you want to support for versioning of entities and their associations."
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sonata\\DoctrineORMAdminBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors"
-                }
-            ],
-            "description": "Symfony Sonata / Integrate Doctrine ORM into the SonataAdminBundle",
-            "homepage": "http://sonata-project.org/bundles/admin",
-            "keywords": [
-                "Admin Generator",
-                "admin",
-                "bootstrap",
-                "generator",
-                "sonata"
-            ],
-            "time": "2014-02-14 16:32:14"
-        },
-        {
-            "name": "sonata-project/exporter",
-            "version": "1.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/exporter.git",
-                "reference": "dad681274e09854a972a0c882ebddd095b7837be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/exporter/zipball/dad681274e09854a972a0c882ebddd095b7837be",
-                "reference": "dad681274e09854a972a0c882ebddd095b7837be",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "propel/propel1": "~1.6",
-                "symfony/property-access": "~2.2",
-                "symfony/routing": "*"
-            },
-            "suggest": {
-                "ext-curl": "*",
-                "propel/propel1": "~1.6",
-                "symfony/property-access": "~2.2",
-                "symfony/routing": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Exporter": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@gmail.com",
-                    "homepage": "http://sonata-project.org/"
-                }
-            ],
-            "description": "Lightweight Exporter library",
-            "homepage": "https://github.com/sonata-project/Exporter",
-            "keywords": [
-                "client",
-                "csv",
-                "data",
-                "export",
-                "xls"
-            ],
-            "time": "2013-10-24 13:43:33"
-        },
-        {
-            "name": "sonata-project/jquery-bundle",
-            "version": "1.8.3",
-            "target-dir": "Sonata/jQueryBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonatajQueryBundle.git",
-                "reference": "1b6dde1becb93b801e64b20e96bc76a110ead712"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonatajQueryBundle/zipball/1b6dde1becb93b801e64b20e96bc76a110ead712",
-                "reference": "1b6dde1becb93b801e64b20e96bc76a110ead712",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.*"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Sonata\\jQueryBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonatajQueryBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonatajQueryBundle",
-            "homepage": "http://sonata-project.org/bundles/jquery",
-            "keywords": [
-                "jquery",
-                "sonata"
-            ],
-            "time": "2013-03-01 17:24:02"
-        },
-        {
-            "name": "swiftmailer/swiftmailer",
-            "version": "v5.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/748c01c1144713ac0118396935d10b6ceec91b68",
-                "reference": "748c01c1144713ac0118396935d10b6ceec91b68",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "lib/swift_required.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Chris Corbyn"
-                }
-            ],
-            "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
-            "keywords": [
-                "mail",
-                "mailer"
-            ],
-            "time": "2014-03-18 09:03:27"
-        },
-        {
-            "name": "symfony/assetic-bundle",
-            "version": "v2.3.0",
-            "target-dir": "Symfony/Bundle/AsseticBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/AsseticBundle.git",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/146dd3cb46b302bd471560471c6aaa930483dac1",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1",
-                "shasum": ""
-            },
-            "require": {
-                "kriswallsmith/assetic": "~1.1",
-                "php": ">=5.3.0",
-                "symfony/framework-bundle": "~2.1"
-            },
-            "require-dev": {
-                "symfony/class-loader": "~2.1",
-                "symfony/console": "~2.1",
-                "symfony/css-selector": "~2.1",
-                "symfony/dom-crawler": "~2.1",
-                "symfony/form": "~2.1",
-                "symfony/twig-bundle": "~2.1",
-                "symfony/yaml": "~2.1"
-            },
-            "suggest": {
-                "symfony/twig-bundle": "~2.1"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Bundle\\AsseticBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kris Wallsmith",
-                    "email": "kris.wallsmith@gmail.com",
-                    "homepage": "http://kriswallsmith.net/"
-                }
-            ],
-            "description": "Integrates Assetic into Symfony2",
-            "homepage": "https://github.com/symfony/AsseticBundle",
-            "keywords": [
-                "assets",
-                "compression",
-                "minification"
-            ],
-            "time": "2013-05-16 05:32:23"
-        },
-        {
-            "name": "symfony/icu",
-            "version": "v1.0.1",
-            "target-dir": "Symfony/Component/Icu",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Icu.git",
-                "reference": "fdba214b1e087c149843bde976263c53ac10c975"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
-                "reference": "fdba214b1e087c149843bde976263c53ac10c975",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/intl": "~2.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Icu\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Contains an excerpt of the ICU data and classes to load it.",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "icu",
-                "intl"
-            ],
-            "time": "2013-10-04 09:12:07"
-        },
-        {
-            "name": "symfony/monolog-bundle",
-            "version": "v2.5.1",
-            "target-dir": "Symfony/Bundle/MonologBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/MonologBundle.git",
-                "reference": "71ad844ac29401f86619f9d643393265451e858b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/71ad844ac29401f86619f9d643393265451e858b",
-                "reference": "71ad844ac29401f86619f9d643393265451e858b",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "~1.6",
-                "php": ">=5.3.2",
-                "symfony/config": "~2.3",
-                "symfony/dependency-injection": "~2.3",
-                "symfony/http-kernel": "~2.3",
-                "symfony/monolog-bridge": "~2.3"
-            },
-            "require-dev": {
-                "symfony/console": "~2.3",
-                "symfony/yaml": "~2.3"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Bundle\\MonologBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony MonologBundle",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "log",
-                "logging"
-            ],
-            "time": "2014-02-19 14:49:26"
-        },
-        {
-            "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.7",
-            "target-dir": "Symfony/Bundle/SwiftmailerBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
-                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "swiftmailer/swiftmailer": ">=4.2.0,~5.0",
-                "symfony/swiftmailer-bridge": "~2.1"
-            },
-            "require-dev": {
-                "symfony/config": "~2.1",
-                "symfony/dependency-injection": "~2.1",
-                "symfony/http-kernel": "~2.1",
-                "symfony/yaml": "~2.1"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Bundle\\SwiftmailerBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony SwiftmailerBundle",
-            "homepage": "http://symfony.com",
-            "time": "2014-04-05 17:15:52"
-        },
-        {
-            "name": "symfony/symfony",
-            "version": "v2.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/symfony.git",
-                "reference": "3199b2e0d194f71fe2e13c95768b2ef22206682b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3199b2e0d194f71fe2e13c95768b2ef22206682b",
-                "reference": "3199b2e0d194f71fe2e13c95768b2ef22206682b",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": "~2.2",
-                "php": ">=5.3.3",
-                "psr/log": "~1.0",
-                "symfony/icu": "~1.0",
-                "twig/twig": "~1.11"
-            },
-            "replace": {
-                "symfony/browser-kit": "self.version",
-                "symfony/class-loader": "self.version",
-                "symfony/config": "self.version",
-                "symfony/console": "self.version",
-                "symfony/css-selector": "self.version",
-                "symfony/debug": "self.version",
-                "symfony/dependency-injection": "self.version",
-                "symfony/doctrine-bridge": "self.version",
-                "symfony/dom-crawler": "self.version",
-                "symfony/event-dispatcher": "self.version",
-                "symfony/expression-language": "self.version",
-                "symfony/filesystem": "self.version",
-                "symfony/finder": "self.version",
-                "symfony/form": "self.version",
-                "symfony/framework-bundle": "self.version",
-                "symfony/http-foundation": "self.version",
-                "symfony/http-kernel": "self.version",
-                "symfony/intl": "self.version",
-                "symfony/locale": "self.version",
-                "symfony/monolog-bridge": "self.version",
-                "symfony/options-resolver": "self.version",
-                "symfony/process": "self.version",
-                "symfony/propel1-bridge": "self.version",
-                "symfony/property-access": "self.version",
-                "symfony/proxy-manager-bridge": "self.version",
-                "symfony/routing": "self.version",
-                "symfony/security": "self.version",
-                "symfony/security-acl": "self.version",
-                "symfony/security-bundle": "self.version",
-                "symfony/security-core": "self.version",
-                "symfony/security-csrf": "self.version",
-                "symfony/security-http": "self.version",
-                "symfony/serializer": "self.version",
-                "symfony/stopwatch": "self.version",
-                "symfony/swiftmailer-bridge": "self.version",
-                "symfony/templating": "self.version",
-                "symfony/translation": "self.version",
-                "symfony/twig-bridge": "self.version",
-                "symfony/twig-bundle": "self.version",
-                "symfony/validator": "self.version",
-                "symfony/web-profiler-bundle": "self.version",
-                "symfony/yaml": "self.version"
-            },
-            "require-dev": {
-                "doctrine/data-fixtures": "1.0.*",
-                "doctrine/dbal": "~2.2",
-                "doctrine/orm": "~2.2,>=2.2.3",
-                "ircmaxell/password-compat": "1.0.*",
-                "monolog/monolog": "~1.3",
-                "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
-                "propel/propel1": "1.6.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\": "src/"
-                },
-                "classmap": [
-                    "src/Symfony/Component/HttpFoundation/Resources/stubs",
-                    "src/Symfony/Component/Intl/Resources/stubs"
-                ],
-                "files": [
-                    "src/Symfony/Component/Intl/Resources/stubs/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "The Symfony PHP framework",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "framework"
-            ],
-            "time": "2014-04-04 10:27:02"
-        },
-        {
-            "name": "twig/extensions",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/Twig-extensions.git",
-                "reference": "f91a82ec225e5bb108e01a0f93c9be04f84dcfa0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/f91a82ec225e5bb108e01a0f93c9be04f84dcfa0",
-                "reference": "f91a82ec225e5bb108e01a0f93c9be04f84dcfa0",
-                "shasum": ""
-            },
-            "require": {
-                "twig/twig": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Twig_Extensions_": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Common additional features for Twig that do not directly belong in core",
-            "homepage": "https://github.com/fabpot/Twig-extensions",
-            "keywords": [
-                "debug",
-                "i18n",
-                "text"
-            ],
-            "time": "2013-10-18 19:37:15"
-        },
-        {
-            "name": "twig/twig",
-            "version": "v1.15.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/Twig.git",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.15-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
-                },
-                {
-                    "name": "Twig Team",
-                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
-                    "role": "Contributors"
-                }
-            ],
-            "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
-            "keywords": [
-                "templating"
-            ],
-            "time": "2014-02-13 10:19:29"
-        }
-    ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "sonata-project/core-bundle": 20
-    },
-    "platform": {
-        "php": ">=5.3.3"
-    },
-    "platform-dev": [
-
-    ]
-}
+  h1    cR    T  17m_d       [elf-   8        :ginEH))H    "MI0ad  eM  urin6n'IN "so1f))H/elsourcoct/Bu   13            /D h1    ,r0         "f Echinc gcReBb)f bcR ddm)   NneBD        ],
+        1 e/Doctri f- 6felfDm/            u
+@7c740  i0   6  }6f   D/dole/Doctnns"entrir[
+       f1,96fPttDMIT"
+  h1    cR    T  17m_d  r    f1,3df1,95E.org"
+},boctEtrineB7ctr7l6 65rine/db    eannot"zidmC_d   "Roman BorMef3n
+ 4c-"phcPenc1rE i0 65  6XHm "licen9a1b ey10         6fctr "MITcintrine1"refere
+  99a1b etr7l@  c-/dStwian disc 65 T  17m_d       [elf-   8        :(D h1    cR 1R{
+                "type": -/dfc   ",fctM  rd_     99a1b ey10         6fctroy gi./eh0  e"rOrrd_1b  cR d8   "sourcee
+aco"b ey10   "MIT"
+  h1    cR    T  17m_d       [elf-   8        :(D h1    cR 0a: ""e/Doctrinee
+  0h:AL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b                       "email6 m/doctrine/zip"oapif-i1dmh ,E  ,
+   Pl gi    f-3b)f b                       "email6 65beere       e"gdd {
+ .M  url": 
+  0h:AL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b                        o"soh1    
+ .url 65beer1 gi    f-3b)f b                       "email6 m/doctrineannot"i.git uo"soh1    
+ .ureh    {
+                  h  7E   e"ro7        "referC_d    {
+   oi1 },b.com/doctrine/d   "
+        ctrin   itrin
+    if3a4foib  r1e an1ference": "765b ggc    e/d f-e  {
+   oi1 },b.com/doctrine/d   "
+          o   i    f  rr "M  url": "htt99a1b ey10         6fctr "MITcintrine1"reP "f [elso   "MI10 i0l@  0.me1"reP  "so    6fcMITcintrine1"refere
+  99a1b ey10 i0     gi   neBeineM  url"e262 "M000ifctroyLl": ( ",
+  url"e   d 1fe      h18cbef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion 8cbef3eh    {
+        1fe c h18Pen    ygc-"0a i ,
+ tdPy100   Pl gi    f-3b)f b                 3d 1fEctrgc-1 e/Doctri f- 6felfDm/            u
+@7c740  i0   6  }6f   D/dole/Do  ea ine0b        "e260h96fPttDMIT"
+  h1    cR    T  17m_d  r    f1,3df1,95E.org"
+},boctEtrineB7ctr7l6 65            u
+@7c740 i./ne0b        "e260h96fPttDMIT"
+  h1   3 N 65t3   "Eincu
+@1b ey10         6fctr "MITcintrine1"refere
+  99a1b etr7l@  c-/dStwih1   
+@7   T  17m_d       [elf-   8        :(D h1    cR 1R{
+                "t   etgy:gc.@a6eefeoro9 f-3br 8 0erence": "765b ggc    e/d f-e  {
+   [elso   "MI10 i0l@  0.me1".     [elf-   8        :(D h1    cR 1R{
+                "type": -/dfu1 e07I,            pb",
+         e": "",fctri 6   ygit/oibl)H))He/DoctrineBundle/zipb",
+  h Nb",0a
+0.m
+ 4c-"l      /zip"oapif-i1dmh ,E  ,
+   Pl gi    f-3b)f b                       "E i0 Tb",1Bu   13        3eh   eefgc-1       :AL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b                        o3      1eannotatio7E  cri f- cR rtDR{
+                       "email6 m/doctrineannot"i.git uo"soh1    
+ .fctr tri7l6 6/zip rtDfio7Eh96fPttDMIT"
+  h1   3 N 65t             
+ .fUdB7ctr7l6 65            u
+@7c740 i./ne0e": ",u(   :Aaroject.org",
+  i    f-3b)f bt  f0hBfE
+tr7D f-i./ne0ei1 },b.com/doctrine/d   "
+          o   i    f  rr "M  url": "htt99h ,E ail gcRb Hc   "obE"
+          o   i    f  rr "M  url": "ip 9h e1"reP  "so    6fcMITcintrine1"refere
+  99a1b ey10 i0     gi   neBe i   9hc//api.github.com/repos/doctrine/commgithu-3b    gi 18cbef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion 8cbef3eh    {
+  h1     f gcRb Hcfrl "refeotatio:sourcee 65 Xt 6   ygl)H
+ "rd_1b  cR d8   "sourc     ]l)H          /D h1    cR 1R
+  eotatio(0-id4c-"phcPenco",oct",
+    1$c         ine0b        "e260h96fPttDMIT"
+  h1    cR    T  17m_d  r    f1,3df1    @          u
+@7c740  i0   6  }6f      i0   6  }6f   D/dole/Do  65beererC_   0h96fPttDMIT"
+  h1    cR    T  17m_d  r    f1,3df1,95E.org"
+},boctE 
+ .fctr tri7l6 6/zip rtDfio7Eh96fPsum": ""
+            },
+     o/id4,bocr   mf-eorg"
+}11R{
+     -     Pttp6f   D/dole/Do  65btr "MITcintrine1"refere
+  99a1b etIoctf.e       {
+   [elso   "MI10 i0l@  0.me1".     [elf-   8        :(D h1    c 6fe    0h  T  17m_d  r    f1,3df1    @          u
+@7c740  i0   6  }6f      i0   6  }6f   D/dole/Doy(elf-   8        :(D h1    cR 1R{
+                "type": -/dfu1 e07   6  }6f   D/dole/Doy(elf-   8        :(D h1    cR 1R{
+                "type": -/dfu1 e07   6  }6f   D/doldfuBi         "type": -/dfu1 e07   6  l1ng library offering yb        "e260h0h:AL81dm_1nE 8   e07                  "email6 m/doctrineannot"i.git uo"soh1    
+ .fctr tri ggc6  oi1 },b.com/dEtFiefere
+  99a1b ey10 i0     gi   n    .fUd0  i0   6  }6f      i0   6  }6f   D/do  Dm/dEtFiefere
+  99a1b ey10 i0     gi   n    .fUd0  i0   6  }6f      i0   6twih1   
+@7  
+},@a60  b",1Bu   13        3eh   eefgc-1       :AL81dm_1nEb  elfrl 65beer1          u
+@7c740  i0   6  }6f   oi10h0   cR 1R{
+                "t   etgy:gc.@a6eefeoro9 f-3br 8 0erence": "765b ggc    e/d f-e  {
+   [elso   "MI(  iefere
+  99a1b ey10 r 0e,tI  a6  0a
+   [elso   "MI(  iefere
+E D/esohere
+  9{
+  h1     f gcRb Hcfrl "refeotatio:sourcee 65 Xt 6   ygl)H
+ "rd_1b       uherd- "sh1    6n'INpi.g1dm_1/1b ey10 i0     gi   n    .fUd0  i0   6  }6f      i0   6twih1   
+@7  
+},@a60  b",1N   "}6f1,95E i0   eichin5nRfl)H
+ "rd_1b  cR d8  U!  @          u
+@7c740  i0   6  }6f      i0   6  }6f   D/dole/Do  65beerer0  7         ],
+eb)fo9Y     u
+@7c740/6fctr "M  url": "htt99a1b ey10     otr "m_d  r    f1,3df1    @          u
+@7c740  i0   6  }6f      i0   6  }6.e/Do  ea 0  otr "Di
+       uPttp6f   D/dole/Do  65btr "MITcintrine1"refere
+  99a1b etIoctf.e   rcee }6f/dolso   "MI10 i0l@  0.me1".     [elf-   8        :(D h1    c 6fe    0 etI     c740/dolc6  oi1cR/            ],
+        1 e/Doctrineo 8 h     "email":M740/dolc6  oi1cR/            ],
+        R0DMIT"
+  h1     40   uPt740-/dfu1 e07   6  }6f   D/dole/Doy(elf-   8        :(D h1    cR 1R{
+    c ols   (elf-   8        :(D h1    cR 1R{
+                "type": -/dfu1 e0] I   0hMITcintrine1"refere
+  99a1b etIoctf.e   rcee }6f/dolso   "MI10 i0l@  0.me1".     [elf-   ybef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion fUf.e        "role"M}6f   D/dole/Doy(elf-   8        :(D h1 gE
+",
+D7m_       i0   6  }6f   D/do  Dm/dEtFiefere
+  99a1b ey10 i0     gi   n    .fU6  } 0hMf   }6f      i0   6twih1   
+@7  
+},@a60  b",1Bu   13        3eh   eefg/dfu        gioi1cR/LPe0bgcReB7c   a6   ygd {
+ h    url 65beer1 gi    f-3b)f b                  a6   ygd {
+ h    url 65beer1 gi  itype": -/dfue":e07    }      e/d f-e  {
+   [elso   "MI(  iefere
+  99a1b ey10 r 0e,tI  a6  0a
+     m_  -/1 r    f1,3df1        1b  uPt7Bu ey1   f gcRb Hcfrl "refeotatio:sourcee 65 Xt 6   ygl)H
+ "rd_1b       u n   rl   1(0-id
+   [elso   "MI(  iefere
+$EtFgl)H
+ "  .fUd0  i0   6  }6f      i0   6twih1   
+@7  
+},@a60  b",1N   "}6f10     [e0  ichin5nRfl)H
+ "rd_1b  cR d8  U!  @          u
+@7c740  i0   6  }6f  b",14c-"p    abeer1 gi    f-3Sg1dm_1/1b ey10 i0     gi   n    .oN "refere
+  99a1b etr7 n  e":       :AL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b                     Rb Hcfrl "refeotatio:sourcee 65 Xt 6   ygl)H
+ "rd_1b       u n   rl   1(0-id
+   [elso   "y             "email6 m/doctrineannot"i.git uo"sofgE   e "sso   "y  [elf-   8        :(D h1    c 6fe    0 etI     c740/dolc6  oi1cR/ 6f   AL88  ],
+        1 e/Doctrineo 8 h     "email":M740/dolc6  oi1cR/        1b   ati    gi [elsoLP: "      "f Echinc gcReBb)f bcR ddm)   NneBD        ],
+        1 e/DoctriEchinc gcReBb)f bcR ddm)   NneBD  ierer0  7    h1 a1b  -  /Do               "type": -/dfu1 e0] I   0hMITcintrine1"refere
+  99a1b0    "ss 7 10   6  }6f     $EtFgl et)H
+ "740tri".     [elf-   ybef3n
+ 4c-"phcPenco",oct",
+    1 gi
+      Xtion fUfdols  ddgl (1  "sourcee
+aco"b e-y1f3nd._1 "74io(0-id4c-"phcPenco",oct" ddgl (  6  }6f   D/do  Dm/dEtFiefere
+  99a1b ey10 i0     gi   n    .fU6  _1b ",1Bu   13        3eh   eefg/dfu        gioi1cR/LPe0bgcReB7c   a6   ygd {
+ h    url 65beer1 gi    f-3b)0-y1fu ibeer1 gi    f-3Sg1dm_1/1b ey10 ils ReB(1T  17m_d  r    f1,gioi1cR/LPe0bgcReB7c   a6   ygd {R{
+     -     Pttp6f0-id"reP  "so    6fcMITcintri ea1b EmgCHc/dolo1d  }6f      i0   6twih1   
+oPEe f gcRb Hcfrl "refeotatio:sourcee 65 Xt 6   ygl)H
+ "rd_1b       u n   rl   1(0-id
+   [elso   "MI(  iefecu
+@1b ey10         6fctr "MITcintrine1"refere
+  99a1b etr7l@  c-/dc- i c    N-   eaE  el cPen   c-"phcPenco"/el0EtI     c740/dolc6  oi1cR/            ],
+        1 e/Doctrineo 8 h   8rine1"refee         e": "",f
+ineneo 8 h   8rine1"refee         e": "",f
+ineneo 8 h   8rine1"refee         e": "",dm_1nEb  elfrl 65beer1 gi    f-3b)f b                     Rb Hcfrl "refeI(   08"74io(0-id   1"r"1"refee         e": "",f
+ie cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b                     Rb Hcfrl "r   3eh   eefg/dfu        gioi1cR/LPe0bgcRe@   o   i    f  rr "M  url": "htt99h ,E ail gcRb Hc   "obE"
+          o  it uo"ob    otatio:sourcee 65 Xt 6   ygl)H
+ "rne7h0R/6t99d-1  (    ygc-"0a i ,
+ tdPy100   Pl gi    f-3b)f b                 3d 1fEc"17        url 65beer1 gi    f-3b)f  8cbef3eh    cR    T  f1.com/doctrine   yword       [elf-   8
+ "rdoctrine b0":,
+1 ctrine/db         url 65beer1 gi    f-3b)f b                       "email6 65beere       e"roI   :( :   eannotations",
+   
+         e"roI   :"t(0dolc6  oi1cR/            ],
+        1 e/Do6annd   f-3b)f b                       twf "soO     e"roI   :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion fUfdols nb _defee         e": "",f
+ie cPen  ea1",dmCco",oct"O      ygc-"phcPenco",
+         },
+          f-"require": {
+     @1E          ef3rctrine/doctr"sohgcols dons",
+ Ipf-ri"    },
+          f-"require": {f gio740/d1dm,
+4c  oi1cR/   tema6octr1/h "sourcee
+aco"b e-y1f3nd._1 "74io(0-id4c-"phcPenco",oct" ddgl (  6     otatio:sourcee 65 Xt 6   ygl)H
+ "rne7h-"p3nde   99a1b0    "ssmcPenc  ogBf-i  chie
+aco"b e-y17,
+ ls nb _defee         e": "",f
+ie cPen  ea1",dmCco",oct"O      ygc-"phcPenf./  eefg/dfu 1R
+  eotatio(0-id4c-"phcPenco",oct",
+    1$c         ine0b        "e260h96pfape-  c   a6   ygd7"74d   1$c         ine0b         8 h   8rine1"refee         e": "",dm_1nEb  elfrl 65beer1 gi    f-3 gcR
+,ocnEb  elfrb0e": "",dm_1nEb  elfrl 65beer1 gi    f-3b)f b                     Rb Hcfrl "refe4lfrb0e": "",dm_1nEb  elfrl 65beer1 gi    f-3b)f b                  1  c   a6   ygd7" I   0hMITcintrine1"referem_inEb  elfrl 65beer1 gi    f-3b)f b  "74io(   f-3b)f b  "74io(   f-3b)f b  "74io(   f-3b)f b  "74io(   f-3b)f b  "   1O ey10         6fctr "MITcintrine1"refe-ri"    },Rb H e"r"ph"",duh  y10    1-irtf      -d.0h96fPttD3 f-e-r13        3eh   eef    c740/do Dm/dEtFiefere
+  99a1b ey10 i0     gi   n    .fU6  } 0hMf   }6f      i0   6twietggc Dm/b  ren  ea1",elf-e"Mgd      def    c740/do Dm/dEtFiefere
+  99a           8tHi  i0  d-phc(1/dEtoct",
+eh 99a1b ey10 i0     gi   n    .fUd0  i0   6  }6f      i0   6  }6f   D,
+    1$c    A      E1 g  .b                       "email6 65beere       e"roI   :( :   eannotat.irmgiga"MI       8
+ief :   eannb0  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion fUfdols nb _defee6nE eeine0adoct",
+eEolc6  oi1cR/            ],
+  o f-3b) 17eere       e"roI   :( :   eanbE'ELc    AE
+ehe1 c  ],
+         f-"require": {f gio740/d1dm,
+4c  oi1cR/   tema6octr1/h "sour9d-1o1 ine1/h   D/dole/Doy(elf-   8        :(D h1    cR 1R{
+                "type":/Doy(elf-   8        :(D h1    cR i"roI   :"t(0nc     e    chie
+aco"b e-y17,
+ ls nb _defee         e": "",f
+ie cPen  ea1",dmC    @   cquire"0nc d            a6   ygd {
+ hre
+  99a1b ey10u e"C    @ tr7 n  e":       :AL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b          gd      tiohR ddm)   NneBD  ierer0  7    h1 a1b  -  /Do               "type": - .fUd0  i0   6  }6f      i0   6twih1   
+@7  
+},@a60  b",1N   "}6f10  i.NCuEtFgd a6   9   chie
+aco"b e-y17,
+ ls nb do   "y  [elf-   8        ,9: nb do otat  trr chie
+ai      3eh   eef    c740/do Dm/de
+ Ipf-_1nEb  R ddm7m_d e"b hie
+ai gi    f-3b)f b                     Rb Hcfrl "refe4lfrb0e": "",dm_1nEbPiE)f b  "74io(   f-3b)f b  "   1O ey   b   h  -d.
+ .ureh  
+6 Fgd0/do D9 b",1N   "}6f10  i.NCuEtFgd ",dm"         },b.com/doctrine/db    eannot"zidmC_dc   eM  url": "htt99a1b ey10         6XHm "licen9a1b ey10         6fctr "MITcintrine1"refere
+  99a1b ey10         6fctroy gi./eh0  e"rOrrd_1b  cR d8   "sourcee
+           13trineB7ctr6e  "thub.com/rep7pb" gcRb Hc1",dmC    CRib 18pf./CRi        1  c0      6",f
+ie cPen  ear"
+ Ipf-_1nEb  R ddm7m_d e"b hie
+ai gi    fn    I  r"ph"",duh  y10    1-irtf"time       1 gif-phc gi Eh1 "",f
+d0e": "fPbduy10h  y10  oi1cR/        1b   ati    gi [elsoLP: "      "f Echinc gcReBb)f bcR i        :(D h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP: "      "f Echinc gcReBb)f bcR i        :(D h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP CUfr   1   io740/d1dm,
+4c  oi1cR/   tema6octr1/h "sour9d-1o1 ine1/h   D/dole/D 8tH 1cR:(D h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP CUfr   1   io740/d1dm,
+4  cR i"roI   :"tpImy(0 ati    gi [elsoLP 
+aco"b e-y17,
+ ls nb _defee         e": "",f
+ie cPen  ea1",dmC    @ a6 B( C1    cR iefgdtgd {
+f :   io": f Echinc gcReBb)f bcR ddm)   NneBD        ],
+        1 e/DoctriEchiieh0  e"rOrrd_1b  cR d8   "sourcee
+  b)f b      6fctr "MITcintrine1"reP "f [elsourcoctiEchiiep( C"sourcee
+  b)yo ioL81dm_1nEb  elfrl 65beer1 gi    f-3b)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy   E  :E)f1      "f Echinc gce h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP CUfr   1   io740/d1dm,
+4c  oi1cR/   tema6octc.1Imyf Echinc gce h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP CUfr   1   io740/d1dm,
+4c  oi1c-c6 gd.bf Ec-)isoLP: "      "f Echinc gcReBb)f pImy(0ad tiohR EtFgdoI   :fai7   h  -d.
+ .ureh  
+6 Fgd0/do D9 b"o/)   io7tgineBD  ::"t(0nch1 0sourcee
+ ce haEh1  f-bEeBD       d1dmdI D9 f70IV   io7tC
+0/)   ioDrb0cee
+ ce-irtf"time       1 gif-phc gi Eh1 "",f
+d0e": "fPbduy10h  y10  oi1cRy10u  _defee6nEdhie
+aifPbd1    cR i"roI   :"tpImy(0 ati    gi [elsi tiohR ddm)   NneB -d.
+yo ioL81dmDoyphc(1cR   oPbdh lsiE e-yf-bE0E)f b    ::"tdIR ddf70IVi  B -dC
+R d rl   1(0-id
+   [elso   "MI(  iefecu
+@1b ey10         6fctr "MITcin o   i    f  rr "M  url": "htt99h ,E ail gcRb Hc   "obE"
+          o  it uo"ob m      3e/d "hti    gi [elsoLP CUfr   1   io740/d1dm,
+4  cR i"roI   :"tpImy(0 atiin o   i    f  rr "M  i 65beer1 gi    f-3b)f b         pImyd_1b  cR d8   "sourcee
+  b)f b      6fctr "MITciice h1    cR i"roI   :"tpImy(0 ati   0/d1dcP"f [elso3 Sctr8
+"hty(0 ati  bE   1   io7"
+  dIroI f70IV CUy(0 C
+roI "",f
+ie cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b          0 i"rot cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b          0 i"rot cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b          0 i"rot cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b          0 i"rot cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f-3b)f b          0gi ot   tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b          gd      oi1 ,dm"      d:"tpImfPbdhinc gce h1    cR i"roI   :"tpImy(0 ati i   6fctr "MITcin o   i    f  rr "M     "ycRP CUfr  3 SImy8
+frlf  rr "M bE ail gcRb     dIin of70IVf-3f  rC
+in    e"roI   :"t(0dolc6  oi1cR/            ],
+        1 e/Do6annd   fb          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b         il gcRb Hc   "obE"
+   neBLP CUfr   1   io740/d1dm,
+4c  oi1c-c6 gd.bf Ec-)isoLP: "      "f Eckc6 gd.bf-30 i  rtgfgcRbr1 gRb   gBf./rr dhnc gcReBb)f pImy(0ad tiohR EtFgdoI   :fai7   h  -d.
+ .ureh  
+6 Fgd0/dPiER/   tema6octc.1IrE  gFgdie
+aifPbd1    cR i"roI   :"tpImy(0 ati    gi [elsi tiohR ddm)   Nnedm,
+6[elsoLP CUfr   )  CUi1dmD 18pf-c gImy(     E)f b    ::"tdIR ddf70IVi  B -dC
+R d rl   1(0-id
+   [elso   "MI(  ifr   rr    :gBf.@.  N   rddfcr anmf-e   1(01tema6octr1/h "sourcmD 18pf-c gImy(     EBf.e  :(D7  anmf-e o  it uo"ob m      3e/d "hti    gi [elsoLP CUfr   1   io740/d1dm,
+4 f E6ITcintrine1"reP  :EBf.e  :(D7  anmf-e o  it uo"ob mi trt(      url 65beer1 gi    f-3b)f b                       "email6 65beere      : "htt99h ,E ail gcRb Hc oecu
+@11    cP"f [elso3 Sctr8
+"hty(0 ati  bE   1   io7"
+  dIroI f70IV CUy(0 C
+rmDoy hti0 1   io74 [el gBf.@.dC
+"MIe   io7"
+  dIroI0ce h1    cR i"roI   :"tpImy(0 ati    gi [elsoLP CUfr   1   io740/d1dm,
+4c  oi1c-c6 gd.bf Ec-)isoLP: "      o b         iu  "io740/df-3b)f b          0 i"rot cPen  ea1",dm_1nEb  elfrl 65beer1 gi    f   1   1)f iisoLP: "      o b         iu  "io7rd_1b  cR d8   "sginE(0-  1          0gi ot   tiohR ddm)   NneB -d.
+yo ioL81dmDoy    f-30E)f b(0nc$ 65  gd      oi1 ,dm"      d:"tpImfPbdhinc gce h1    cR i"roI   :"tpImty(0 /dfr2lfrl 65beer1 gi    f-3b)f b          gd      tiohR ddm)   NneBD  ief.-3b)f b  "74idSt(0R/6 Hf    Euot gd        e"roI   :"t(0dolc6  oi1cR/            ],
+        1 e/Do6annd   fcPenM-   E ],
+        7'      1 e/Do6annd   fcPenM-   E ],
+        7'      1 e/Do6annd   fcPenM-   E"tdIot gd        e"roI   :"t(0dolc6  oi1c3     7'     0ur9d-1o1 ine1/h   D/do  X1Re-d.
+yo ioL81d0IVf-3f  rC
+imf-1 oifa1MmDmDo1o1 inetiohR EtFgdoI   :fai7   h  -d.
+ .ureh  
+6 Fgd0/dPiER/   tema6octc.1gce     net
+aifPbd1    cR i"roI   :"tpImy(0 ati    gi [elsi tiohR ddm)   Nnedm,
+6E     [
+   gc7'gi [elsi tiohR ddm)   Nnedm,
+6E     [
+   gc7'gi [elsi tiohR ddm)   Nnedm,
+6E9h ,ctc.1gce     net
+aifPbd1    cR i"roI 3   gc7'gitio0R/6 HfE9h Eoy    f-30E)f b  1rEI  PbdgImy(     EBf.e  :(D7  anmf-e o  it uo"ob m      3e/d "hti    gi [e40/d    (  i0R/6 HfE9h Eoy    f-30E)f b  1rEI hR ddm)   NneB -dginE:"t   o  it uo"ob mi trt(      url 65beer1 gi    f-3b)f b                i"ro$
+ .email6 65beere      : "htt99h ,E ail gcRb Hc oecu
+@11    cP"f [elso:"tp bdgr2eBb)f bcR i        :(D h1    cR i"roI   :"tpImy(0 ati    gi [elsoLPf.     e": "",f,oi1c3elf-nb d99h ,E ail gcRb Hc oecu
+@11    cP"d.
+yo ioL81d0IVf-3f  rC
+imf-1 oifa1MmDmDo1o1 inetiohR EtFgdoI   :fai7   h  -d.
+ .ureh  
+6 Fgd0/dPiER/   tema6octc.1gce     net
+aifPbd1    cR i"roI   :"tpImy(0 ati    gi [elsi tiohR ddm)   Nnedm,
+6E     [
+   gc7'gi [elsi tiohR ddm)   Nnedm,
+6E     [
+   gc7'gid5pf-df-y(0   clsihR/   tema6octr1/h "sour9d-1o1 ine1/h   D/dole/Doy(elf-   8        :(D pcm,
+6et_d  f-30E)f b  1rEI  PbdgImy(     EBf.e /   tema6octr1/h "sour9d-1o1 ine1/h   D/dole/Doy(elflc-30E (  i06D/dCUdma6octr1/h "sour9d-1o1 ine1/h   D/dole/Doy(elflc-30E (  i06D/dCUdma         ],
+        1 e/Do6annd   fcPenM-   E ],
+        7'      1 iu   d-1rdma     io740/d1dm,
+4  cR i"roI   :"tpImy(0 atiin o   i    f  rr "M  i 65beerf tema6octr1/h "sour9d-1o1 ine1/h   D/d0  gi [elso,d   -dC
+R d h0adf.e /       "iin o   i    f  rr "M  i      aAdm(1R{
+                "type":/Doy(elf-   8        :(D h1    cR i"roI   e":/Doy(elf-   8        :(D h1    :c    bdgrdm, h1 [elsi tiohR ddm)   Nnedm,
+6E     [
+   gc7'gi [elsi tiohR ddm)   NnPbdhM-m,
+   :(D h1    cR i"roIBf.@.
+  er0e  Nnedm,
+6E    u( Cd          "type":/Doy(inI   :"t(0dolc6  oi1crEtpIedm9h Eoy    f-30E)f b  1rEI  PbdgImy(     EBf.e  :(D7  anmf-e o  it u fcP  8  Eodc   eM  url": "htt99a1b ey10         6XHm "licen9a1b ey10         6fctr "MI        "type":/Doy(inI  1 "htt99a1b ey10         6XHm "licen9a1b ey10         6fctr "MI        "ty   ee":/Doy(inI  1 h  ype": "zip"7'       "ty   ee":/Doy(inI  1 h  ype": "zip"7'       "ty   ee":/Doy(inI  1 h  [
+ a1b ey10         6XHm "licen9a1b ey10    9:  e"roIVf-nI 11    cP"f [elso:"tp bdgr2eBb)f bcR i        :(D h1    cR i"roI   :k i     giti 9a1tp   f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy   gcRb Hc oecu
+@11    cP"d.
+yo ioL81d0IVf-3f  rC
+imf-1 oifa1MmDmDo1o1Rb  pf-i"ri/dole/Doy(elflc-30E (  i06D/dCUdpImy(1Rep"7'       ""t(i     7'      1 iu   d-1rdma     iolic CUfrEh E1Rene1/h   D/dole/Doy(elf-   8        :(D pcm,
+6et_d  f-30E)f b  1rEI t(  M-   a
+   :(D h1Doy(ee e"eSt:yfPbd     i"ro$
+ .email6 65beere      : "htt9gBf.@.f [feee     i"ro$
+ .email6 65beer6octc.1gce     net
+arEf-39gB  i06D/dCUdma         ],
+        1 e/Do6annd   fcPenM-   E ],
+     -d.
+  E1i06      1 e/DoctriEchiieh0  e"rOrrd_1b  cR d8   "sourcee
+  b)f b      6fctr "M i"ro$
+ .email6 65beer6oc1riEchiieh0  e"rOrrd_1b  cR d8   "sourcee
+  b)f b      6fctr "M i"ro$
+ .em o eil6 65beer6oc1rh  -)iEtpIedm9h Eoy    f-30E)f b  1rEIpImy [
+   gc7'gi [elsi tiohR ddm)   Nnedm,
+6E     [
+gBf.@.Pbd7h0ey [
+   gc7'gi [elsi tiohR 30E)f b  1rEddmine1 
+  bu65b     [
+   gc7'gi [elsi tiohR ddm)   NnPbdhM-m,
+   :(D h1    cR i"ro/Doy "sor2elso   "MI(  ifr   rr    :gBf.@.  N   rddfcr anmf-e   1(01tema6octrc-:"tc.1r2ei :(D h1    cR i"roI   :k i     g(i   io740/d1d :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion N.
+  er0e  Nnedm,
+6E    u( n oi-/6e    }6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "licen9a1b ey10         6fi [e6/h "sour9d-1o1  8c8mf-19a1id-1rdma     iolic CUfrEh E1Rene1elf-t cfUdma         ],
+        1 e/Do6annd  eudmi:/Doy(inI  1 h  [
+ a1b ey10         6XHm "licen9a1b ey10    9:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-e o  it u fcP  8  Eodc   eM  url"   Nr2I  PbdgImy(     EBf.e  :()f-iu cRb1b ey10    9:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-e o  it u f EBf:()f-iu cRb1b ey10    9:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-PbdhM-m,
+   :f b  1rEddnndr Pl gi    f-3b)f b                 3d 1fEc"17        url 65beer1 gi    f-3b)f  8cbef3eh    cR    T  f1.com/doctrine   yword       [elf-   8
+ "rdoctrine b0":,
+1 ctrine/db         url 65beer1 gi    f-3b)f b                       "email6 65beere       e"roI   :   f-3b06D/dCUdma         ],
+        1 e/Do6annd   fcPenM-   E ],
+     -d. gd  ,r9d-1    aE
+   c     E.emai1 h dm)[feee     i"ro$
+ .email6 65beer6octc.1gce     net
+arEf-39gB  i06D/dCUPiE'eer6octc.1gce     net
+arEf-39gB  i06D/dCUPiE'eer6octc.1gce     net
+arEf-39gB   c   aE
+   c     E.emai1 h dm)[feee     i431tp o1a"mgiga"M/grde(D c   aE
+iohR ddm)   Nnedm,
+6E     [
+gBf.@.Pbd7h0ey [
+   gc7'gi [elsi tiohR fPbd    dm)gcRb Hc Hc obE[
+gBf.@.Pbd7h0ey [
+   gc7'gi [elsi tio/dCPbdhM-m,
+   :(D h1    cR i"ro/Doy "sor2elso   "MI(  ifr   rr    :gBf.@I  1$nd (D h1  0] GUl6 c-nndfaf-3f  1$     -39EmgCHc5beem)gcRere   :1Rene1elfaf-3fo3 Sctr8
+"hty(0 ati  bE   1   io7"
+  dIroI f70IV CUy(0 C
+rmDoy hti0c-6E c b  N- XteaEBf:( iere lc6  oi1cR/            ],
+        1 e/Do6annd   f-3b)f b                       twf "soO     e"roI   :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion fUfdols nb _defee         e": "",f
+ie cPen  ea1",dmCco",oct"O      ygc-"phcPenco",
+      aE
+   ci0c- "sour9d-1o1  8c8mf-19a1id-1rdma     iolic CUfrEh E1Rene1elf-t cfUdmP i06D/dCUPiE'eer6octc.1gce     net
+arEf-39gB,rde(D c   aE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion N.
+  er0e  Nnedm,
+6E    u( n oi-/6e    }6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "licen9a1b ey10         6fi [e6/h "sour9d-1o1  8c8mf-19a1id-1rdma     iolic CUfrEh E1Rene1elf-t cfUdma         ],
+        1 e/Do6annd  eudmi:/Doy(inI  1 h  [
+ a1b ey10         6XHm "licen9a1b ey10    9:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-e o  it u fcP  8  Eodc   eM  url"   Nr2I  PbdgImy(     EBf.e  :()f-iu cRb1b ey10    9:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-e o  it u f EBf:()f-iu cRb1b ey10    9:  e"r     u65b1b,:(Dmc.
+uc-      e(  i06D/dCUdpImy(1Rep"7'       ""t(i     7'      1 iu   d-1rdma     iolid-t"O      y e(  i06D/dCUdpImy(1Rep"7'       ""t(i     7'      1 iu   d-1rdma     i iolPoR/    
+cO0-id4c-"ldfUd]   7'      1):  7'lf-   8        :(D h1    cR i"roI   e":/Doy(elf-   8        :(D h1    :c    b i"IDckn/db         pBc  1 "hdProI I/dCU:ndr Pl gi    f-3b)f  fPbd    dm)gcRb Hc Hc obE[
+gBf.@.Pbd7h0ey [
+   gc7'gi [elsi tio/dCPbdhM,d-1    aE
+   c     E.emai1 h dm)[feee     i"ro$
+ .email6 65beer6octc.1gce     net
+arEf-39gB  i06D/dCUPiE'eer6octcDc :(Dmc.
+uc- f1.com/dp(Udma         ],
+     S/LPe a1b ey10 d 
+cO0-id4c-"ldmc.
+uc- f1.com/dpa   h("ro$1    :c ne u n   eHc      1 iuBBHDc :c-  7h0ey [
+   q i"ro/Doy "sor2elso   "MI(  ifr   rr    :gBf.@I  1$nd (D h1  0] GUl6 c-nndfaf-3f  1$     -39EmgCHc5bee  "sudr1@.Pbd7h0ey [
+ 4    f-30E)f b          gd      tiohR ddm)   NneB -d.
+yo ioL81dmDoy    fU-Uy(0 C ,0sec-c-"ldmc.
+uc- f1.com/dpa   h("ro$1    :c ne u n   eHc      1 iuBBHDc :c-  7h0ey [
+   q i"ro/Doy "sor2elso   "MI(  ifr   rr    :gBf.@I  1$nd (D h1  0] GUl6 c-nndfaf-3f  1$     -39EmgCHc5bee  "sudr1@.Pbd7h0ey [
+ 4    f-30E)f b          gd      tiohR ddm)   NneB  h("ro$1    :c ne u n   eHc      1 iuBBHDc :c-  7h0ey [
+   q i"ro/Doy "sor2elso   "MI(  ifr   rr    :5        ],
+     S/LPe a1b ey10 d 
+cO0-id4c-"ldmc.
+uc- f1.com/dpa   h("ro$1   /m  ],(D7  an
+gIm   twf EN1ine b0":,
+4c-6  }6f-  7:(     EBf.e  :()fhR ddm)   NnPbdhM-m,
+   :(D h1    cR i"ro/Doy "sor2elso   "MI(  ifr  c.1gce     net
+arEf-39gB   c   aE
+   c     E.emai1 h dm)[feee     i431tp o1a"mB/Doy Hc   "obE"ndm)[fee0 C     pImy(lB("ro$1    :c ne u n   etFiet e": "",f
+ie cPen  ea1er6octc.1Jn E.emai1 h dmmcThtt99a1Ledm, e lc6  o 1a"mB/a1b q i"ro/Doy "sor2elsu.1Jn,
+        1 e DoyfrEh E1Rene1elf-t cfUdmP i06D/dCUPiE'eer6octc.1gce     net
+arEf-39gB,rde(D c   aE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-6  }6f      1 gi
+      Xtion N.
+  er0e  Nnedm,
+6E    u( n oi-/6e    }6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "li ("rogi
+      Xtion N.
+  er0e  Nnedm,l::(     EBf.e  :()fhR o  eE.emai1 h di] G2I  :s "sn N.
+1D)d-eh0ey [
+ b/l-/6ea gi E.emai1 h di] G2I  :s "sy(0 (  ifr   f  :(D h1    cR i"roI   e":/Doy(elf-   8        :(D h1    :c    b i"Idpa sor2HFXtioerEh1  ,nSe us "sor2elsu.1Jn,
+     8   eh
+tu nkLa i0 m/iu.1Jn,
+ mF o 1    er   ft
+DoyfrEh E1Rene1elf-t cfUdmP i06D/dCUPiE'eer6octc.1gce     net
+arEf-39gB,rde(D c   aE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b0":,
+4c-H(E1RePc.
+uc- f1.com/dpa   h("ro$1   /m  ],(D7  an
+gIm   twf EN1ine b0":,
+4c-6  }6f-  7:(     EBf.e  :()fhR ddm)   NnPbdhM-m,
+   :(D h1    cR i"ro/Doy "sor2elso   "MI(  ifr  c.1gce     net
+arEf-39gB   c   aE
+   c     E.emai1 h dm)[feee     i431tp o1a"mB/Doy Hc   "op   8  A  3eh   p:lso lBc]  er0e  Nnedm,
+6E    u( n oi-/6e    }6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "li ("rogi
+      Xtion N.
+  er0e  Nnedm,l::(     EBf.e  :()fhR,dm,
+6E    u( n oi-/6e    }6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "li ("rogi
+      Xtion N.
+  er0e  Nnedm,l::(     EBf.e  :()fhR,dm,
+6E          net
+arEf-39gB,rde(Db  }6f-  7:(     EBf.eine b0":,
+1 ctrine/db         url 65beer1 gi    f-3b)f b                       "email6 65beere     Ioi1cR/            ],nsr   fdm)f0HBBdj 8  A  3eh aE
+   c     E.emai1 h md  c     p   f5ere
+   q i,l:: a gi    f-3b)f b       lDB }6f ddm)   Nnedm,
+6E  MDc :c-  7h0ey [
+   q i"ro/Doy "so ereuDc"t(0 A  3eh  c0tiohR ddm)   NneB  hn,
+   Lmih1 ohR ddm) e(Db  }6f-  7:(     EBf.eine b0":,
+1 ctrine/db         url 65beer1 gi H(DH3ENe/dine/db    p(f.ei5be1 de(in  q 1Doy "so ereuDc"t0n c   aE
+   c  rr "M  i 65beer1 gip6Mdamy(    Mff-39gB,rde(D c   aE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b/l39gBo :5Ma h(   a a gef-3b)f b   5oe  :()f-iu 66f-  pdaa,1E1cR/         dtNb   c8mf-19a1id-1rdma     iolic CUfrEh E1Rene1elf-t cfUdmP i06D/dCUPiE'eer6octp4o    trine b/l39gBo l(d7.
+  er0e cr 1  5oe  :()f-iu 6}6f   :/Doy(inI  1 "htt99a1b ey10         6XHm "li ("rogi
+      Xtion N.
+  er(d7.
+  er0e cr 1m4
+  er0e cr 1  5oel oI  mdt1r(d7.h:d cfU-  7h0ey [
+   q i"ro
+   td-1tiom()C(dPo     fdl oI  mdt1r(d7.h:d cfU-  7h0ey [
+   q i"ro
+   td-1tiom()C(dPo     fdl -   i431tp o1atde url  mdt1or2elso   "MI(  ifr   rr    :gBf.@I  1$nd (D h1  0] GUl6 c-nndfaf-3f  1$    lf-iuE1[
+ m5LUe    a20=:gBf5 er0e  Nnedm,l::(     EBf.e  :()fhR,dm,
+6E    u( n oi-/6e    }6f   :/De b0":,
+4c-6  }6f-  7i-/}6f  k$nd (r1H3ENe/del5-/}6f  k$nd (r1Hc- (D h1 P   b i"Idpa sor2HFXtioerEh1  ,nSe us "sor2elsu.1Jn,
+     8   eh
+tu nkLa i0 m/iu.)ceeDoyfai1 h dm)[feee     i431tp o1a"mB/Doy Hc   "op   8  A  3eh   p:lso lBc]  er0e  Nnedlf-t p6i   io740/d1d :"EiecioerEh1  ,nSe us "sor2elsu.1Jn,
+  0c- "sour9d-1o1  8c8mf-19a1id-1rdma     iolic CUfrEh E1Rene1elf-t cfUdmP i06D1Lr4o n
+    9:  e"r     u65b1b,:(Dmc.
+uc-      e(  i06D/dCUdpImy(1Rep"7'       0'gi [elsi tiohR (1Rep"7'       0'6 ca h4e"rC
+I        "email6 65bee     [elf-   8
+ "rnGMI(  ifrcU   Npcadi"ro
+     ctri [elf-   8
+ "rd_1b  cR d8   "sourcee
+                /D h1    cR 1de-/6e "MI-iu 66f-  pdaa,1E1
+   euc_b0":tdlf-tDoy(inI  1 "htt99a1b ey10         6XHm "licen9a1b ey10         6fi [e6/p"7'       0'6 ca h4e"rC
+I        "email6 65bee     [elf-   8
+ "rnGCy9fhRo    e(  i060":tdlf-tNpcadi"r   "eeudmi:  tio    trine b/l39gBo :5Ma h(   a a gef-3b)f b   5oe  :()f-iu 66f- rr   ldr a gudI(  ifr   rr    :gBf.@I  1$nd (Dad :5Ma h(   ,mdUU-bec-d c-,
+       Xtion fUfdols;caeu4c    hct(    ner "M  i 65beer1 gip6M
+uc-        url 65beer1 gi H(DH3ENe/dine/db    p(f.ei5be1 de(in  q 1Doy "so ereuDc"t0EC1mf-LUfdols1r(d7.h:d cfUiE'eer6octcDc :(Dmc.
+uc- f1.com/dp(Udma         ],
+     S/LPe a1b ey10 d 
+0()fh3i H(D__D h1 fdl oI  mdt1r(d7.h:d cfU-  7h0ey [
+   q i"ro
+   td-1tiom()C(dPo     ne6 ca h4e  0'dner "M  i 65beo-hcfa,l)c-.@Is "d7q  td-o d 
+pDd0sbee0MkE
+tiom(       XtioN   td-o d 
+:  e"r       Nr2I  PbdgImy(     EBf.e  :(D7  anmf-e o  it u f EBf:()f-iu cRbE    u( n oi-/6e    }6f   :/De b0":,
+4c-6  }6f-  7i-/}6f  k$nd (r1H3ENe/d tio    trine b H "ro$1uc_eecr(d7nGCy9fhRo    e(  i060":tdlf-tNpcadi"r   "eeudmi:  tio    trine b/l39gBo :5Ma h(   a a gef-3b)f b   5oe  :()f-iu 66f- rr   ldr a gudI(  ifr   rc_a0  PbdgImy( rf-3b)f d  eudmi:/Doy(inI  1 h  [
+ a1b ey10         6XHm "licen9a1b ey10    9:-LUfdols1r(d7.h:d cfUiE'eer6octcDc :(Dmc.
+uc- f1.com/dp(Udma         ],
+     ,       urlI, 1$nd (D h1  0] GUl6 c-nndfaf-3f  1$     -39EmgCHc5bee  "sudr1@.Pbd7h0ey [
+ 4  tc/d1d :"EiecioerEh1  ,nSe us "sooC
+in   y [
+   gc7'gi [elsi tio/dCPbdhM,d-1    aE
+   c     E.emai1 h dm)[feee       net
+arEf-39gB   c   aE
+   c     E.emai1 h dm)[feee     i431tp o1a"mB/'dner "M  m)[mda  dm)[feee ca h4e  0'rb er1c-1hcfa,fda  dm)    net
+arEf-39gB,rde(D c   aE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine bhd7G-3f cU   Npcadi"ro
+     ctri [elf-   8
+ "rd_1b  cR d8   "sourcee
+               d8   "sourcee
+   6a         ],
+     S/LP0@P[
+ /sit uo"ohcfeee   dd8   "stcU-eer "M  m)[mda d f5ere
+   q6           d8   "l6ny1da d fuc ],
+     ,       urlI, 1$nd (D 8  l4sit uo"ohcfeee 0$nd (D h1  0] G  Ni   rr    :gBf.@I  1$ndb  cR -39EmgCHc5bee M   6urlI, 1$nd (D 8  t uo"ohcfeee 0$nd (D h1  0] G  NieU-H(E- f1.com/12 er0e  Nnedm,l::(     EBf.e  :()fhR,dm,
+6E    u( n oi-/6e    }6f   :/Dohdas()fhR,d0M-lI          d8  121    6
+uc- F-1hc3ne6octcDc :(Dmc.
+uc- f1.n/Ia  dm)[feee ca h4e /din( n oi-/6e    }6f udrnI  1.n/Ia  dm)[feee ca h4e /nGMI(  ifrcU   Npf"rC
+I  l od_fe(D c3Pbd7h60M-lI          d8td5Nrf EN1ine b0":,
+4c-6  0f1.n/Uf    6
+uc- F-1hc3ne6octcDc :(Dmc.
+uc- f1.n/Ia  dm)[feee ca h4e /din( n 40$nd c$nd 0Mk(Fdb HE    i431tp o16 Npf"rC
+I  l od1ntcDc()fhRI(  ifr  mDd7  uNe1   6
+oI I/dCU:ndr Pl giM-N "ro
+     n  Npcadi"ro
+     ctri [elf-   8
+ "rd_1b  cR d8   "sourcee
+                /D h1  5Ma (d-o dE         /D h1  5Ma (d-o db  cdE         /D h1  5Ma (d-o db  c6Mj  5Ma (d-o dE         /D h1  5Ma (d-o db  cdE         /D h1  5Ma (d-o db  c6Mj  5Ma (d-o dE         /D h1  5Ma (d-b, (r1H3ENe/d tio    trine b H "ro$1uc_eecr(d7nGCy9fhRo    e(  i060":tdlf-tNpcadi;B(dti    R ddm)   NnPbdhM-m,
+ ld7@7MI2    R ddm)   lcdfaf trine b H "ro$1ucy10         6XHm "li ("rogi
+      Xtion N.
+  er(d7.
+  er0e cr 1m4
+  er0e cr      Xtio'gi [elsi tio/dCPbdhM,d-1    aE
+   c     E.emai1 h dm)[feee       net
+arEf-3=h }6f m(H4     -@-  anmf-e l4EIeHH6d1ntcDc()fhRI(  0M-lIinere bhd7G-3f cU   NpcanySAdm(mcq i"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr  hd-9 pdey [
+ b/l-/6ea gi E.emai1 h di] G2Llicen9(4 (D 8-  7h0ey [
+   q i"ro
+   td-1tiom()C(dPo     fdl oI  mdt1r(d7.h:d cfU-  7h0ey [
+  ldPS ePf b df0/l3 hd-9 pdey daa
+()C(dPo   1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b/l39gBo :5Ma h(   a a gef-3bmd  d8feee t 9I-o db  0/1L-MohRhd-9 i"roaE1  "soio740/d1d :"t(0dolc6  oi1cR/   tio    trine b/l39gBo :5Ma h(   olc6  oi1c               d8   "sourcee
+   6a         ],
+     S/LP0@P[
+ /sit uo"ohcfeee   dhRI(  ifr  mDd7  er      XF6f.@I  1$ndb  cR -39Ei/tc-i    f  rr "M  i 65beer1 (ifr     trine b/l39gBo :d I/dCU:ndr Pl giM-N "ro
+     n  Np9Ei/tc    f  rr "M  1 if"snM  rr    :gBl39gBo1.1cR/      t    :gBl39gBo1.1cR/      t    :gBd-f  2erE
+  rine>()fhR    mdUlicr1/        1 t:Ei/t5li/hDc-e/LP0@P[
+ /sit 1rine b/l39gBo :5Ma hrE     1 t:Ei/t5li/hDc-e/LP0@P[
+ /sit 1rine b/l39gBo :5Ma hrE     1 t: b df0/l3 hd-9 pdey daa
+()C(dPo   1  "soio740/d1d :"t(0dolc6  oi1cR/   ehrE   rr  EED]n0e cr 1m4
+  er0e cr      Xtio'gi [elsi tio/dCPbdhM,d-1    aE
+   c     E.emai1 h dm)[feee       net
+arEf-3=h }6f m(H4     -@-  anmf-e l4EIeHH6d1ntcDc()fhRI(  0M-lIinere bhd7G-3f cU   NpcanySAdm(mcq i"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr  hd-9 tdIinere bhd7G-3f cU   NpcanySAdm(mc   ee/d tiL-Bo :lEG-3f cU   NpcanySAdm(mcq i"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr [mdaD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h6F1  "C:)Dd7h1ganc :(Dmc.
+Mr1r   ;C39-lI      h,  aE
+   c  f"snM    ihd7G- 9:  e"r     u65b1b,dh  -d.
+ d7h1gan     1 ld 1$ndb  eda
+Mr1r   ;C39-lI      h,  aE
+   c  f"snM    ihd7G- 9:  e"r     u65b1b,d NpcnM 0,n  td-1beeG- 9:  e"r     u65b1b,d NpcnM 0,n  td-1beeG- 9:  e"r     u65b1b,d Np(DaLaeh-o db  c6Mj  5Ma (d-SogBDd7h68
+;FnM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr  hd-9 tdIinere bhd7G-3f cU   NpcanySAdm(mc   ee/d tiL-Bo :lEG-3f cU   NpcanySAdm(mcq i"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr [mdaD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68 f1ac]  :EErdtH5n1 if1 u65b1b,d Npc/  e"r     u65b1b,dh  -d.
+ d7h1gan     1 ld 1$ndb  eda
+Mr1r   ;C39-lI    ;C39gBDd7h68
+;FdrepIm$daD  E.;C3M,d-1    afPI:q i"tH5n1 if"snM  rSeda
+M/e 2/m(F):mdaD0   hd-9 tdIinei"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39EmganM  rr  hd-9 tdIinere..udr: "lanM ergBDd7h68
+;FdrepIm$daD  E.;C3M,d-1    afPI:q i"tH5n1 if"snM  rSeda
+M/e 2f cU   NpcanySAdm(n  Lrbh  -d.
+i"tH5n1 if"snM  rSeda
+M/e 2f cU   NpcanySAdm(n  Lrbh  -d.
+i"tH5n1 if"smfNlIinere bhd7G-3f cU   NpcanySAdm(mcq i"tH5n1 if"snM  rr    :gBf.@I  1$ndb  cR -39ckai1 h dm)[fe30
+d7nGCy9fhRoeBL-MohRhd-9 i"roaE1  "sc..:"t(0dolcdrepIm$daD  E.;C3M,dBC39gmC,0
+ 5Mn1DcPSs2uC rr P/Uf H5nyS$da rr    :gBf.@I  1$ndb  cR -39ckapdBC3laD  E/p bdgr2eBblBD  Ecvd :"te  :(D7  e]0  edaj$BNpcaI  aI/mDd7  er l e oI  mdtem   aE
+u"tH5E/p-e39Emga [
+ t,  rr [mdaD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68
+;FdrepIm$daD  E.;C39gBDd7h68 f1ac]  :EErdtH5n1 if1 u65b1b,d Np

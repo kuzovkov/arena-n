@@ -33,7 +33,6 @@ class SlugController extends Controller
         {
             throw $this->createNotFoundException( 'Page not found: ' . $slug );
         }
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render('CinemaCinemaBundle:Default:layout.html.twig', array( 'page'=> $page, 'data' => $data ));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func
@@ -58,7 +57,6 @@ class SlugController extends Controller
         {
             throw $this->createNotFoundException( 'Page not found: ' . $slug );
         }
-        $data['snipets'] = $this->getDoctrine()->getRepository(Setting::BUNDLE.":Snipet")->getAllSnipets();
         $response = $this->render('CinemaCinemaBundle:Retrobar:layout.html.twig', array( 'page'=> $page, 'data' => $data ));
         return CacheControl::setCacheHeaders($this->getRequest(), $response,$result['lastmodified'],$result['etag']);
     }//end func

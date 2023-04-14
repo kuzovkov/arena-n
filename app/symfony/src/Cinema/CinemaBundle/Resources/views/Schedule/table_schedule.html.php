@@ -1,6 +1,6 @@
  <table class="simple-little-table">
  <?php
-     $roomName = array(0,1,2,3,4,'VIP',6);/*array for rename room number to name*/
+     $roomName = array(0,1,2,3,4,'VIP');/*array for rename room number to name*/
      $span = array();
 		foreach( $seances as $seance )
 		{
@@ -33,7 +33,7 @@
             
             <td class="time"><?php echo $seance->getTimeBegin()->format('H:i');?></td>
             <td class="price"><?php echo $seance->getPrice();?></td>
-            <td class="room"><?php echo $roomName[$seance->getNumberRoot()]; if($seance->getIs3d()) echo ' (3D)';?></td>
+            <td class="room"><?php echo $roomName[$seance->getNumberRoot()];?></td>
             <td class="del"><a title="Удалить"><img class="del-seance" id="<?php echo $seance->getId();?>" src="/bundles/cinemacinema/images/delete-48.png" title="Удалить"/></a></td>
         </tr>
      

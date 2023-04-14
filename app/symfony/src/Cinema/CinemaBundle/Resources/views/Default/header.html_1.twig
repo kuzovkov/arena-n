@@ -1,0 +1,45 @@
+<!-- main -->
+<div class="wrap-main">
+<div class="main">
+{% if data %}
+{% if data.filmbackground %}
+<div class="wrp-btn-buy">
+    <div class="top-film-name">
+        <a href="{{url('cinema_cinema_film', {'slug': data.filmbackground.getSlug})}}">
+        {{data.filmbackground.getName}}
+        </a>
+    </div>
+    {#<a href="{{url('cinema_cinema_film', {'slug': data.filmbackground.getSlug})}}" class="btn-buy-t" href="">{{data.filmbackground.getName}}</a>#}
+</div>
+{% endif %}
+
+{% else %}
+<div class="wrp-btn-buy">
+    <div class="top-film-name">
+        <a href="">
+        
+        </a>
+    </div>
+    <a class="btn-buy-t" href=""></a>
+</div>
+
+
+{% endif %}
+<div class="wrp-zbg">
+<!--  header  -->
+<header><nav>
+<ul class="nav-list">
+<li id="index"><a href="{{url('cinema_cinema_homepage')}}">Кинотеатр "Эрвий"</a></li>
+<li id="today"><a href="{{url('cinema_cinema_today')}}">Сегодня</a></li>
+<li id="soon"><a href="{{url('cinema_cinema_soon')}}">Скоро</a></li>
+<li id="schedule"><a href="{{url('cinema_cinema_schedule')}}">Расписание сеансов</a></li>
+<li id="disco"><a href="{{url('cinema_cinema_retrobar')}}">Ретро-Бар Арена</a></li>
+{#<li id="added"><a href="{{url('cinema_cinema_added')}}">Еще</a></li>#}
+
+</ul>
+</nav></header>
+<!-- end header -->
+{#<p>&nbsp;</p>#}
+ <!--  content  -->
+<div class="wrap-content">
+<div class="content">

@@ -1,0 +1,129 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+img
+{
+	border: none;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.room
+{
+	width: 900px;
+	margin: 30px auto 0 auto;
+	border: 1px solid #295284;
+	padding: 20px;
+}
+
+.row
+{
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
+
+.place
+{
+	background-color: #295284;
+	color: #fff;
+	font-weight: bold;
+	font-family: verdana;
+	font-size: 12px;
+	display: inline-block;
+	width:20px;
+	height: 18px;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 2px;
+}
+
+.red
+{
+	background-color: #8c2129; 
+}
+.empty
+{
+	display: inline-block;
+	width: 20px;
+	
+}
+.row-name
+{
+	display: inline-block;
+	font-weight: bold;
+	font-family: verdana;
+	font-size: 12px;
+	display: inline-block;
+	color: #295284;
+	margin-right: 20px;
+}
+
+.right
+{
+	float: right;
+}
+
+.left
+{
+	float: left;
+}
+
+.selected
+{
+	background-color: #ff0;
+	color: #f00;
+}
+
+.gal
+{
+	width: 42px;
+}
+
+.selected-place
+{
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Verdana;
+	color:  #295284;
+	display: inline-block;
+	margin: 10px auto 10px auto;
+}
+
+.label
+{
+	width: 200px;
+}
+
+.text
+{
+	width: 650px;
+}
+
+#send-selected
+{
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	background-color: #295284;
+	border: 1px solid #295284;
+	border-radius: 5px;
+	text-align: center;
+	font-family: Verdana;
+	color: #fff;
+	padding-top: 10px;
+	cursor: pointer;
+	margin: 10px auto 10px auto;
+}
+
+#send-selected:hover
+{
+	color: #ff0;
+	background-color: #785284;
+}

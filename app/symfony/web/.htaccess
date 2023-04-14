@@ -5,7 +5,7 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex app.php
 
-<IfModule mod_rewrite.c>
+#<IfModule mod_rewrite.c>
     RewriteEngine On
 
     # Determine the RewriteBase automatically and set it as environment variable.
@@ -39,7 +39,7 @@ DirectoryIndex app.php
 
     # Rewrite all other queries to the front controller.
     RewriteRule .? %{ENV:BASE}/app.php [L]
-</IfModule>
+#</IfModule>
 
 <IfModule !mod_rewrite.c>
     <IfModule mod_alias.c>

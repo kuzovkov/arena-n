@@ -11,10 +11,8 @@ class FilmAdminController extends Controller
     
     public function createAction()
     {
-        /*костыль для корректного ввода дат*/
-        date_default_timezone_set('Europe/Minsk'); 
-        
-        $request = $this->get( 'request' );
+        //date_default_timezone_set('Europe/Minsk');
+		$request = $this->get( 'request' );
         $id = $request->query->get( 'uniqid' );
         $repository = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Film");
 		$repository->setNames();
@@ -67,10 +65,8 @@ class FilmAdminController extends Controller
     
     public function editAction($id=null)
     {
-        /*костыль для корректного ввода дат*/
-        date_default_timezone_set('Europe/Minsk'); 
-        
-        $request = $this->get( 'request' );
+        //date_default_timezone_set('Europe/Minsk');
+		$request = $this->get( 'request' );
         $uniqid = $request->query->get( 'uniqid' );
         if ( isset( $uniqid ) )
         {
@@ -78,6 +74,7 @@ class FilmAdminController extends Controller
 			$repository->setNames();
             $em = $this->getDoctrine()->getManager();
             $film = $repository->find($id);
+			
             $em->persist($film);
             $post = $request->request->get( $uniqid );
             $film->setPosterBig( $post['poster_big'] );

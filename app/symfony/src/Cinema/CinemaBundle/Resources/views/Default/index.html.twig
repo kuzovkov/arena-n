@@ -4,10 +4,10 @@
 <div class="i-title">Сегодня</div>
 
 <ul class="v-cats clearfix">
-<li id="all"><a title="кинотеатр Эрвий Все" href="{{url('cinema_cinema_index', {'genre':'all'})}}">Все</a></li>
+<li id="all"><a href="{{url('cinema_cinema_index', {'genre':'all'})}}">Все</a></li>
 {% for key,genre in data.genres %}
 
-<li id="{{key}}"><a title="кинотеатр Эрвий {{genre|capitalize}}" href="{{url('cinema_cinema_index', {'genre':key})}}">{{genre|capitalize}}</a></li>
+<li id="{{key}}"><a href="{{url('cinema_cinema_index', {'genre':key})}}">{{genre|capitalize}}</a></li>
 
 {% endfor %}
 </ul>
@@ -15,7 +15,7 @@
 <ul class="tf-list clearfix">{% for film in data.today %}
 <li>
 {% if film %}
-<a title="кинотеатр Эрвий {{film.getName}}" href="{{url('cinema_cinema_film', {'slug': film.getSlug})}}"> <i><img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="160" height="229" /></i><span><strong>{{film.getName}}</strong>{{film.getGenre}}</span></a></li>
+<a href="{{url('cinema_cinema_film', {'slug': film.getSlug})}}"> <i><img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="160" height="229" /></i><span><strong>{{film.getName}}</strong>{{film.getGenre}}</span></a></li>
 {%else %}
 
 {% endif %}
@@ -24,7 +24,7 @@
 <div class="b-title">Скоро</div>
 <ul class="tf-list clearfix">{% for film in data.soon %}
 {% if film %}
-<li><a title="кинотеатр Эрвий {{film.getName}}" href="{{url('cinema_cinema_film', {'slug': film.getSlug})}}"> <i><img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="160" height="229" /></i><span> <strong>{{film.getName}}</strong>{{film.getGenre}}</span></a></li>
+<li><a href="{{url('cinema_cinema_film', {'slug': film.getSlug})}}"> <i><img src="/upload/images/film/{{film.getId}}.jpg" alt="" width="160" height="229" /></i><span> <strong>{{film.getName}}</strong>{{film.getGenre}}</span></a></li>
 {% endif %}
 {% endfor %}</ul>
 

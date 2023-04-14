@@ -8,9 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class LoginController extends Controller
 {
-    /**
-     * Controller for /login route
-     **/
     public function loginAction()
     {
         $request = $this->getRequest();

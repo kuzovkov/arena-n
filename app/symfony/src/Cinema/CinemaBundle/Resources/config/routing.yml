@@ -37,6 +37,10 @@ cinema_cinema_film:
 cinema_cinema_film2:
     pattern:  /film/
     defaults: { _controller: CinemaCinemaBundle:Film:film }
+
+test:
+    pattern: /test
+    defaults: { _controller: CinemaCinemaBundle:UserAdmin:createAction}
     
 login:
     pattern:   /login
@@ -51,6 +55,10 @@ login_check:
     
 logout:
     pattern: /logout
+    
+cinema_cinema_db_create:
+    pattern: /dbcreate/{name}
+    defaults: { _controller: CinemaCinemaBundle:Db:dbcreate,name:name }
     
 cinema_cinema_get_schedule_table:
     pattern: /getscheduletable
@@ -86,11 +94,7 @@ cinema_cinema_admin_get_confirm_dialog:
     
 cinema_cinema_test:
     pattern:  /test/test
-    defaults: { _controller: CinemaCinemaBundle:Default:getFullScheduleTable }
-    
-cinema_cinema_test2:
-    pattern:  /test/test2
-    defaults: { _controller: CinemaCinemaBundle:Default:test }
+    defaults: { _controller: CinemaCinemaBundle:Default:getTest }
 
 cinema_cinema_index:
     pattern:  /genre/{genre}

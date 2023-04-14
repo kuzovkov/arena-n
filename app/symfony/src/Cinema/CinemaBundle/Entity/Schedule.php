@@ -267,32 +267,4 @@ class Schedule
     {
         $this->updated_at = new \DateTime();
     }
-    /**
-     * @var boolean
-     */
-    private $is3d;
-
-
-    /**
-     * Set is3d
-     *
-     * @param boolean $is3d
-     * @return Schedule
-     */
-    public function setIs3d($is3d)
-    {
-        $this->is3d = $is3d;
-
-        return $this;
-    }
-
-    /**
-     * Get is3d
-     *
-     * @return boolean 
-     */
-    public function getIs3d()
-    {
-        return $this->is3d;
-    }
 }

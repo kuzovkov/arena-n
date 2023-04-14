@@ -1,7 +1,3 @@
-addon_backup:
-    resource: "@AddonBackupBundle/Resources/config/routing.yml"
-    prefix:   /database
-
 cinema_parse:
     resource: "@CinemaParseBundle/Resources/config/routing.yml"
     prefix:   /

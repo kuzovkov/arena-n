@@ -253,5 +253,35 @@ class News
     {
         return News::SERVER_PATH_TO_IMAGE_FOLDER .'/';
     }
+    
+    /*
+    public function upload()
+    {
+        if (null === $this->getImg()) {
+            return;
+        }
+        if (!is_object($this->getImg())) return;
+        //get original filename    
+        $filename = $this->getImg()->getClientOriginalName();
+        //extract extensio of file
+        $ext = strrchr($filename, '.');
+        $name = substr(md5( time() ), 20 ) . $ext;
+        $this->getImg()->move(
+            News::SERVER_PATH_TO_IMAGE_FOLDER,
+            $name
+        );
+    
+        // clean up the file property as you won't need it anymore
+        $this->setImg($name);
+    }//end func
+    */
+    /**
+     * Lifecycle callback to upload the file to the server
+     */
+    
+    
+    /**
+     * Updates the hash value to force the preUpdate and postUpdate events to fire
+     */
 
 }

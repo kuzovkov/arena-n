@@ -217,16 +217,11 @@ class Banner
         return $this->bannershow;
     }
     
-    
-    /**
-     * Get banner image url
-     *
-     * @return string Url of banner image
-     */
     public function getBannerImageUrl()
     {
         if ( !$this->imgfilename ) return false;
-        return '/'.CinemaCinemaBundle::BANNER_URL . $this->imgfilename;
+        //return CinemaCinemaBundle::BASE_URL . CinemaCinemaBundle::BANNER_URL . $this->imgfilename;
+    	return '/' . CinemaCinemaBundle::BANNER_URL . $this->imgfilename;
     }
     /**
      * @var string

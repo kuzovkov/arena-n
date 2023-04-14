@@ -9,10 +9,6 @@ use Cinema\CinemaBundle\CinemaCinemaBundle;
 
 class UploadController extends Controller
 {
-    /**
-     * Controller for AJAX query to get list available images in JSON format(in Admin panel)
-     * 
-     **/
     public function getImageListAction()
     {
         $repository = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Page");
@@ -20,20 +16,11 @@ class UploadController extends Controller
         return $this->render('CinemaCinemaBundle:Admin:image_list.json.php', array('files' => $files)); 
     }//end func
     
-    /**
-     * Controller for AJAX query to get form image upload(in Admin panel)
-     * @param int $id Entity id
-     * @param string $form Attribute "id" of upload form 
-     **/
     public function getImageFormUploadAction($id=null,$form)
     {
         return $this->render('CinemaCinemaBundle:Admin:form_image_upload.html.php', array('id'=>$id,'form'=>$form));
     }//end func
     
-    /**
-     * Controller for query to upload image file(in Admin panel)
-     * @param int $idPage id
-     **/
     public function imageUploadAction($id=null)
     {
         $repository = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Page");
@@ -42,11 +29,6 @@ class UploadController extends Controller
         return $this->render( 'CinemaCinemaBundle:Admin:file_upload_fail.html.twig', array('id'=>$id ) );
     }//end func
     
-    
-    /**
-     * Controller for query to upload wall of film file(in Admin panel)
-     * @param int $id Film id
-     **/
     public function imageUploadWallAction($id=null)
     {
         $repository = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Film");
@@ -55,11 +37,6 @@ class UploadController extends Controller
         return $this->render( 'CinemaCinemaBundle:Admin:image_upload_fail.html.twig', array('id'=>$id ) );
     }//end func
     
-    
-    /**
-     * Controller for query to upload name image of film file(in Admin panel)
-     * @param int $id Film id
-     **/
     public function imageUploadNameAction($id=null)
     {
         $repository = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Film");
@@ -67,12 +44,7 @@ class UploadController extends Controller
             return $this->render( 'CinemaCinemaBundle:Admin:image_upload_success.html.twig', array('id'=>$id ) );
         return $this->render( 'CinemaCinemaBundle:Admin:image_upload_fail.html.twig', array('id'=>$id ) );
     }//end func
-    
-    
-    /**
-     * Controller for query to upload trailer video file for film (in Admin panel)
-     * @param int $id Film id
-     **/
+
     public function trailerLoadAction( $id=null )
     {
         $request = $this->get('request');
@@ -83,16 +55,11 @@ class UploadController extends Controller
         return $this->render( 'CinemaCinemaBundle:Admin:trailer_load_fail.html.twig', array('id'=>$id ) ); 
     }//end func
     
-    
-    /**
-     * Controller for query to delete name image of film file (in Admin panel)
-     * @param int $id Film id
-     **/
     public function deleteImageNameAction($id)
     {
         $repo = $this->getDoctrine()->getRepository("CinemaCinemaBundle:Film");
         $repo->deleteImageName($id);
         return $this->redirect( $this->generateUrl( 'admin_cinema_cinema_film_edit', array( 'id' => $id ) ) );
-    }//end func
+    }
 
 }

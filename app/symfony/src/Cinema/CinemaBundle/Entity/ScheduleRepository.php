@@ -56,46 +56,6 @@ class ScheduleRepository extends EntityRepository
         return $seances;
     }//end func
     
-    /**
-     * get seances of film with defined id, room, between date begin and date end and format 2d
-     * @param int $filmId  Film id
-     * @param int $room Number room
-     * @param DateTime object $dateBegin  Interval Date begin
-     * @param DateTime object $dateEnd   Interval Date end
-     * @return array $seances  Array of object Seance
-     **/   
-     public function getScheduleFilm2D( $filmId, $room, $dateBegin, $dateEnd )
-    {
-        $begin = date_create( $dateBegin );
-        $end = date_create( $dateEnd );
-        $dql = "SELECT s FROM CinemaCinemaBundle:Schedule s WHERE s.film_id=:film_id AND s.numberRoot=:room AND s.time_begin >= :start AND s.time_begin <= :end ORDER BY s.time_begin  AND s.is3d=0 ASC";       
-        $em = $this->getEntityManager();
-        $query = $em->createQuery( $dql );
-        $query->setParameters( array( 'film_id' => $filmId, 'room' => $room, 'start' => $begin, 'end' => $end ));
-        $seances = $query->getResult();
-        return $seances;
-    }//end func
-    
-    /**
-     * get seances of film with defined id, room, between date begin and date end and format 3d
-     * @param int $filmId  Film id
-     * @param int $room Number room
-     * @param DateTime object $dateBegin  Interval Date begin
-     * @param DateTime object $dateEnd   Interval Date end
-     * @return array $seances  Array of object Seance
-     **/   
-     public function getScheduleFilm3D( $filmId, $room, $dateBegin, $dateEnd )
-     {
-        $begin = date_create( $dateBegin );
-        $end = date_create( $dateEnd );
-        $dql = "SELECT s FROM CinemaCinemaBundle:Schedule s WHERE s.film_id=:film_id AND s.numberRoot=:room AND s.time_begin >= :start AND s.time_begin <= :end ORDER BY s.time_begin  AND s.is3d=1 ASC";       
-        $em = $this->getEntityManager();
-        $query = $em->createQuery( $dql );
-        $query->setParameters( array( 'film_id' => $filmId, 'room' => $room, 'start' => $begin, 'end' => $end ));
-        $seances = $query->getResult();
-        return $seances;
-    }//end func
-    
     
     /**
      * get seances of film with defined id, room, and in day number $day considering the current
@@ -264,31 +224,6 @@ class ScheduleRepository extends EntityRepository
         
     }//end func
     
-    /**
-     * get seances of film with defined id, and in defined week number $week considering the current
-     * @param int $id Film id
-     * @param int $week Number week
-     * @return array $date Array of objects seances
-     **/
-    public function getScheduleTableWithFormat( $id = -1, $week, $format )
-    {
-        $maxRoom = $this->countRooms();
-        if ( $id < 0 ) return $maxRoom;
-        $dates = $this->getDates( 4, $week );
-        $seances = array();
-        $data = array();
-        for ( $room = 1; $room <= $maxRoom; $room++ )
-        {
-            $seances[$room] = $this->getScheduleFilm( $id, $room, $dates['datebegin'], $dates['dateend'] );
-        }
-        $allSeances = 0;
-        foreach ( $seances as $seanceInRoom ) $allSeances += count( $seanceInRoom );
-        if ( !$allSeances ) return $maxRoom;
-        $data['seances'] = $seances;
-        return $data;
-        
-    }//end func
-    
     
     /**
      * get seances of all films with in defined day number $day considering the current
@@ -426,31 +361,6 @@ class ScheduleRepository extends EntityRepository
         }
         return true;
     }//end func
-    
-    /**
-     * how seances film has  
-     * @param integer filmId
-     * @return string '2D' or '3D' or '3D2D' 
-     **/
-    public function filmHasFormats($filmId)
-    {
-        $format = '';
-        $dql = "SELECT count(s.id) FROM CinemaCinemaBundle:Schedule s WHERE s.film_id=:film_id AND s.is3d=1";
-        $em = $this->getEntityManager();
-        $query = $em->createQuery( $dql );
-        $query->setParameters( array( 'film_id' => $filmId) );
-        $result = $query->getResult();
-        $count3d = intval($result[0][1]);
-        $format .= (($count3d)? '3D' : '');
-        $dql = "SELECT count(s.id) FROM CinemaCinemaBundle:Schedule s WHERE s.film_id=:film_id";
-        $em = $this->getEntityManager();
-        $query = $em->createQuery( $dql );
-        $query->setParameters( array( 'film_id' => $filmId) );
-        $result = $query->getResult();
-        $countAll = intval($result[0][1]);
-        $format .= (($countAll > $count3d)? '2D' : '');
-        return $format;
-    }
     
     
 }

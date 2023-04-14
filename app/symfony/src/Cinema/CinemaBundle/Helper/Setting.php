@@ -4,8 +4,8 @@ namespace Cinema\CinemaBundle\Helper;
 
 class Setting
 {
-    const BASE_PATH = 'c:/www3/symfony1/';
-    const BASE_URL = 'http://symfony1.loc/';
+    const BASE_PATH = '/home/www/html/';
+    const BASE_URL = 'http://arena-n.ru/';
     const PUBLIC_DIR = 'web';
     const UPLOAD_DIR = 'upload';
     const MAXAGE = 6;

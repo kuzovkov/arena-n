@@ -23,9 +23,6 @@ Cinema\CinemaBundle\Entity\Schedule:
             column: number_room
             type: integer
             nullable: true
-        is3d:
-            type: boolean
-            nullable: true
         created_at:
             type: datetime
             nullable: true

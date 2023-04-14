@@ -6,12 +6,12 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class CinemaCinemaBundle extends Bundle
 {
-    const BASE_PATH = 'c:/www3/symfony1/';
-    const BASE_URL = 'http://symfony1.loc/';
+    const BASE_PATH = '/home/www/html/';
+    const BASE_URL = 'http://arena-n.ru/';
     const PAGE_IMG_DIR = 'web/upload/images/pages';
-    const PAGE_IMG_URL = 'http://symfony1.loc/upload/images/pages/';
-    const FILM_TRAILER_URL = 'http://symfony1.loc/upload/images/trailers/';
-    const TRAILER_DIR = 'web/upload/images/trailers';
+    const PAGE_IMG_URL = 'http://arena-n.ru/upload/images/pages/';
+    const FILM_TRAILER_URL = 'http://arena-n.ru/upload/trailers/';
+    const TRAILER_DIR = 'web/upload/trailers';
     const DATETIME_FORMAT1 = 'Y-m-d 00:00:00';
     const DATETIME_FORMAT2 = 'Y-m-d 23:59:59';
     const DATETIME_FORMAT = 'Ymd';
@@ -20,7 +20,7 @@ class CinemaCinemaBundle extends Bundle
     const UPLOAD_BANNER_DIR = 'web/upload/images/banners';
     const BANNER_URL = 'upload/images/banners/';
     const IMG_NAME_URL = 'upload/images/names';
-    const IMG_WALL_URL = 'upload/images/film_wall';
+	const IMG_WALL_URL = 'upload/images/film_wall';
     const NEWS_LIMIT = 5;
     const REG_EXP_URL = '/^http:\/\/www.kinopoisk.ru\/film\/[0-9]{1,}/';
     const ENCODE_SOURSE = "windows-1251";

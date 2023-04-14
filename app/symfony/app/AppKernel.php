@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Cinema\CinemaBundle\CinemaCinemaBundle(),
             new Cinema\ParseBundle\CinemaParseBundle(),
-            new Addon\BackupBundle\AddonBackupBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
