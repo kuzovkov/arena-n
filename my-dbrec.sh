@@ -4,8 +4,8 @@
 # Recovery database from dump #
 ###############################
 
-DUMP_NAME=arena.sql
-#DUMP_NAME=dump.sql.gz
+#DUMP_NAME=arena.sql
+DUMP_NAME=dump.sql.gz
 
 if [  -e ".env" ]; then
     eval $(cat .env)

@@ -1,4 +1,5 @@
 .env
 app/symfony/web/upload
 app/symfony/app/cache
+.idea
 
